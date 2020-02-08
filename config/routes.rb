@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'pages#home'
   get '/dashboard', to: 'dashboard#show'
   get '/properties', to: 'properties#show'
-  resources :properties only: [:show]
+  resources :properties, only: [:show]
 
   scope '/reservations' do
 
