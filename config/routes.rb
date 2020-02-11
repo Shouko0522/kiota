@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get '/dashboard', to: 'dashboard#show'
   get '/properties', to: 'properties#show'
-  get '/questions', to: 'questions#show'
+  get '/questions/:step', to: 'questions#show', as: 'question' 
+  post '/questions/:step', to: 'questions#update', as: 'question' 
+  
   resources :properties, only: [:show]
-  resources :questions, only: [:show]
+ 
 
   scope '/reservations' do
 
