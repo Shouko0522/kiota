@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_08_091641) do
+ActiveRecord::Schema.define(version: 2020_02_11_110752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,29 @@ ActiveRecord::Schema.define(version: 2020_02_08_091641) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price"
+    t.integer "distance_to_station"
+    t.boolean "pets"
+    t.integer "distance_to_supermarket"
+    t.boolean "tatami"
+    t.integer "age"
+    t.integer "floor"
+    t.integer "distance_to_park"
+    t.integer "size"
+    t.string "location"
     t.index ["user_id"], name: "index_properties_on_user_id"
+  end
+
+  create_table "property_viewings", force: :cascade do |t|
+    t.string "status"
+    t.string "time_slot", array: true
+    t.datetime "confirmed_time"
+    t.bigint "user_id"
+    t.bigint "property_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["property_id"], name: "index_property_viewings_on_property_id"
+    t.index ["user_id"], name: "index_property_viewings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -36,4 +58,6 @@ ActiveRecord::Schema.define(version: 2020_02_08_091641) do
   end
 
   add_foreign_key "properties", "users"
+  add_foreign_key "property_viewings", "properties"
+  add_foreign_key "property_viewings", "users"
 end
