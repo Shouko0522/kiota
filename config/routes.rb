@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#show'
   get '/properties', to: 'properties#show'
   get '/questions/:step', to: 'questions#show', as: 'question' 
-  post '/questions/:step', to: 'questions#update', as: 'question' 
+  patch '/questions/:step', to: 'questions#update', as: 'question_update' 
   
   resources :properties, only: [:show]
  
