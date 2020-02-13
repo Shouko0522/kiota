@@ -2,7 +2,7 @@
 
 <%= simple_form_for(@user, url: question_update_path) do |f| %>
   <div class="form-group">
-    <%= f.input :distance_to_park, as: :radio_buttons, prompt: "Select your age" %>
+    <%= f.input :distance_to_park, as: :radio_buttons %>
     <%= f.submit "Next" %>
   </div>
 <% end %>

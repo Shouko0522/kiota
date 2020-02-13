@@ -29,6 +29,7 @@ class QuestionsController < ApplicationController
       :tatami, 
       :distance_to_station, 
       :age,
-      :size)
+      :size
+      )
   end
 end

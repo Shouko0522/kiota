@@ -1,8 +1,10 @@
 <h1>Have any pets?</h1>
 
-<%= simple_form_for(@user, url: question_update_path) do |f| %>
+<%= form_for(@user, url: question_update_path) do |f| %>
   <div class="form-group">
-    <%= f.input :pets, as: :radio_buttons %>
+
+    <%= f.radio_button :pets, true  %>Yes
+    <%= f.radio_button :pets, false  %>No
     <%= f.submit "Next" %>
   </div>
 <% end %>
