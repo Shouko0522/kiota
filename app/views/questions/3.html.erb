@@ -2,8 +2,10 @@
 
 <%= simple_form_for(@user, url: question_update_path) do |f| %>
   <div class="form-group">
-    <%= f.input :pets, as: :radio_buttons %>
-    <%= f.submit "Next" %>
+    <div class="row justify-content-center">
+     <%= f.input :pets, as: :radio_buttons %>
+     <%= f.submit "Next" %>
+    </div>
   </div>
 <% end %>
 
