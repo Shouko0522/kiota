@@ -1,0 +1,10 @@
+<h1>Where do you work?</h1>
+
+<%= simple_form_for(@user, url: question_update_path) do |f| %>
+  <div class="form-group">
+    <%= text_field(:user, :location) %>
+    <%= f.submit "Next" %>
+  </div>
+<% end %>
+
+<%= render 'shared/question_layout' %>

@@ -1,3 +1,23 @@
-<h1>Question 1</h1>
+<h1>What's your price range?</h1>
 
-<%= link_to "Next Question",  question_path(@step + 1) %>
+<%= simple_form_for(@user, url: question_update_path) do |f| %>
+  <div class="form-group">
+    <label for="pricerange">Select from price ranges:</label>
+    <%= select(:user, :price, [
+      ['85,000 - 100,000', '85000-100000'], 
+      ['100,000 - 125,000', '100000-125000'], 
+      ['125,000 - 150,000', '125000-150000'],
+      ['150,000 - 180,000', '150000-180000'],
+      ['180,000 - 200,000', '180000-200000'],
+      ['200,000 and above', '200000']
+      ]) %>
+    <%= f.submit "Next" %>
+  </div>
+<% end %>
+
+ 
+<%= render 'shared/question_layout' %>
+
+
+
+
