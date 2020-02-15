@@ -9,7 +9,6 @@ class QuestionsController < ApplicationController
   def update
     @step = params[:step].to_i
     @user = current_user
-    
     if @user.update(strong_params)
       redirect_to question_path(@step + 1)
     else
@@ -20,16 +19,18 @@ class QuestionsController < ApplicationController
   private
   def strong_params
     params.require(:user).permit(
-      :price, 
-      :location, 
+      :min_price,
+      :max_price,
+      :desired_location,
+      :work_location,
       :pets, 
-      :distance_to_park, 
-      :distance_to_supermarket, 
-      :floor, 
+      :wants_park_nearby, 
+      :wants_supermarket_nearby, 
+      :wants_first_floor, 
       :tatami, 
-      :distance_to_station, 
+      :wants_station_nearby,
       :age,
-      :size
+      :layout
       )
   end
 end

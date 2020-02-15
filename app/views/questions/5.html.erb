@@ -1,3 +1,16 @@
-<h1>Do you mainly cook at home or eat out?</h1>
-
-<%= link_to "Next Question",  question_path(@step + 1) %>
+<h1 class="text-center">How old is your desired apartment?</h1>
+  <%= simple_form_for(@user, url: question_update_path) do |f| %>
+    <div class="form-group text-center">
+      <div class="justify-content-center">
+       <label for="pricerange">Choose the max age (years)</label>
+       <%= select(:user, :age, [
+        1, 5, 10, 15, 20, 25, 30, 35, 40, 50
+        ]) %>
+      </div>
+      <div>
+        <%= f.submit "Next", class: "btn btn-dark" %>
+      </div>
+    </div>
+  <% end %>
+  <%= render 'shared/question_layout' %>
+</div>

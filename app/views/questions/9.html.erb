@@ -1,0 +1,13 @@
+<h1 class="text-center">Have any pets?</h1>
+    <%= form_for(@user, url: question_update_path) do |f| %>
+      <div class="form-group" style="text-align: center;">
+        <div class="justify-content-center">
+          <%= f.radio_button :pets, true  %>Yes
+          <%= f.radio_button :pets, false  %>No
+        </div>
+        <div>
+          <%= f.submit "Next", class: "btn btn-dark" %>
+        </div>
+      </div>
+    <% end %>
+<%= render 'shared/question_layout' %>

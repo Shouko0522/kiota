@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_11_110752) do
+ActiveRecord::Schema.define(version: 2020_02_15_051546) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,15 +21,15 @@ ActiveRecord::Schema.define(version: 2020_02_11_110752) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price"
-    t.integer "distance_to_station"
     t.boolean "pets"
-    t.integer "distance_to_supermarket"
     t.boolean "tatami"
     t.integer "age"
     t.integer "floor"
-    t.integer "distance_to_park"
     t.integer "size"
     t.string "location"
+    t.integer "distance_to_supermarket"
+    t.integer "distance_to_park"
+    t.integer "distance_to_station"
     t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
@@ -54,15 +54,18 @@ ActiveRecord::Schema.define(version: 2020_02_11_110752) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price"
-    t.integer "distance_to_station"
     t.boolean "pets"
-    t.integer "distance_to_supermarket"
     t.boolean "tatami"
-    t.integer "floor"
-    t.integer "distance_to_park"
     t.integer "age"
-    t.integer "size"
-    t.string "location"
+    t.boolean "wants_supermarket_nearby"
+    t.boolean "wants_park_nearby"
+    t.boolean "wants_station_nearby"
+    t.boolean "wants_first_floor"
+    t.string "desired_location"
+    t.string "work_location"
+    t.string "layout"
+    t.integer "min_price"
+    t.integer "max_price"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
