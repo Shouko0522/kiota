@@ -9,9 +9,5 @@ class AddDistanceToProperties < ActiveRecord::Migration[5.2]
     add_column :properties, :distance_to_park, :integer
     add_column :properties, :size, :integer
     add_column :properties, :location, :string
-    add_column :properties, :deposit, :integer
-    add_column :properties, :layout, :string
-    add_column :properties, :deposit, :integer
-    add_column :properties, :layout, :string
   end
 end

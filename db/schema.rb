@@ -27,11 +27,11 @@ ActiveRecord::Schema.define(version: 2020_02_15_051546) do
     t.integer "floor"
     t.integer "size"
     t.string "location"
+    t.integer "deposit"
+    t.string "layout"
     t.integer "distance_to_supermarket"
     t.integer "distance_to_park"
     t.integer "distance_to_station"
-    t.integer "deposit"
-    t.string "layout"
     t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
