@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2020_02_15_051546) do
+ActiveRecord::Schema.define(version: 2020_02_11_110754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,9 +29,12 @@ ActiveRecord::Schema.define(version: 2020_02_15_051546) do
     t.integer "floor"
     t.integer "size"
     t.string "location"
+
     t.integer "distance_to_supermarket"
     t.integer "distance_to_park"
     t.integer "distance_to_station"
+    t.integer "deposit"
+    t.string "layout"
     t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
@@ -66,6 +71,10 @@ ActiveRecord::Schema.define(version: 2020_02_15_051546) do
     t.string "layout"
     t.integer "min_price"
     t.integer "max_price"
+    t.integer "floor"
+    t.integer "distance_to_park"
+    t.integer "Size"
+    t.string "Location"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
