@@ -58,11 +58,11 @@ ActiveRecord::Schema.define(version: 2020_02_11_110752) do
     t.boolean "pets"
     t.integer "distance_to_supermarket"
     t.boolean "tatami"
+    t.integer "age"
     t.integer "floor"
     t.integer "distance_to_park"
-    t.integer "age"
-    t.integer "size"
-    t.string "location"
+    t.integer "Size"
+    t.string "Location"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
