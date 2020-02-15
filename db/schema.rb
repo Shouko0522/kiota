@@ -10,6 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
+ActiveRecord::Schema.define(version: 2020_02_15_051546) do
 ActiveRecord::Schema.define(version: 2020_02_11_110754) do
 
   # These are extensions that must be enabled in order to support this database
@@ -21,15 +23,16 @@ ActiveRecord::Schema.define(version: 2020_02_11_110754) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price"
-    t.integer "distance_to_station"
     t.boolean "pets"
-    t.integer "distance_to_supermarket"
     t.boolean "tatami"
     t.integer "age"
     t.integer "floor"
-    t.integer "distance_to_park"
     t.integer "size"
     t.string "location"
+
+    t.integer "distance_to_supermarket"
+    t.integer "distance_to_park"
+    t.integer "distance_to_station"
     t.integer "deposit"
     t.string "layout"
     t.index ["user_id"], name: "index_properties_on_user_id"
@@ -56,11 +59,18 @@ ActiveRecord::Schema.define(version: 2020_02_11_110754) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price"
-    t.integer "distance_to_station"
     t.boolean "pets"
-    t.integer "distance_to_supermarket"
     t.boolean "tatami"
     t.integer "age"
+    t.boolean "wants_supermarket_nearby"
+    t.boolean "wants_park_nearby"
+    t.boolean "wants_station_nearby"
+    t.boolean "wants_first_floor"
+    t.string "desired_location"
+    t.string "work_location"
+    t.string "layout"
+    t.integer "min_price"
+    t.integer "max_price"
     t.integer "floor"
     t.integer "distance_to_park"
     t.integer "Size"

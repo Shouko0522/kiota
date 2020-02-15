@@ -1,4 +1,18 @@
-<h1>Are you afraid of heights?</h1>
+<h1 class="text-center">Do you like jogging?</h1>
 
-<%= link_to "Next Question",  question_path(@step + 1) %>
+<div style="text-align: center;">
+  <%= form_for(@user, url: question_update_path) do |f| %>
+    <div class="justify-content-center mb-3">
+      <%= f.check_box :wants_park_nearby, checked: true, hidden: true %>
+      <%= f.submit "Yes", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+  <%= form_for(@user, url: question_update_path) do |f| %>
+    <div class="justify-content-center">
+      <%= f.check_box :wants_park_nearby, checked: false, hidden: true %>
+      <%= f.submit "No", class: "btn btn-dark" %>
+    </div>
+  <% end %>
+</div>
 <%= render 'shared/question_layout' %>

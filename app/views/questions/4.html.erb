@@ -1,12 +1,28 @@
-<h1>Do you like jogging?</h1>
-
-<%= simple_form_for(@user, url: question_update_path) do |f| %>
-  <div class="form-group">
-    <div class="row justify-content-center">
-      <%= f.input :distance_to_park, as: :radio_buttons %>
-      <%= f.submit "Next" %>
+<h1 class="text-center">What apartment layout are you looking for?</h1>
+  <%= simple_form_for(@user, url: question_update_path) do |f| %>
+    <div class="form-group text-center">
+      <div class="justify-content-center">
+       <label for="pricerange">Select from available layouts</label>
+       <%= select(:user, :layout, [
+        ['1K'],
+        ['1DK'],
+        ['1LDK'],
+        ['2K'],
+        ['2DK'],
+        ['2LDK'],
+        ['3K'],
+        ['3DK'],
+        ['3LDK'],
+        ['4K'],
+        ['4DK'],
+        ['4LDK'],
+        ['150,000 - 180,000', '150000-180000'],
+        ['180,000 - 200,000', '180000-200000'],
+        ['200,000 and above', '200000']
+        ]) %>
+       <%= f.submit "Next", class: "btn btn-dark" %>
+      </div>
     </div>
-  </div>
-<% end %>
-
-<%= render 'shared/question_layout' %>
+  <% end %>
+  <%= render 'shared/question_layout' %>
+</div>

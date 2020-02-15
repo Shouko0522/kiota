@@ -1,0 +1,18 @@
+<h1>Tatami mats: love them or hate them?</h1>
+<div style="text-align: center">
+  <%= form_for(@user, url: question_update_path) do |f| %>
+    <div class="justify-content-center mb-3">
+      <%= f.check_box :tatami, checked: true, hidden: true %>
+      <%= f.submit "Love them", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+  <%= form_for(@user, url: question_update_path) do |f| %>
+    <div class="justify-content-center">
+      <%= f.check_box :tatami, checked: false, hidden: true %>
+      <%= f.submit "Hate them", class: "btn btn-dark" %>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'shared/question_layout' %>
