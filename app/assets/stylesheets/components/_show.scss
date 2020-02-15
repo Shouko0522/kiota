@@ -1,0 +1,21 @@
+.property_container {
+  padding: 10px;
+  background: E5E5E5;
+}
+
+.property_img  {
+  height: 100%;
+  width: 100%;
+}
+
+.property-info  {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.price  {
+  font-size: 40px;
+}
+

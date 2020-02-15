@@ -2,12 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get '/dashboard', to: 'dashboard#show'
-  get '/properties', to: 'properties#show'
-  get '/questions/:step', to: 'questions#show', as: 'question' 
-  patch '/questions/:step', to: 'questions#update', as: 'question_update' 
-  
-  resources :properties, only: [:show]
- 
+  get '/properties/:id', to: 'properties#show'
+  get '/questions/:step', to: 'questions#show', as: 'question'
+  patch '/questions/:step', to: 'questions#update', as: 'question_update'
 
   scope '/reservations' do
 
