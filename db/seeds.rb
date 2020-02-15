@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-SIZE = ["1D", "1DK", "1LDK", "2DK", "2LDK", "2LDK"]
+LAYOUT = ["1D", "1DK", "1LDK", "2DK", "2LDK", "2LDK"]
 CITY = ["Meguro", "Shibuya", "Roppongi","Ebisu", "Nakameguro", "Daikanyama", "Namano"]
 INFO = ["Elegant style", "Modern style", "Close to staion"]
 
@@ -34,9 +34,11 @@ require 'faker'
       age: rand(50),
       floor: rand(5),
       distance_to_park: rand(50),
-      size: SIZE.sample,
+      size: rand(50),
+      layout: LAYOUT.sample,
       location: CITY.sample,
-      user: User.create(email: Faker::Internet.email, password: "123456")
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: rand(10..50)
     )
     property.save!
 end
