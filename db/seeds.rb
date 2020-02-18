@@ -12,20 +12,22 @@ INFO = ["Elegant style", "Modern style", "Close to staion"]
 # platform: PLATFORMS.sample
 
 require 'faker'
+require "open-uri"
+
+Property.destroy_all
+User.destroy_all
 
 
-# puts "Creating developer accounts..."
-# User.create(name:"Nii",email:"nii@gmail.com",password:"123456")
-# User.create(name:"Gavin",email:"gavin@gmail.com",password:"123456")
-# User.create(name:"Shouko",email:"shouko@gmail.com",password:"123456")
-# User.create(name:"Yann",email:"yann@gmail.com",password:"123456")
+puts "Creating developer accounts..."
+User.create(email:"nii@gmail.com",password:"123456")
+User.create(email:"gavin@gmail.com",password:"123456")
+User.create(email:"shouko@gmail.com",password:"123456")
+User.create(email:"yann@gmail.com",password:"123456")
 
 
-20.times do
+10.times do |index|
     property = Property.new(
       information: INFO.sample,
-      created_at: Faker::Time,
-      updated_at: Faker::Time,
       price: rand(50..100),
       distance_to_station: rand(50),
       pets: Faker::Boolean.boolean,
@@ -40,6 +42,8 @@ require 'faker'
       user: User.create(email: Faker::Internet.email, password: "123456"),
       deposit: rand(10..50)
     )
+    file = URI.open('https://goodnaturestation.com/wp/wp-content/themes/biostyle/img/category/room/top-banner-background-room7.jpg')
+    property.photo.attach(io: file, filename: "room#{index}.jpg", content_type: 'image/jpg')
     property.save!
 end
 
