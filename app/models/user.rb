@@ -10,4 +10,19 @@ class User < ApplicationRecord
   # Renter
   has_many :property_viewings
   has_many :properties, through: :property_viewings
+
+  def feed_properties
+    to_be_seen_properties
+      .where('location >= ?', desired_location)
+      # .where()
+  end
+
+  def to_be_seen_properties
+    Property.joins(<<~SQL
+      LEFT JOIN property_viewings 
+        on properties.id = property_viewings.property_id 
+        and property_viewings.user_id = #{id}
+    SQL
+    ).where('property_viewings.id IS NULL')
+  end
 end
