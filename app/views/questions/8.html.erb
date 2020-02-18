@@ -1,13 +1,15 @@
-<h1>Do you own a pair of cycling shorts?</h1>
-<div style="text-align: center;">
-  <%= form_for(@user, url: question_update_path) do |f| %>
-    <div class="justify-content-center">
-      <%= f.radio_button :wants_station_nearby, true %>No
-      <%= f.radio_button :wants_station_nearby, false %>Yes
-    </div>
-    <div class="justify-content-center">
-      <%= f.submit "Next", class: "btn btn-dark" %>
-    </div>
-  <% end %>
+<div class="theme">
+  <h1 class="text-center question">Do you own a pair of cycling shorts?</h1>
+  <div style="text-align: center;">
+    <%= form_for(@user, url: question_update_path) do |f| %>
+      <div class="justify-content-center">
+        <%= f.radio_button :wants_station_nearby, true %>No
+        <%= f.radio_button :wants_station_nearby, false %>Yes
+      </div>
+      <div class="justify-content-center">
+        <%= f.submit "Next", class: "next-button" %>
+      </div>
+    <% end %>
+  </div>
+  <%= render 'shared/question_layout' %>
 </div>
-<%= render 'shared/question_layout' %>

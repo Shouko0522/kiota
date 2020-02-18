@@ -1,0 +1,83 @@
+.theme {
+  background: linear-gradient(rgba(47, 238, 146, 0.77), rgba(67, 67, 67, 1));
+  min-height: 100vh;
+  color: white;
+}
+
+.question {
+  padding-top: 9rem;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 128.3%;
+  letter-spacing: 0.1em;
+}
+
+.question-subtext {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 128.3%;
+  letter-spacing: 0.1em;
+  color: white;
+  margin-top: 2rem;
+}
+
+.rangeValues {
+  font-style: normal;
+  font-weight:200;
+  font-size: 14px;
+  line-height: 128.3%;
+  letter-spacing: 0.1em;
+  margin-top: 2rem;
+}
+
+.range-slider {
+  margin-top: 1.5rem;
+}
+
+#slider1 {
+  margin-top: 1rem;
+  height: 30px;
+}
+
+#slider2 {
+  margin-top: 1rem;
+  height: 30px;
+}
+
+.next-button {
+  background: linear-gradient(180deg, rgba(47, 238, 146, 0.77) -190%, rgba(47, 238, 146, 0.93) 255%);
+  border-radius: 8px;
+  border-style: none;
+  color: white;
+  position: absolute;
+  width: 114px;
+  height: 40px;
+  left: 130px;
+  top: 497px;
+}
+// For Yes/No Questions
+.yes-button {
+  background: linear-gradient(180deg, rgba(47, 238, 146, 0.77) -190%, rgba(47, 238, 146, 0.93) 255%);
+  border-radius: 8px;
+  border-style: none;
+  color: white;
+  position: absolute;
+  width: 114px;
+  height: 40px;
+  left: 130px;
+  top: 440px;
+}
+
+.no-button {
+  background: linear-gradient(180deg, rgba(47, 238, 146, 0.77) -190%, rgba(47, 238, 146, 0.93) 255%);
+  border-radius: 8px;
+  border-style: none;
+  color: white;
+  position: absolute;
+  width: 114px;
+  height: 40px;
+  left: 130px;
+  top: 497px;
+}

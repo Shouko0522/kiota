@@ -1,10 +1,12 @@
-<h1 class="text-center">Where do you work?</h1>
-<%= simple_form_for(@user, url: question_update_path) do |f| %>
-  <div class="form-group text-center">
-    <div class="justify-content-center">
-     <%= text_field(:user, :work_location) %>
-     <%= f.submit "Next", class: "btn btn-dark" %>
+<div class="theme">
+  <h1 class="text-center question">Where do you work?</h1>
+  <%= simple_form_for(@user, url: question_update_path) do |f| %>
+    <div class="form-group text-center location-field">
+      <div class="justify-content-center">
+      <%= text_field(:user, :work_location) %>
+      <%= f.submit "Next", class: "next-button" %>
+      </div>
     </div>
-  </div>
-<% end %>
-<%= render 'shared/question_layout' %>
+  <% end %>
+  <%= render 'shared/question_layout' %>
+</div>
