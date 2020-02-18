@@ -1,1 +1,26 @@
 // Specific CSS for your home-page
+.landing-img {
+  background-image: url("kiota_landing_page.png");
+  height: 100vh;
+  background-position: center;
+}
+
+.get-started-button {
+  background: linear-gradient(180deg, rgba(47, 238, 146, 0.77) -190%, rgba(47, 238, 146, 0.93) 255%);
+  border-radius: 8px;
+  border-style: none;
+  color: white;
+  position: absolute;
+  width: 126px;
+  height: 44px;
+  left: 130px;
+  top: 497px;
+  padding-top: 7px;
+  font-size: large;
+}
+
+.get-started-button:hover {
+  text-decoration: none;
+  color: white;
+  background: rgb(47, 238, 146);
+}

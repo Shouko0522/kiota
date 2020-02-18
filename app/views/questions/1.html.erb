@@ -1,19 +1,19 @@
-<h1 class="text-center">What's your price range?</h1>
-<%= form_for(@user, url: question_update_path) do |f| %>
-  <div class="form-group text-center">
-      <label for="pricerange">Select from price ranges:</label>
-    <div class="d-flex justify-content-center">
-      <section class="range-slider" data-controller="sliders">
-        <span class="rangeValues"></span>
-        <input name="user[min_price]" value="30000" min="10000" max="350000" step="1000" type="range" id="slider1">
-        <input name="user[max_price]" value="200000" min="10000" max="350000" step="1000" type="range" id="slider2">
-      </section>
+<div class="theme">
+  <h1 class="text-center question">What's your price range?</h1>
+  <%= form_for(@user, url: question_update_path) do |f| %>
+    <div class="form-group text-center">
+      <label for="pricerange" class="question1-subtext">Select from price ranges:</label>
+      <div class="d-flex justify-content-center">
+        <section class="range-slider" data-controller="sliders">
+          <span class="rangeValues"></span>
+          <input name="user[min_price]" value="40000" min="10000" max="350000" step="1000" type="range" id="slider1">
+          <input name="user[max_price]" value="250000" min="10000" max="350000" step="1000" type="range" id="slider2">
+        </section>
+      </div>
     </div>
-  </div>
-  <div class="text-center">
-    <%= f.submit "Next", class: "btn btn-dark" %>
-  </div>
-<% end %>
-<%= render 'shared/question_layout' %>
-
-
+    <div class="text-center">
+      <%= f.submit "Next", class: "next-button" %>
+    </div>
+  <% end %>
+  <%= render 'shared/question_layout' %>
+</div>

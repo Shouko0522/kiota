@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get '/dashboard', to: 'dashboard#show'
   get '/properties/:id', to: 'properties#show'
+
+  get '/property_viewings/:id', to: 'property_viewings#show'
+
   get '/questions/:step', to: 'questions#show', as: 'question'
   patch '/questions/:step', to: 'questions#update', as: 'question_update'
 

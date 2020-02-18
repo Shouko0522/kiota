@@ -1,18 +1,20 @@
-<h1 class="text-center">Do you like jogging?</h1>
+<div class="theme">
+  <h1 class="text-center question">Do you like jogging?</h1>
 
-<div style="text-align: center;">
-  <%= form_for(@user, url: question_update_path) do |f| %>
-    <div class="justify-content-center mb-3">
-      <%= f.check_box :wants_park_nearby, checked: true, hidden: true %>
-      <%= f.submit "Yes", class: "btn btn-primary" %>
-    </div>
-  <% end %>
+  <div style="text-align: center;">
+    <%= form_for(@user, url: question_update_path) do |f| %>
+      <div class="justify-content-center mb-3">
+        <%= f.check_box :wants_park_nearby, checked: true, hidden: true %>
+        <%= f.submit "Yes", class: "yes-button" %>
+      </div>
+    <% end %>
 
-  <%= form_for(@user, url: question_update_path) do |f| %>
-    <div class="justify-content-center">
-      <%= f.check_box :wants_park_nearby, checked: false, hidden: true %>
-      <%= f.submit "No", class: "btn btn-dark" %>
-    </div>
-  <% end %>
+    <%= form_for(@user, url: question_update_path) do |f| %>
+      <div class="justify-content-center">
+        <%= f.check_box :wants_park_nearby, checked: false, hidden: true %>
+        <%= f.submit "No", class: "no-button" %>
+      </div>
+    <% end %>
+  </div>
+  <%= render 'shared/question_layout' %>
 </div>
-<%= render 'shared/question_layout' %>

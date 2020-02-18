@@ -1,17 +1,19 @@
-<h1 class="text-center">Are you afraid of heights?</h1>
-<div style="text-align: center">
-  <%= form_for(@user, url: question_update_path) do |f| %>
-    <div class="justify-content-center mb-3">
-      <%= f.check_box :wants_first_floor, checked: true, hidden: true %>
-      <%= f.submit "Terrified", class: "btn btn-primary" %>
-    </div>
-  <% end %>
-  
-  <%= form_for(@user, url: question_update_path) do |f| %>
-    <div class="justify-content-center">
-      <%= f.check_box :wants_first_floor, checked: false, hidden: true %>
-      <%= f.submit "No problem", class: "btn btn-dark" %>
-    </div>
-  <% end %>
+<div class="theme">
+  <h1 class="text-center question">Are you afraid of heights?</h1>
+  <div style="text-align: center">
+    <%= form_for(@user, url: question_update_path) do |f| %>
+      <div class="justify-content-center mb-3">
+        <%= f.check_box :wants_first_floor, checked: true, hidden: true %>
+        <%= f.submit "Terrified", class: "yes-button" %>
+      </div>
+    <% end %>
+    
+    <%= form_for(@user, url: question_update_path) do |f| %>
+      <div class="justify-content-center">
+        <%= f.check_box :wants_first_floor, checked: false, hidden: true %>
+        <%= f.submit "No problem", class: "no-button" %>
+      </div>
+    <% end %>
+  </div>
+  <%= render 'shared/question_layout' %>
 </div>
-<%= render 'shared/question_layout' %>
