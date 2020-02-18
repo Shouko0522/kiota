@@ -1,9 +1,10 @@
 class Property < ApplicationRecord
   belongs_to :user
   has_one_attached :photo
+  has_many :property_viewings
 end
 
 
 def my_match (a_user)
-  Property.where(shouko)
+  Property.where(Property.pets = User.pets)
 end
