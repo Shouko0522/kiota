@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'property_viewings/show'
   devise_for :users
   root to: 'pages#home'
-  get '/dashboard', to: 'dashboard#show'
+  get '/dashboard', to: 'dashboard#index'
   get '/properties', to: 'properties#index'
   get '/properties/:id', to: 'properties#show'
 
