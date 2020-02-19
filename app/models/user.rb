@@ -12,8 +12,9 @@ class User < ApplicationRecord
   has_many :properties, through: :property_viewings
 
   def feed_properties
+    
     to_be_seen_properties
-      .where('location >= ?', desired_location)
+      .where('location = ?', desired_location)
       # .where()
   end
 
