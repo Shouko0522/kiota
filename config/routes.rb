@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get '/dashboard', to: 'dashboard#show'
+  get '/properties', to: 'properties#index'
   get '/properties/:id', to: 'properties#show'
 
   get '/property_viewings_feed', to: 'property_viewings#feed'
