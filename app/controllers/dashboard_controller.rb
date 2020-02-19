@@ -1,4 +1,5 @@
 class DashboardController < ApplicationController
-  def show
+  def index
+    @properties = Property.all
   end
 end
