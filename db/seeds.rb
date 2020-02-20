@@ -14,6 +14,7 @@ INFO = ["Elegant style", "Modern style", "Close to staion"]
 require 'faker'
 require "open-uri"
 
+PropertyViewing.destroy_all
 Property.destroy_all
 User.destroy_all
 
