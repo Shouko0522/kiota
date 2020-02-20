@@ -6,8 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 LAYOUT = ["1D", "1DK", "1LDK", "2DK", "2LDK", "2LDK"]
-CITY = ["Meguro", "Shibuya", "Roppongi","Ebisu", "Nakameguro", "Daikanyama", "Namano"]
+CITY = ["Meguro", "Shibuya", "Roppongi","Ebisu", "Nakameguro", "Daikanyama", "Nakano"]
 INFO = ["Elegant style", "Modern style", "Close to staion"]
+
 
 # platform: PLATFORMS.sample
 
