@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
   def index
-    @properties = Property.all
+    @properties = current_user.properties
   end
 end
