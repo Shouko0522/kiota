@@ -1,7 +1,8 @@
 class PropertyViewingsController < ApplicationController
   def feed
     @property = current_user.feed_properties.first
-    
+    @property = Property.find(params[:id])
+
   end
 
   def create

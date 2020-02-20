@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/properties', to: 'properties#index'
   get '/properties/:id', to: 'properties#show'
 
-  get '/property_viewings_feed', to: 'property_viewings#feed'
+  get '/property_viewings_feed/:id', to: 'property_viewings#feed'
   get '/property_viewings/:id', to: 'property_viewings#show'
 
   get '/questions/:step', to: 'questions#show', as: 'question'
