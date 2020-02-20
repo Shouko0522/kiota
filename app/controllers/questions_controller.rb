@@ -10,7 +10,12 @@ class QuestionsController < ApplicationController
     @step = params[:step].to_i
     @user = current_user
     if @user.update(strong_params)
-      redirect_to question_path(@step + 1)
+      if @step < 11
+        redirect_to question_path(@step + 1)
+      else
+        redirect_to properties_viewings_feed_path
+      end
+
     else
       render "questions/#{@step}"
     end
@@ -23,11 +28,11 @@ class QuestionsController < ApplicationController
       :max_price,
       :desired_location,
       :work_location,
-      :pets, 
-      :wants_park_nearby, 
-      :wants_supermarket_nearby, 
-      :wants_first_floor, 
-      :tatami, 
+      :pets,
+      :wants_park_nearby,
+      :wants_supermarket_nearby,
+      :wants_first_floor,
+      :tatami,
       :wants_station_nearby,
       :age,
       :layout
