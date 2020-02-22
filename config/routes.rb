@@ -15,12 +15,16 @@ Rails.application.routes.draw do
   get '/questions/:step', to: 'questions#show', as: 'question'
   patch '/questions/:step', to: 'questions#update', as: 'question_update'
 
-  scope '/reservations' do
+    scope '/reservations' do
 
-  get '/new', to: 'reservations#new'
-  post '/new', to: 'reservations#create'
-  get '/confirm', to: 'reservations#confirm'
-  post '/confirm', to: 'reservations#submit'
-end
+    get '/new', to: 'reservations#new'
+    post '/new', to: 'reservations#create'
+    get '/confirm', to: 'reservations#confirm'
+    post '/confirm', to: 'reservations#submit'
+
+      resources :property do
+        resources :reservations, only: [ :new, :create ]
+      end
+    end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
