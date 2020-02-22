@@ -1,7 +1,7 @@
 <div class="property_container">
   <div class="property_card">
     <% @property_viewings.each do |property_viewing| %>
-      <%= cl_image_tag property_viewing.property.photo.key, height: 300, width: 400, crop: :fill %>
+      <%=cl_image_tag property_viewing.property.photo.key, height: 300, width: 400, crop: :fill %>
         <div class="property-info">
           <div class="price">¥<%= property_viewing.property.price %>,000/m</div>
           <div><i class="fas fa-subway"></i> <%= property_viewing.property.distance_to_station %>m from <%= property_viewing.property.location %> station</div>
@@ -10,6 +10,7 @@
           <div><i class="fas fa-home"></i> <%= property_viewing.property.age %></div>
           <div><i class="fas fa-money-check-alt"> </i> <%= property_viewing.property.deposit %>,000</div>
         </div>
+        <%= link_to "Reserve", new_property_reservation_path(property_viewing.property)%>
     <% end %>
   </div>
 </div>
