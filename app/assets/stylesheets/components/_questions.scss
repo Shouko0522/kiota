@@ -23,6 +23,38 @@
   margin-top: 2rem;
 }
 
+.next-button {
+  background: linear-gradient(180deg, rgba(47, 238, 146, 0.77) -190%, rgba(47, 238, 146, 0.93) 255%);
+  border-radius: 8px;
+  border-style: none;
+  color: white;
+  position: absolute;
+  width: 114px;
+  height: 40px;
+  left: 130px;
+  top: 497px;
+}
+
+.go_back_button {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  color:white;
+}
+
+.go_back_button:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.go_back_arrow {
+  position: absolute;
+  top: 9px;
+  left: 0px;
+}
+
+// For Question 1 use with the sliders
+
 .rangeValues {
   font-style: normal;
   font-weight:200;
@@ -46,18 +78,8 @@
   height: 30px;
 }
 
-.next-button {
-  background: linear-gradient(180deg, rgba(47, 238, 146, 0.77) -190%, rgba(47, 238, 146, 0.93) 255%);
-  border-radius: 8px;
-  border-style: none;
-  color: white;
-  position: absolute;
-  width: 114px;
-  height: 40px;
-  left: 130px;
-  top: 497px;
-}
 // For Yes/No Questions
+
 .yes-button {
   background: linear-gradient(180deg, rgba(47, 238, 146, 0.77) -190%, rgba(47, 238, 146, 0.93) 255%);
   border-radius: 8px;
@@ -80,4 +102,11 @@
   height: 40px;
   left: 130px;
   top: 497px;
+}
+
+// For questions asking for a location
+
+.location-field {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }

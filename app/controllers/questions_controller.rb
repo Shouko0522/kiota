@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
       if @step < 11
         redirect_to question_path(@step + 1)
       else
-        redirect_to properties_viewings_feed_path
+        redirect_to property_viewings_feed_path
       end
 
     else

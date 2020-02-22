@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 LAYOUT = ["1D", "1DK", "1LDK", "2DK", "2LDK", "2LDK"]
-CITY = ["Meguro", "Shibuya", "Roppongi","Ebisu", "Nakameguro", "Daikanyama", "Nakano"]
+CITY = ["Meguro", "Ebisu", "Shibuya"]
 INFO = ["Elegant style", "Modern style", "Close to staion"]
 
 
@@ -27,7 +27,7 @@ User.create(email:"shouko@gmail.com",password:"123456")
 User.create(email:"yann@gmail.com",password:"123456")
 
 
-10.times do |index|
+20.times do |index|
   photos = [
     'https://goodnaturestation.com/wp/wp-content/themes/biostyle/img/category/room/top-banner-background-room7.jpg',
     'https://images.unsplash.com/photo-1486304873000-235643847519?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80',
@@ -39,13 +39,13 @@ User.create(email:"yann@gmail.com",password:"123456")
     property = Property.new(
       information: INFO.sample,
       price: rand(50..100),
-      distance_to_station: rand(50),
+      distance_to_station: rand(20),
       pets: Faker::Boolean.boolean,
-      distance_to_supermarket: rand(50),
+      distance_to_supermarket: rand(20),
       tatami: Faker::Boolean.boolean,
       age: rand(50),
       floor: rand(5),
-      distance_to_park: rand(50),
+      distance_to_park: rand(20),
       size: rand(50),
       layout: LAYOUT.sample,
       location: CITY.sample,
