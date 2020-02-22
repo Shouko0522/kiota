@@ -8,14 +8,30 @@ class PropertyViewingsController < ApplicationController
     #       lat: flat.latitude,
     #       lng: flat.longitude
     #     }
+    if @property.nil?
+      # redirect_to
+    else 
+    @property_viewing = PropertyViewing.new
+    end
   end
 
   def create
-    current_user.property_viewings.create(status: params[:status])
-    redirect :feed
+    property_viewing = PropertyViewing.new(property_viewing_params)
+    property_viewing.user = current_user
+    property_viewing.save
+    redirect_to action: "feed"
   end
 
   def show
     @property_viewing = PropertyViewing.find(params[:id])
+  end
+
+  private
+
+  def property_viewing_params
+    params.require(:property_viewing).permit(
+      :status,
+      :property_id
+    )
   end
 end

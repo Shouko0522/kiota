@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
-  resources :articles
-  get 'property_viewings/show'
   devise_for :users
   root to: 'pages#home'
+
   get '/dashboard', to: 'dashboard#index'
+
   get '/properties', to: 'properties#index'
   get '/properties/:id', to: 'properties#show'
 
-  get '/property_viewings_feed/:id', to: 'property_viewings#feed'
-  get '/property_viewings/:id', to: 'property_viewings#show'
+  get '/property_viewings_feed', to: 'property_viewings#feed'
+  resources :property_viewings, only: [:show, :create]
+  # get '/property_viewings/:id', to: 'property_viewings#show'
+  # post 'property_viewings/:id', to: 'property_viewings#create', as: 'property_viewings_create'
 
   get '/questions/:step', to: 'questions#show', as: 'question'
   patch '/questions/:step', to: 'questions#update', as: 'question_update'

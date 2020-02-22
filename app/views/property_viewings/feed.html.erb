@@ -13,4 +13,29 @@
       <div class="like">
       </div>
   </div>
+
+  <% if @property.nil? %>
+    <p>No more properties match your criteria</p>
+  <% else %>
+    <div class="property_card">
+      <%= cl_image_tag @property.photo.key, height: 300, width: 400, crop: :fill %>
+        <div class="property-info">
+          <div class="price">¥<%= @property.price %>,000/m</div>
+          <div><i class="fas fa-subway"></i> <%= @property.distance_to_station %>m from <%= @property.location %> station</div>
+          <div><i class="fas fa-bed"></i> <%= @property.layout %></div>
+          <div><i class="fas fa-ruler-combined"></i> <%= @property.size %></div>
+          <div><i class="fas fa-home"></i> <%= @property.age %></div>
+          <div><i class="fas fa-money-check-alt"> </i> <%= @property.deposit %>,000</div>
+        </div>
+        <div class="like">
+          <%#= link_to "like", property_viewings_create_path(@property_viewing), class: "btn btn-primary", method: :post %>
+          <%= simple_form_for @property_viewing do |f| %>
+            <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
+            <%= f.input :status, :as => :hidden, :input_html => { :value => "liked" } %>
+            <%= f.button :submit, "Like", class: "btn btn-primary", style: "position: absolute; left: 60%; bottom: 15%;"%> 
+          <% end %>
+        </div>
+        
+    </div>
+  <% end %>
 </div>
