@@ -19,16 +19,17 @@
           <%= simple_form_for @property_viewing do |f| %>
             <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
             <%= f.input :status, :as => :hidden, :input_html => { :value => "liked" } %>
-            <%= f.button :submit, "Like", class: "btn btn-primary", style: "position: absolute; left: 60%; bottom: 15%;"%> 
+            <%= f.button :submit, "Like", class: "btn btn-primary", style: "position: absolute; left: 60%; bottom: 15%;"%>
           <% end %>
         </div>
         <div class="dislike">
           <%= simple_form_for @property_viewing do |f| %>
             <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
             <%= f.input :status, :as => :hidden, :input_html => { :value => "disliked" } %>
-            <%= f.button :submit, "Dislike", class: "btn btn-danger", style: "position: absolute; left: 76%; bottom: 15%;"%> 
+            <%= f.button :submit, "Dislike", class: "btn btn-danger", style: "position: absolute; left: 76%; bottom: 15%;"%>
           <% end %>
         </div>
+        <img class="map" src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/<%=@property.longitude%>,<%=@property.latitude%>,10.45,0,0/600x1000?access_token=pk.eyJ1Ijoic2hvdWtvMDUyMiIsImEiOiJjazM4bDU2NW4wMzl3M2lxZTE5cml5a2tlIn0.s7I7YWPUw2sOQdWENcgDtA">
     </div>
   <% end %>
 </div>
