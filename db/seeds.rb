@@ -46,7 +46,7 @@ User.create(email:"yann@gmail.com",password:"123456")
       age: rand(10),
       floor: rand(5),
       distance_to_park: rand(20),
-      size: rand(50),
+      size: rand(29..50),
       layout: LAYOUT.sample,
       location: CITY.sample,
       user: User.create(email: Faker::Internet.email, password: "123456"),
