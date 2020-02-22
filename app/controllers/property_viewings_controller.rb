@@ -9,7 +9,7 @@ class PropertyViewingsController < ApplicationController
     #       lng: flat.longitude
     #     }
     if @property.nil?
-      # redirect_to
+      # redirect_to somewhere
     else 
     @property_viewing = PropertyViewing.new
     end
