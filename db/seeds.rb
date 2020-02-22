@@ -43,7 +43,7 @@ User.create(email:"yann@gmail.com",password:"123456")
       pets: Faker::Boolean.boolean,
       distance_to_supermarket: rand(20),
       tatami: Faker::Boolean.boolean,
-      age: rand(50),
+      age: rand(10),
       floor: rand(5),
       distance_to_park: rand(20),
       size: rand(50),
