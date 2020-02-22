@@ -1,4 +1,19 @@
 <div class="property_container">
+  <div class="property_card">
+    <%= cl_image_tag @property.photo.key, height: 300, width: 400, crop: :fill %>
+      <div class="property-info">
+        <div class="price">¥<%= @property.price %>,000/m</div>
+        <div><i class="fas fa-subway"></i> <%= @property.distance_to_station %>m from <%= @property.location %> station</div>
+        <div><i class="fas fa-bed"></i> <%= @property.layout %></div>
+        <div><i class="fas fa-ruler-combined"></i> <%= @property.size %></div>
+        <div><i class="fas fa-home"></i> <%= @property.age %></div>
+        <div><i class="fas fa-money-check-alt"> </i> <%= @property.deposit %>,000</div>
+        <img class="map" src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/<%=@property.longitude%>,<%=@property.latitude%>,10.45,0,0/600x1000?access_token=pk.eyJ1Ijoic2hvdWtvMDUyMiIsImEiOiJjazM4bDU2NW4wMzl3M2lxZTE5cml5a2tlIn0.s7I7YWPUw2sOQdWENcgDtA">
+      </div>
+      <div class="like">
+      </div>
+  </div>
+
   <% if @property.nil? %>
     <div style="position: absolute; top: 30%;">
       <p class="text-center">No more properties match your criteria. Click below to view all of the properties you've liked</p>

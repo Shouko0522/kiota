@@ -9,6 +9,7 @@ LAYOUT = ["1D", "1DK", "1LDK", "2DK", "2LDK", "2LDK"]
 CITY = ["Meguro", "Ebisu", "Shibuya"]
 INFO = ["Elegant style", "Modern style", "Close to staion"]
 
+
 # platform: PLATFORMS.sample
 
 require 'faker'
