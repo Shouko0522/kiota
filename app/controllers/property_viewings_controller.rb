@@ -2,7 +2,7 @@ class PropertyViewingsController < ApplicationController
   def feed
     @property = current_user.feed_properties.first
     if @property.nil?
-      # redirect_to
+      # redirect_to somewhere
     else 
     @property_viewing = PropertyViewing.new
     end
