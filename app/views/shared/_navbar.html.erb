@@ -1,8 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to dashboard_path(current_user), class: "navbar-brand" do %>
     <%= image_tag "Logo-62x65.png"%>
     <% end %>
-    <h1><%#= current_user.name  %></h1>
+    <p><%#= current_user.email  %></p>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

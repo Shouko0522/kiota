@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
   def index
-    @properties = current_user.properties
+    @property_viewings = PropertyViewing.where(status: "liked", user: current_user )
   end
 end

@@ -1,6 +1,9 @@
 <div class="property_container">
   <% if @property.nil? %>
-    <p>No more properties match your criteria</p>
+    <div style="position: absolute; top: 30%;">
+      <p class="text-center">No more properties match your criteria. Click below to view all of the properties you've liked</p>
+      <%= link_to "My dashboard", dashboard_path(current_user), class: "btn btn-success text-align-center", style: "display: block; color: white;" %>
+    </div>
   <% else %>
     <div class="property_card">
       <%= cl_image_tag @property.photo.key, height: 300, width: 400, crop: :fill %>
@@ -13,14 +16,19 @@
           <div><i class="fas fa-money-check-alt"> </i> <%= @property.deposit %>,000</div>
         </div>
         <div class="like">
-          <%#= link_to "like", property_viewings_create_path(@property_viewing), class: "btn btn-primary", method: :post %>
           <%= simple_form_for @property_viewing do |f| %>
             <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
             <%= f.input :status, :as => :hidden, :input_html => { :value => "liked" } %>
             <%= f.button :submit, "Like", class: "btn btn-primary", style: "position: absolute; left: 60%; bottom: 15%;"%> 
           <% end %>
         </div>
-        
+        <div class="dislike">
+          <%= simple_form_for @property_viewing do |f| %>
+            <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
+            <%= f.input :status, :as => :hidden, :input_html => { :value => "disliked" } %>
+            <%= f.button :submit, "Dislike", class: "btn btn-danger", style: "position: absolute; left: 76%; bottom: 15%;"%> 
+          <% end %>
+        </div>
     </div>
   <% end %>
 </div>
