@@ -2,15 +2,26 @@
   <div class="property_card">
     <% @property_viewings.each do |property_viewing| %>
       <%=cl_image_tag property_viewing.property.photo.key, height: 300, width: 350, crop: :fill %>
-        <div class="property-info">
+         <div class="property-info">
           <div class="price">¥<%= property_viewing.property.price %>,000/m</div>
-          <div><i class="fas fa-subway"></i> <%= property_viewing.property.distance_to_station %>m from <%= property_viewing.property.location %> station</div>
-          <div><i class="fas fa-bed"></i> <%= property_viewing.property.layout %></div>
-          <div><i class="fas fa-ruler-combined"></i> <%= property_viewing.property.size %></div>
-          <div><i class="fas fa-home"></i> <%= property_viewing.property.age %></div>
-          <div><i class="fas fa-money-check-alt"> </i> <%=  property_viewing.property.deposit %>,000</div>
+          <div style="margin-top: -12px;">
+            <div><i class="fas fa-subway"></i> <%= property_viewing.property.distance_to_station %> min from <%= property_viewing.property.location %> station</div>
+            <div><i class="fas fa-bed"></i> <%= property_viewing.property.layout %>
+              <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Layout</p>
+            </div>
+            <div><i class="fas fa-ruler-combined"></i> <%= property_viewing.property.size %>m²
+              <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Size</p>
+            </div>
+            <div><i class="fas fa-home"></i> <%= property_viewing.property.age %>
+              <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Age</p>
+            </div>
+            <div><i class="fas fa-money-check-alt"> </i> <%= property_viewing.property.deposit %>,000
+              <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Deposit</p>
+            </div>
+          </div>
         </div>
         <%= link_to "Reserve", new_property_reservation_path(property_viewing.property), class: "btn btn-success", style: "margin-bottom: 4px; color: white;"%>
     <% end %>
   </div>
 </div>
+
