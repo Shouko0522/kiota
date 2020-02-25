@@ -62,14 +62,14 @@
         <%= simple_form_for @property_viewing do |f| %>
           <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
           <%= f.input :status, :as => :hidden, :input_html => { :value => "liked" } %>
-          <%= f.button :submit, "Like", class: "btn btn-primary", style: "position: absolute; left: 60%; bottom: 15%;"%>
+          <%= f.button :submit, "Like", class: "btn btn-primary", style: "position: absolute; left: 60%; bottom: 7%;"%>
         <% end %>
       </div>
       <div class="dislike">
         <%= simple_form_for @property_viewing do |f| %>
           <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
           <%= f.input :status, :as => :hidden, :input_html => { :value => "disliked" } %>
-          <%= f.button :submit, "Dislike", class: "btn btn-danger", style: "position: absolute; left: 76%; bottom: 15%;"%>
+          <%= f.button :submit, "Dislike", class: "btn btn-danger", style: "position: absolute; left: 76%; bottom: 7%;"%>
         <% end %>
       </div>
     </div>
