@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-LAYOUT = ["1D", "1DK", "1LDK", "2DK", "2LDK", "2LDK"]
+LAYOUT = ["1LDK"]
 CITY = ["Meguro", "Ebisu", "Shibuya"]
 INFO = ["Elegant style", "Modern style", "Close to staion"]
 
@@ -43,10 +43,10 @@ User.create(email:"yann@gmail.com",password:"123456")
       pets: Faker::Boolean.boolean,
       distance_to_supermarket: rand(20),
       tatami: Faker::Boolean.boolean,
-      age: rand(50),
+      age: rand(10),
       floor: rand(5),
       distance_to_park: rand(20),
-      size: rand(50),
+      size: rand(29..50),
       layout: LAYOUT.sample,
       location: CITY.sample,
       user: User.create(email: Faker::Internet.email, password: "123456"),
