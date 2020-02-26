@@ -10,6 +10,7 @@ class User < ApplicationRecord
   # Renter
   has_many :property_viewings
   has_many :properties, through: :property_viewings
+  has_many :reservations
 
   def feed_properties
 

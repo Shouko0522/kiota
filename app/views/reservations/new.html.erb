@@ -1,60 +1,21 @@
 <div class="container">
   <div style="text-align: center;">
     <h2>Make your reservation</h2>
-      <%= form_for @reservations do |f| %>
-      <p class="Select" style="font-size: 20px;">Select your available day </p>
-        <div for="week" class="Monday">Monday
-          <%= select(:reservation, :meeting_date, [
-          "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00","unavailable"
-          ]) %> -
-          <%= select(:reservation, :Product, [
-          "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00","unavailable"
-          ]) %></div>
-        <div for="week" class="Tuesday">Tuesday
-          <%= select(:reservation, :meeting_date, [
-          "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00","unavailable"
-          ]) %> -
-          <%= select(:reservation, :Product, [
-          "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00","unavailable"
-          ]) %></div>
-        <div for="week" class="Wednesday">Wednesday
-          <%= select(:reservation, :meeting_date, [
-          "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00","unavailable"
-          ]) %> -
-          <%= select(:reservation, :Product, [
-          "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00","unavailable"
-          ]) %></div>
-        <div for="week" class="Thursday">Thursday
-          <%= select(:reservation, :meeting_date, [
-          "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00","unavailable"
-          ]) %> -
-          <%= select(:reservation, :Product, [
-          "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00","unavailable"
-          ]) %></div>
-        <div for="week" class="Friday">Friday
-          <%= select(:reservation, :meeting_date, [
-          "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00","unavailable"
-          ]) %> -
-          <%= select(:reservation, :Product, [
-          "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00","unavailable"
-          ]) %></div>
-        <div for="week" class="Saturday">Saturday
-          <%= select(:reservation, :meeting_date, [
-          "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00","unavailable"
-          ]) %> -
-          <%= select(:reservation, :Product, [
-          "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00","unavailable"
-          ]) %></div>
-         <div for="week" class="Sunday">Sunday
-          <%= select(:reservation, :meeting_date, [
-          "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00","unavailable"
-          ]) %> -
-          <%= select(:reservation, :Product, [
-          "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00","unavailable"
-          ]) %></div>
-        <%= f.input :Alien_registration_card_number %>
-        <%= f.input :password %>
-      <%= f.submit "Next", class: "next-button" %>
+      <%= simple_form_for new_property_reservation_path do |f| %>
+      <div>Chose your available day</div>
+      <div>Monday <%= f.select :Start, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %>-<%= f.select :End, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %></div>
+      <div>Tuesday <%= f.select :Start, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %>-<%= f.select :End, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %></div>
+      <div>Wednesday <%= f.select :Start, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %>-<%= f.select :End, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %></div>
+      <div>Thursday <%= f.select :Start, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %>-<%= f.select :End, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %></div>
+      <div>Friday <%= f.select :Start, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %>-<%= f.select :End, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %></div>
+      <div>Saturday <%= f.select :Start, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %>-<%= f.select :End, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %></div>
+      <div>Sunday <%= f.select :Start, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %>-<%= f.select :End, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %></div>
+
+      <%= f.input :Alien_registration_card_number %>
+      <%= f.input :Employer_name%>
+      <%= f.input :Salary %>
+      <%= f.input :Credit_card_number %>
+      <%= f.submit "Submit", class: "next-button" %>
        <% end %>
   </div>
 </div>
