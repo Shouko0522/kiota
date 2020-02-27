@@ -1,0 +1,32 @@
+<div class="container" style="text-align: center; margin-bottom: 6rem; margin-top: 4rem;">
+  <h2>Make your reservation</h2>
+  <%= form_for @user, url: profile_path, class: "form-control" do |f| %>
+  <div class="Choose_day" style="text-align: center;margin-top: 1rem;">Chose your available day</div>
+  <%= f.fields_for :availability do |fa| %>
+    <% time_options = options_for_select(%w[8:00 9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 18:00 19:00 20:00]) %>
+    <% Date::DAYS_INTO_WEEK.each do |day_name, day_index| %>
+    <div>
+      <%= day_name.to_s.capitalize %>
+      <%= fa.fields_for day_name do |fa_day| %>
+      <%= fa_day.select :start, time_options %>-<%= fa_day.select :end, time_options %>
+      <% end %>
+    </div>
+    <% end %>
+  <% end %>
+  <div class="Questions" style="text-align: center;margin-top: 2rem;">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name%>
+    <%= f.text_field :last_name%>
+    <%= f.date_select :dob %>
+    <%= f.text_field :address %>
+    <%= f.date_select :start_date%>
+    <%= f.text_field :phone_number %>
+    <%= f.text_field :registration_card_number %>
+    <%= f.number_field :salary %>
+    <%= f.text_field :employer_name %>
+    <%= f.submit "Submit", class: "btn btn-primary"%>
+  </div>
+  <% end %>
+</div>
+</div>
+
