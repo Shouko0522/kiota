@@ -1,5 +1,4 @@
-<div class="container">
-  <div style="text-align: center;">
+<div class="container" style="text-align: center;">
     <h2>Make your reservation</h2>
       <%= simple_form_for new_property_reservation_path do |f| %>
       <div>Chose your available day</div>
@@ -10,13 +9,12 @@
       <div>Friday <%= f.select :Start, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %>-<%= f.select :End, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %></div>
       <div>Saturday <%= f.select :Start, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %>-<%= f.select :End, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %></div>
       <div>Sunday <%= f.select :Start, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %>-<%= f.select :End, options_for_select(%w[9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 8:00 ×]) %></div>
-
       <%= f.input :Alien_registration_card_number %>
       <%= f.input :Employer_name%>
       <%= f.input :Salary %>
       <%= f.input :Credit_card_number %>
-      <%= f.submit "Submit", class: "next-button" %>
-       <% end %>
+      <%= f.submit "Submit", class: "button"%>
+      <% end %>
   </div>
 </div>
 
