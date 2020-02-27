@@ -1,27 +1,43 @@
-<div class="property_container">
-  <div class="property_card">
+<div class="dashboard-container">
+  <%= form_tag('/reservations/apply') do %>
+
+    <div class="text-center">
+      <%= submit_tag "Apply Selected", class: "reserve-all" %>
+    </div>  
+    
     <% @property_viewings.each do |property_viewing| %>
-      <%=cl_image_tag property_viewing.property.photo.key, height: 300, width: 350, crop: :fill %>
-         <div class="property-info">
-          <div class="price">¥<%= property_viewing.property.price %>,000/m</div>
-          <div style="margin-top: -12px;">
-            <div><i class="fas fa-subway"></i> <%= property_viewing.property.distance_to_station %> min from <%= property_viewing.property.location %> station</div>
-            <div><i class="fas fa-bed"></i> <%= property_viewing.property.layout %>
-              <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Layout</p>
-            </div>
-            <div><i class="fas fa-ruler-combined"></i> <%= property_viewing.property.size %>m²
-              <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Size</p>
-            </div>
-            <div><i class="fas fa-home"></i> <%= property_viewing.property.age %>
-              <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Age</p>
-            </div>
-            <div><i class="fas fa-money-check-alt"> </i> <%= property_viewing.property.deposit %>,000
-              <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Deposit</p>
-            </div>
+    <div class="dashboard-property-container">
+    <input class="checkbox" id="pvc-<%= property_viewing.id %>" type="checkbox" name="property_viewing_ids[]" value="<%= property_viewing.id %>" >
+    <label for="pvc-<%= property_viewing.id %>" >
+      <div class="dashboard-property">
+        <div class="image-price-div">
+          <%=cl_image_tag property_viewing.property.photo.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin-left: 12px; margin-top: 10px;" %>
+          <div class="price">
+            <h2>¥<%= property_viewing.property.price %>,000/m</h2>
           </div>
         </div>
-        <%= link_to "Reserve", new_property_reservation_path(property_viewing.property), class: "btn btn-success", style: "margin-bottom: 4px; color: white;"%>
+        <div class="dashboard-info">  
+          <div><i class="fas fa-subway"></i> 
+            <%= property_viewing.property.distance_to_station %> min from <%= property_viewing.property.location %> station
+          </div>
+          <div><i class="fas fa-ruler-combined"></i>
+            <%= property_viewing.property.size %>m²
+            <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Size</p>
+          </div>
+          <div><i class="fas fa-home"></i>
+            <%= property_viewing.property.age %>
+            <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Age</p>
+          </div>
+          <%= link_to "N/A", new_property_reservation_path(property_viewing.property), class: "btn btn-success", style: "color: white;"%>
+        </div>
+      </div>
+      </label>
+    </div>
     <% end %>
-  </div>
-</div>
 
+    <div class="text-center">
+      <%= submit_tag "Apply Selected", class: "reserve-all" %>
+    </div> 
+    
+  <% end %>
+</div>
