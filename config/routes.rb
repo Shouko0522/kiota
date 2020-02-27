@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
     scope '/reservations' do
 
+    post '/apply', to: 'reservations#apply'
     get '/new', to: 'reservations#new'
     post '/new', to: 'reservations#create'
     get '/confirm', to: 'reservations#confirm'

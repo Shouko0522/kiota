@@ -1,6 +1,7 @@
 .dashboard-container {
   margin-top: 4rem;
   margin-left: 1rem;
+  margin-right: 1rem;
   margin-bottom: 4rem;
 }
 
@@ -15,10 +16,21 @@
   border-radius: 20px;
 }
 
+.reserve-all {
+  background: linear-gradient(180deg, rgba(47, 238, 146, 0.77) -190%, rgba(47, 238, 146, 0.93) 255%);
+  border-radius: 20px;
+  padding: 8px 10px;
+  border-style: none;
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
 .price h2 {
   margin-top: 10px;
   font-size: 16px;
   font-weight: bold;
+  text-align: center;
   // margin: 0;
 }
 
@@ -32,4 +44,29 @@
 
 .dashboard-property .dashboard-info {
   padding: 16px;
+}
+
+.dashboard-property-container {
+  cursor: pointer;
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  label {
+    height: 170px;
+    background: white;
+    
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+
+  input[type=checkbox] + label {
+    color: #ccc;
+  } 
+  input[type=checkbox]:checked + label {
+    box-shadow: 0 0 35px rgba(15, 158, 62, 0.2);
+    
+  } 
 }
