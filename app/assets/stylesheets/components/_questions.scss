@@ -1,15 +1,38 @@
 .theme {
-  background: linear-gradient(rgba(47, 238, 146, 0.77), rgba(67, 67, 67, 1));
-  min-height: 100vh;
-  color: white;
+  background: white;
+  min-height: 89vh;
+  color: $white;
+  border-radius: 20px;
+  margin-top: 4rem;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.theme p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.theme-box {
+  width: 328px;
+  height: 117px;
+  background: rgba(186, 0, 217, 0.53);
+  border-radius: 20px;
+  position: absolute;
+  top: 23%;
+  left: 5.5%;
 }
 
 .question {
-  padding-top: 9rem;
+  // color: $purple;
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
-  line-height: 128.3%;
+  line-height: 149.3%;
   letter-spacing: 0.1em;
 }
 
@@ -31,15 +54,15 @@
   position: absolute;
   width: 114px;
   height: 40px;
-  left: 130px;
-  top: 497px;
+  left: 33%;
 }
 
 .go_back_button {
   position: absolute;
   top: 5px;
   left: 15px;
-  color:white;
+  color:grey;
+  z-index: 3;
 }
 
 .go_back_button:hover {
@@ -51,6 +74,8 @@
   position: absolute;
   top: 9px;
   left: 0px;
+  z-index: 3;
+  color: grey;
 }
 
 // For Question 1 use with the sliders
@@ -109,4 +134,7 @@
 .location-field {
   margin-top: 2rem;
   margin-bottom: 2rem;
+  position: absolute;
+  top: 40%;
+  left: 7%;
 }
