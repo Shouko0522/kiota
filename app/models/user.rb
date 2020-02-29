@@ -10,7 +10,6 @@ class User < ApplicationRecord
   # Renter
   has_many :property_viewings
   has_many :properties, through: :property_viewings
-  has_many :reservations
 
   def feed_properties
 
@@ -26,5 +25,13 @@ class User < ApplicationRecord
         and property_viewings.user_id = #{id}
     SQL
     ).where('property_viewings.id IS NULL')
+  end
+
+  def applied_reservations
+    PropertyViewing.where(reservation_status: "applied")
+  end
+
+  def confirmed_reservations
+    PropertyViewing.where(reservation_status: "confirmed")
   end
 end
