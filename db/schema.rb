@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_27_110648) do
+ActiveRecord::Schema.define(version: 2020_02_29_034523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,11 +55,11 @@ ActiveRecord::Schema.define(version: 2020_02_27_110648) do
     t.integer "floor"
     t.integer "size"
     t.string "location"
+    t.integer "deposit"
+    t.string "layout"
     t.integer "distance_to_supermarket"
     t.integer "distance_to_park"
     t.integer "distance_to_station"
-    t.integer "deposit"
-    t.string "layout"
     t.integer "key_money"
     t.float "latitude"
     t.float "longitude"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 2020_02_27_110648) do
     t.bigint "property_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "reservation_status"
     t.index ["property_id"], name: "index_property_viewings_on_property_id"
     t.index ["user_id"], name: "index_property_viewings_on_user_id"
   end

@@ -35,7 +35,9 @@ class User < ApplicationRecord
     PropertyViewing.where(reservation_status: "confirmed")
   end
 
+
   def profile_complete?
     false
   end
+
 end
