@@ -15,17 +15,17 @@
   <% end %>
   <div class="Questions" style="text-align: center;margin-top: 2rem;">
     <div><%= f.label :first_name %></div>
-    <%= f.text_field :first_name%>
+    <div><%= f.text_field :first_name%></div>
     <div style="margin-top: 1rem;"><%= f.label :last_name%></div>
-    <%= f.text_field :last_name%>
+    <div><%= f.text_field :last_name%></div>
     <div style="margin-top: 1rem;"><%= f.label :birthday%></div>
-    <%= f.date_select :dob %>
+    <div class="drop_down"><%= f.date_select :dob %></div>
     <div style="margin-top: 1rem;"><%= f.label :address%></div>
-    <%= f.text_field :address %>
+    <div><%= f.text_field :address %></div>
     <div style="margin-top: 1rem;"><%= f.label :when_do_you_want_to_start_to_live%></div>
-    <%= f.date_select :start_date%>
+    <div class="drop_down"><%= f.date_select :start_date%></div>
     <div style="margin-top: 1rem;"><%= f.label :phone_number%></div>
-    <%= f.text_field :phone_number %>
+    <div><%= f.text_field :phone_number %></div>
     <div style="margin-top: 1rem;"><%= f.label :registration_card_number %></div>
     <%= f.text_field :registration_card_number %>
     <div style="margin-top: 1rem;"><%= f.label :salary %></div>
