@@ -28,14 +28,16 @@ class User < ApplicationRecord
   end
 
   def applied_reservations
-    PropertyViewing.where(reservation_status: "applied")
+    PropertyViewing.where(status: "applied", user: self)
   end
 
   def confirmed_reservations
-    PropertyViewing.where(reservation_status: "confirmed")
+    PropertyViewing.where(status: "confirmed", user: self)
   end
+
 
   def profile_complete?
     false
   end
+
 end

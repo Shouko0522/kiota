@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+  get '/meetings', to: 'meetings#index'
+
   get '/dashboard', to: 'dashboard#index'
 
   get '/profile', to: 'users#show'
@@ -32,5 +34,9 @@ Rails.application.routes.draw do
         resources :reservations, only: [ :new, :create ]
       end
     end
+      require "sidekiq/web"
+          authenticate :user, lambda { |u| u.admin } do
+            mount Sidekiq::Web => '/sidekiq'
+          end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
