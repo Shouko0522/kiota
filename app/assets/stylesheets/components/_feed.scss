@@ -5,14 +5,19 @@ margin-left: 6px;
 background: #F3F3F3;
 }
 
-// .feed-card {
-// }
-
-.feed-img  {
+.active .feed-img  {
   border-radius: 20px;
 }
 
-.feed-location {
+.inactive {
+  height: 457px;
+  width: 350px;
+  margin-bottom: 14px;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.feed-img-location {
   position: absolute;
   top: 312px;
   font-size: 29px;
@@ -20,12 +25,46 @@ background: #F3F3F3;
   color: white;
   letter-spacing: 6%;
   left: 53px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+  text-shadow: 4px 2px 3px rgba(0, 0, 0, .5);
 }
 
+.feed-img-station {
+  position: absolute;
+  top: 364px;
+  font-size: 15px;
+  font-style: bold;
+  color: white;
+  letter-spacing: 6%;
+  left: 53px;
+  text-shadow: 4px 2px 3px rgba(0, 0, 0, .5);
+}
+
+.feed-img-price {
+  height: 49px;
+  width: 182px;
+  background-color: rgba(186, 0, 217, 0.6);
+  border-radius: 20px;
+  position: absolute;
+  top: 75%;
+  left: 49%;
+}
+
+.feed-img-price p {
+  color: white;
+  font-weight: bold;
+  font-size: 29px;
+  line-height: 159.3%;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+ 
+}
 .feed-info  {
   font-size: 25px;
   text-align: left;
+  background-color: white;
+  border-radius: 20px;
+  padding: 16px 8px;
 }
 
 .price  {
@@ -33,3 +72,18 @@ background: #F3F3F3;
   text-align: right;
 }
 
+.feed-yes-btn {
+  height: 60px;
+  width: 60px;
+  background-image: url('Logo-62x65.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.feed-no-btn {
+  height: 60px;
+  width: 60px;
+  background-image: url('no-button.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}

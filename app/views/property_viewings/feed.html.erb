@@ -14,32 +14,36 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100 feed-img" src="<%= cl_image_path @property.photo.key, height: 400, width: 350, crop: :fill %>" alt="First slide" style="position:relative;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48" style="position: absolute; top: 320px; left: 18px"><title>ic_location_on_48px</title>
+          <img class="d-block w-100 feed-img" src="<%= cl_image_path @property.photo.key, height: 400, width: 350, crop: :fill %>" alt="First slide" style="position:relative; opacity: 80%;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48" style="position: absolute; top: 320px; left: 18px;"><title>ic_location_on_48px</title>
               <g class="nc-icon-wrapper" fill="#111111">
                 <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
               </g>
             </svg>
-          <p class="feed-location"><%= @property.location %><p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48" style="position: absolute; top: 360px; left: 18px"><title>ic_directions_subway_48px</title>
+              <g class="nc-icon-wrapper" fill="#ffffff">
+                <path d="M24 4C15.16 4 8 5 8 12v19c0 3.87 3.14 7 7 7l-3 3v1h24v-1l-3-3c3.87 0 7-3.13 7-7V12c0-7-7.16-8-16-8zm-9 30c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm7-12H12V12h10v10zm11 12c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-12H26V12h10v10z"/>
+              </g>
+            </svg>
+            <div class="feed-img-price">
+              <p>¥<%= @property.price %>,000/m</p>
+            </div>
+          <p class="feed-img-location"><%= @property.location %><p>
+          <p class="feed-img-station"><%= @property.distance_to_station %> minute walk<p>
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100 map" src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/<%=@property.longitude%>,<%=@property.latitude%>,10.45,0,0/600x1000?access_token=pk.eyJ1Ijoic2hvdWtvMDUyMiIsImEiOiJjazM4bDU2NW4wMzl3M2lxZTE5cml5a2tlIn0.s7I7YWPUw2sOQdWENcgDtA" alt="Second slide">
+          <img class="d-block w-100 inactive" src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/<%=@property.longitude%>,<%=@property.latitude%>,10.45,0,0/600x1000?access_token=pk.eyJ1Ijoic2hvdWtvMDUyMiIsImEiOiJjazM4bDU2NW4wMzl3M2lxZTE5cml5a2tlIn0.s7I7YWPUw2sOQdWENcgDtA" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="..." alt="Third slide">
+          <img class="d-block w-100 inactive" src="..." alt="Third slide">
         </div>
       </div>
       
     </div>
 
       <div class="feed-info">
-        <div class="price">
-          ¥<%= @property.price %>,000/m
-        </div>
         <div style="margin-top: -12px;">
-          <div>
-            <i class="fas fa-subway"></i> <%= @property.distance_to_station %>m from <%= @property.location %> station
-          </div>
+        <h1 class="text-center" style="color: rgba(186, 0, 217); font-size: 29px;">Additional Information</h1>
           <div>
             <i class="fas fa-bed"></i> <%= @property.layout %>
             <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Layout</p>
@@ -62,14 +66,14 @@
         <%= simple_form_for @property_viewing do |f| %>
           <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
           <%= f.input :status, :as => :hidden, :input_html => { :value => "liked" } %>
-          <%= f.button :submit, "Like", class: "btn btn-primary", style: "position: absolute; left: 60%; bottom: 7%;"%>
+          <%= f.button :submit, "", class: "feed-yes-btn", style: "position: absolute; left: 60%; bottom: 0%;"%>
         <% end %>
       </div>
       <div class="dislike">
         <%= simple_form_for @property_viewing do |f| %>
           <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
           <%= f.input :status, :as => :hidden, :input_html => { :value => "disliked" } %>
-          <%= f.button :submit, "Dislike", class: "btn btn-danger", style: "position: absolute; left: 76%; bottom: 7%;"%>
+          <%= f.button :submit, "", class: "feed-no-btn", style: "position: absolute; left: 76%; bottom: 0%;"%>
         <% end %>
       </div>
     </div>
