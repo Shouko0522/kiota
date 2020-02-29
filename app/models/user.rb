@@ -34,4 +34,5 @@ class User < ApplicationRecord
   def confirmed_reservations
     PropertyViewing.where(reservation_status: "confirmed")
   end
+
 end
