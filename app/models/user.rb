@@ -26,4 +26,12 @@ class User < ApplicationRecord
     SQL
     ).where('property_viewings.id IS NULL')
   end
+
+  def applied_reservations
+    PropertyViewing.where(reservation_status: "applied")
+  end
+
+  def confirmed_reservations
+    PropertyViewing.where(reservation_status: "confirmed")
+  end
 end
