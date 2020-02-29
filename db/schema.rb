@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2020_02_29_055135) do
 
   # These are extensions that must be enabled in order to support this database
@@ -80,6 +81,7 @@ ActiveRecord::Schema.define(version: 2020_02_29_055135) do
     t.bigint "property_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "reservation_status"
     t.index ["property_id"], name: "index_property_viewings_on_property_id"
     t.index ["user_id"], name: "index_property_viewings_on_user_id"
   end
