@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
     post '/apply', to: 'reservations#apply'
     get '/new', to: 'reservations#new'
-    post '/new', to: 'reservations#create'
+    post '/', to: 'reservations#create'
     get '/confirm', to: 'reservations#confirm'
     post '/confirm', to: 'reservations#submit'
 
