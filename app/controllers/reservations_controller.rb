@@ -29,14 +29,15 @@ class ReservationsController < ApplicationController
       current_user.property_viewings.where(id: @viewing_ids).update_all(status: "applied")
       redirect_to dashboard_path
 
-    else 
+    else
+      @viewing_ids = params[:property_viewings].keys
       current_user.property_viewings.where(id: @viewing_ids).update_all(status: "applied")
       redirect_to profile_edit_path
-      
+
     end
     # redirect_to new_property_reservation_path(@reservation)
 
-    
+
     # @property_viewings = PropertyViewing.find(@viewing_ids)
     # @property_viewings.each do |property_viewing|
     #   property_viewing.status = "applied"

@@ -1,19 +1,16 @@
 <div class= "meeting-container">
 
+  <h1 class= "text-center"> confirmed reservation </h1>
     <% @confirmed_reservations.each do |confirmed_reservation| %>
     <div class="meeting-property-container">
-  <h1 class= "text-center"> confirmed reservation </h1>
 
       <div class="meeting-property">
-          <%=cl_image_tag confirmed_reservation.photo.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin-left: 12px; margin-top: 10px;" %>
+          <%=cl_image_tag confirmed_reservation.property.photo.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin-left: 12px; margin-top: 10px;" %>
         </div>
         <div class="meeting-info">
-            <%= confirmed_reservation.property.date %>
+            <%= confirmed_reservation.confirmed_time %>
           </div>
-          <div>
-            <%= confirmed_reservation.property.time %>
 
-          </div>
           <div>
             <%= confirmed_reservation.property.location %>
 
@@ -26,24 +23,28 @@
 
     </div>
     <% end %>
+    <div class= "meeting-container">
 
+  <h1 class= "text-center"> applied reservation </h1>
+    <% @applied_reservations.each do |applied_reservation| %>
+    <div class="meeting-property-container">
 
+      <div class="meeting-property">
+          <%=cl_image_tag applied_reservation.property.photo.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin-left: 12px; margin-top: 10px;" %>
+        </div>
 
+          <div>
+            <%= applied_reservation.property.location %>
 
-  <div class= "meeting-card">
+          </div>
 
-  </div>
+          </div>
+          <%#= link_to "", property_viewing.property, class: "btn btn-success", style: "color: white;"%>
+        </div>
+      </div>
 
-
-  <h1 class= "text-center"> to be continued</h1>
-
-  <div class= "meeting-card">
-  </div>
-
-  <h1 class= "text-center"> applied</h1>
-
-    <div class= "meeting-card">
     </div>
+    <% end %>
 
-</div>
+
 
