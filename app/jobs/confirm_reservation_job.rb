@@ -5,7 +5,7 @@ class ConfirmReservationJob < ApplicationJob
     property_viewing = PropertyViewing.find(property_viewings_id)
     puts "Confirm resevation of #{property_viewings_id}"
     # TODO: perform a time consuming task like Clearbit's Enrinchment API.
-    property_viewing.reservation_status = "confirmed"
+    property_viewing.status = "confirmed"
     property_viewing.save
     puts "Done! "
   end

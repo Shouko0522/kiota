@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
+  get '/meetings', to: 'meetings#index'
+
   get '/dashboard', to: 'dashboard#index'
 
   get '/profile', to: 'users#show'

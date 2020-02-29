@@ -3,7 +3,8 @@ class UsersController < ApplicationController
     @user = current_user
     # raise
     @user.update(user_params)
-    redirect_to profile_path
+
+    redirect_to meetings_path
   end
 
   def edit
