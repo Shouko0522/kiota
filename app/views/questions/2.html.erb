@@ -1,11 +1,15 @@
 <div class="theme">
-  <h1 class="text-center question">Nearest Station</h1>
+  <div class="theme-box">
+    <h1 class="text-center question">Nearest Station</h1>
+  </div>
   <%= simple_form_for(@user, url: question_update_path) do |f| %>
-    <div class="form-group text-center">
-      <div class="justify-content-center location-field">
+    <div class="form-group text-center location-field">
+      <div class="justify-content-center">
       <%= text_field(:user, :desired_location) %>
-      <%= f.submit "Next", class: "next-button" %>
       </div>
+    </div>
+    <div class="text-center">
+      <%= f.submit "Next", class: "next-button", style: "top:80%" %>
     </div>
   <% end %>
   <%= render 'shared/question_layout' %>
