@@ -29,11 +29,15 @@ User.create(email:"yann@gmail.com",password:"123456")
 
 20.times do |index|
   photos = [
-    'https://goodnaturestation.com/wp/wp-content/themes/biostyle/img/category/room/top-banner-background-room7.jpg',
-    'https://images.unsplash.com/photo-1486304873000-235643847519?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80',
-    'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-    'https://images.unsplash.com/photo-1538183744096-546dd974a90e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80',
-    'https://images.unsplash.com/photo-1545454760-a8e55231441c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2551&q=80'
+    'http://imgs.u-note.me/note/uploadimage/1517469286245.jpg',
+    'https://up.gc-img.net/post_img_web/2016/10/xes771bmnKlLojl.jpeg',
+    'https://the-tanaka.com/wp-content/uploads/2017/05/room-2-768x576.jpg',
+    'https://journal.anabuki-style.com/wp-content/uploads/2018/02/02-2.jpg',
+    'http://imgs.u-note.me/note/uploadimage/1517462957903.jpg',
+    'https://satellite-img.athome.co.jp/ag/entry_id/15045/slide_01.jpg',
+    'https://cdn.roomclip.jp/v1/1536/roomclip-bucket/img_1536/8d7079273285cf374d52f533ab35b9624dab0c66.jpg',
+    'https://simple-hira.com/wp-content/uploads/2017/11/f6ba78c90a4d93b9f5f93a35e791aa18.jpg',
+    'https://img02.ti-da.net/usr/aikata/CA320087.JPG'
   ]
 
     property = Property.new(
