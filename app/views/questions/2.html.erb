@@ -13,17 +13,29 @@
   </div>
   <p>Your preferences</p>
   <div class="theme-box">
-    <h1 class="text-center question">Nearest Station</h1>
+    <h1 class="text-center question">Where do you party?</h1>
   </div>
+
   <%= simple_form_for(@user, url: question_update_path) do |f| %>
-    <div class="form-group text-center location-field">
+    <div class="form-group text-center" style="position: absolute; top: 40%; left: 40%;">
       <div class="justify-content-center">
-      <%= text_field(:user, :desired_location) %>
+      <label for="partylocation" class="question-subtext" ></label>
+      <%= select(:user, :partylocation, [
+        ['Roppongi'],
+        ['Shibuya'],
+        ['Shinjuku'],
+        ['Ueno'],
+        ['Yurakucho'],
+        ['Ginza'],
+        ['Ikebukuro']
+        ]) %>
       </div>
     </div>
-    <div class="text-center">
-      <%= f.submit "Next", class: "next-button", style: "top:80%" %>
+    
+    <div class="continue-div">
+      <%= f.submit "", class: "continue-bttn" %>
     </div>
+    
   <% end %>
   <%= render 'shared/question_layout' %>
 </div>

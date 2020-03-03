@@ -1,49 +1,35 @@
 // Specific CSS for your home-page
 .landing-img {
-  background-image: asset_url("landing-page.jpg");
+  background-image: asset_url("landing-page-final.svg");
   background-repeat: no-repeat;
   height: 100vh;
   background-position: center;
-  
 }
 
 .tagline {
   position: absolute;
-  top: 21%;
+  top: 55%;
   left: 6%;
-  
   height: 10vh; 
-  width: 50vh; 
-  
-  
+  width: 50vh;   
 }
 
 .tagline h2 {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: normal;
   color: white;
   text-align: center;
-  padding-top: 8px;
-  text-shadow: 3px 0px 2px rgb(0, 0, 0);
+  text-shadow: 0px 4px 4px #000000;
 }
 
 .get-started-button {
-  background: rgb(47, 238, 146);
-  border-radius: 8px;
-  border-style: none;
-  color: white;
+  background-image: asset_url("landing-start.svg");
+  border: none;
   position: absolute;
   width: 126px;
-  height: 44px;
+  height: 174px;
   left: 122px;
   top: 74%;
-  padding-top: 9px;
-  font-size: large;
-}
-
-
-.get-started-button:hover {
-  text-decoration: none;
-  color: white;
-  background: rgb(47, 238, 146);
+  background-position: center;
+  background-repeat: no-repeat;
 }

@@ -1,5 +1,5 @@
 .theme {
-  background: white;
+  background: #F3F3F3;
   min-height: 89vh;
   color: $white;
   border-radius: 20px;
@@ -42,8 +42,8 @@
 }
 
 .theme-box {
-  width: 328px;
-  height: 117px;
+  width: 338px;
+  height: 125px;
   background: rgba(186, 0, 217, 0.53);
   border-radius: 20px;
   position: absolute;
@@ -55,7 +55,7 @@
   // color: $purple;
   font-style: normal;
   font-weight: 600;
-  font-size: 36px;
+  font-size: 29px;
   line-height: 149.3%;
   letter-spacing: 0.1em;
 }
@@ -70,15 +70,19 @@
   margin-top: 2rem;
 }
 
-.next-button {
-  background: linear-gradient(180deg, rgba(47, 238, 146, 0.77) -190%, rgba(47, 238, 146, 0.93) 255%);
-  border-radius: 8px;
-  border-style: none;
-  color: white;
+.continue-div {
   position: absolute;
-  width: 114px;
-  height: 40px;
-  left: 33%;
+  top: 80%;
+  left: 39%;
+}
+
+.continue-bttn {
+  background-image: asset_url('next-btn.svg');
+  height: 95px;
+  width: 95px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border:none;
 }
 
 .go_back_button {
@@ -106,8 +110,8 @@
 
 .rangeValues {
   font-style: normal;
-  font-weight:200;
-  font-size: 14px;
+  font-weight: normal;
+  font-size: 22px;
   line-height: 128.3%;
   letter-spacing: 0.1em;
   margin-top: 2rem;
