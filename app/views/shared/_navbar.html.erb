@@ -1,6 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to dashboard_path(current_user), class: "navbar-brand" do %>
-    <%= image_tag "Navbar-Logo-kiota-196x196.png"%>
+    <%= image_tag "Navbar-Logo-kiota.png"%>
+  <% end %>
+  <%= link_to dashboard_path(current_user), class: "navbar-brand-dashboard" do %>
+    <%= image_tag "kiota-logo-no-circle.png"%>
   <% end %>
   <p><%#= current_user.email  %></p>
 

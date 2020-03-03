@@ -1,4 +1,5 @@
 <div class="dashboard-container">
+  <h1 style="color: rgba(186, 0, 217); font-size: 18px; text-align: center;">Your liked properties</h1>
   <%= form_tag apply_path, method: :post do %>
     <div class="text-center">
       <%= submit_tag "Apply Selected", class: "reserve-all" %>
@@ -12,7 +13,7 @@
             <div class="image-price-div">
               <%=cl_image_tag property_viewing.property.photo.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin-left: 12px; margin-top: 10px;" %>
               <div class="price">
-                <h2>¥<%= property_viewing.property.price %>,000/m</h2>
+                <h2>¥<%= property_viewing.property.price %>,000</h2>
               </div>
             </div>
             <div class="dashboard-info">
@@ -23,11 +24,11 @@
                 <%= property_viewing.property.size %>m²
                 <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Size</p>
               </div>
-              <div><i class="fas fa-home"></i>
-                <%= property_viewing.property.age %>
+              <div><i class="fas fa-heartbeat"></i>
+                <%= property_viewing.property.age %> years old
                 <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Age</p>
               </div>
-              <%= link_to "N/A", new_property_reservation_path(property_viewing.property), class: "btn btn-success", style: "color: white;"%>
+              
             </div>
           </div>
         <% end %>
