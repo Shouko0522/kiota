@@ -1,23 +1,46 @@
 // Specific CSS for your home-page
 .landing-img {
-  background-image: asset_url("kiota_landing_page.png");
+  background-image: asset_url("landing-page.jpg");
+  background-repeat: no-repeat;
   height: 100vh;
   background-position: center;
+  
+}
+
+.tagline {
+  position: absolute;
+  top: 21%;
+  left: 6%;
+  
+  height: 10vh; 
+  width: 50vh; 
+  
+  
+}
+
+.tagline h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding-top: 8px;
+  text-shadow: 3px 0px 2px rgb(0, 0, 0);
 }
 
 .get-started-button {
-  background: linear-gradient(180deg, rgba(47, 238, 146, 0.77) -190%, rgba(47, 238, 146, 0.93) 255%);
+  background: rgb(47, 238, 146);
   border-radius: 8px;
   border-style: none;
   color: white;
   position: absolute;
   width: 126px;
   height: 44px;
-  left: 130px;
-  top: 497px;
-  padding-top: 7px;
+  left: 122px;
+  top: 74%;
+  padding-top: 9px;
   font-size: large;
 }
+
 
 .get-started-button:hover {
   text-decoration: none;

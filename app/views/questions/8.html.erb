@@ -1,9 +1,21 @@
 <div class="theme">
+  <div class="progress-bar">
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="purple-bar"></div>
+    <div class="purple-bar"></div>
+  </div>
+  <p>Your preferences</p>
   <div class="theme-box">
-
     <h1 class="text-center question" style="font-size: 27px">Do you own a pair of cycling shorts?</h1>
   </div>
-  <div style="text-align: center;">
+  <div style="text-align: center; padding-top: 13rem; color: purple;">
     <%= form_for(@user, url: question_update_path) do |f| %>
       <div class="justify-content-center">
         <%= f.radio_button :wants_station_nearby, true %>No

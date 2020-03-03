@@ -12,8 +12,16 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 68px;
-  top: 0px;
-  left: 160px;
+  width: 98px;
+  top: 20px;
+  left: 140px;
+  position: absolute;
+}
+
+.navbar-lewagon .navbar-brand-dashboard img {
+  width: 42px;
+  height: 40px;
+  top: 6px;
+  right: 2px;
   position: absolute;
 }

@@ -8,13 +8,37 @@
   margin-right: 4px;
 }
 
+.progress-bar {
+  display: flex;
+  flex-flow: inherit;
+  background: none !important;
+  border: none;
+}
+
+.progress-bar .green-bar {
+  height: 6px;
+  width: 29px;
+  border-radius: 20px;
+  background: $green;
+  margin-right: 4px;
+  margin-top: 10px;
+}
+
+.progress-bar .purple-bar {
+  height: 6px;
+  width: 29px;
+  border-radius: 20px;
+  background: rgba(186, 0, 217, 0.53);
+  margin-right: 4px;
+  margin-top: 10px;
+}
+
 .theme p {
-  font-style: normal;
-  font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 2rem;
+  color: $purple;
 }
 
 .theme-box {
