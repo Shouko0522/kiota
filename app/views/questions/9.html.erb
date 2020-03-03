@@ -1,17 +1,32 @@
 <div class="theme">
+  <div class="progress-bar">
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="green-bar"></div>
+    <div class="purple-bar"></div>
+  </div>
+  <p>Your preferences</p>
   <div class="theme-box">
     <h1 class="text-center question">Have any pets?</h1>
   </div>
-      <%= form_for(@user, url: question_update_path) do |f| %>
-        <div class="form-group" style="text-align: center;">
-          <div class="justify-content-center">
-            <%= f.radio_button :pets, true  %>Yes
-            <%= f.radio_button :pets, false  %>No
-          </div>
-          <div>
-            <%= f.submit "Next", class: "next-button" %>
-          </div>
+  <div style="text-align: center; padding-top: 13rem; color: purple;">
+    <%= form_for(@user, url: question_update_path) do |f| %>
+      <div class="form-group" style="text-align: center;">
+        <div class="justify-content-center">
+          <%= f.radio_button :pets, true  %>Yes
+          <%= f.radio_button :pets, false  %>No
         </div>
-      <% end %>
+        <div>
+          <%= f.submit "Next", class: "next-button" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
   <%= render 'shared/question_layout' %>
 </div>
