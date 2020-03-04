@@ -1,41 +1,42 @@
 <div class="theme">
-  <div class="progress-bar">
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-  </div>
-  <p>Your preferences</p>
-  <div class="theme-box">
-    <h1 class="text-center question">Where do you party?</h1>
-  </div>
-
-  <%= simple_form_for(@user, url: question_update_path) do |f| %>
-    <div class="form-group text-center" style="position: absolute; top: 40%; left: 40%;">
-      <div class="justify-content-center">
-      <label for="partylocation" class="question-subtext" ></label>
-      <%= select(:user, :partylocation, [
-        ['Roppongi'],
-        ['Shibuya'],
-        ['Shinjuku'],
-        ['Ueno'],
-        ['Yurakucho'],
-        ['Ginza'],
-        ['Ikebukuro']
-        ]) %>
+  <div class="img-box">
+    <div class= "white-box">
+      <p>Tell us about yourself</p>
+      <div class="progress-bar">
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
       </div>
     </div>
-    
-    <div class="continue-div">
-      <%= f.submit "", class: "continue-bttn" %>
+  </div>
+  <div class="question-box">
+    <h1 class="text-center question">Where do you work?</h1>
+
+    <%= simple_form_for(@user, url: question_update_path) do |f| %>
+      <div class="form-group text-center">
+        <label for="work_location" class="question-subtext" ></label>
+          <%= select(:user, :work_location, [
+            ['Roppongi'],
+            ['Shibuya'],
+            ['Shinjuku'],
+            ['Ueno'],
+            ['Yurakucho'],
+            ['Ginza'],
+            ['Ikebukuro']
+            ]) %>
+        </div>
+      </div>
     </div>
-    
-  <% end %>
+    <div class="text-center" style="position: absolute; bottom: 15%; left: 30%;">
+      <%= f.submit "Continue", class:"choice-button" %>
+    </div>
+    <% end %>
   <%= render 'shared/question_layout' %>
 </div>

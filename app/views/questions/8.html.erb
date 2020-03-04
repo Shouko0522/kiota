@@ -1,31 +1,39 @@
 <div class="theme">
-  <div class="progress-bar">
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-  </div>
-  <p>Your preferences</p>
-  <div class="theme-box">
-    <h1 class="text-center question" style="font-size: 27px">Do you own a pair of cycling shorts?</h1>
-  </div>
-  <div style="text-align: center; padding-top: 13rem; color: purple;">
-    <%= form_for(@user, url: question_update_path) do |f| %>
-      <div class="justify-content-center">
-        <%= f.radio_button :wants_station_nearby, true %>No
-        <%= f.radio_button :wants_station_nearby, false %>Yes
+  <div class="img-box">
+    <div class= "white-box">
+      <p>Tell us about yourself</p>
+      <div class="progress-bar">
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
       </div>
-      
-      <div class="text-center">
-        <%= f.submit "Next", class: "next-button", style: "top:80%" %>
-      </div>
-    <% end %>
+    </div>
+  </div>
+  <div class="question-box">
+    <h1 class="text-center question" style="font-size: 27px">Now let's talk about priorities, beer or coffee?</h1>
+    <div class="button-div" style="text-align: center">
+      <%= form_for(@user, url: question_update_path) do |f| %>
+        <div class="justify-content-center">
+          <%= f.check_box :wants_bar_nearby, checked: true, hidden: true %>
+          <%= f.submit "Beer", class: "choice-button" %>
+        </div>
+      <% end %>
+
+      <%= form_for(@user, url: question_update_path) do |f| %>
+        <div class="justify-content-center">
+          <%= f.check_box :wants_cafe_nearby, checked: true, hidden: true %>
+          <%= f.submit "Coffee", class: "choice-button" %>
+        </div>
+      <% end %>
+
+    </div>
   </div>
   <%= render 'shared/question_layout' %>
 </div>

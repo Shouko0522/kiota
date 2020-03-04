@@ -1,17 +1,22 @@
 .feed-container {
 margin-top: 3.6rem;
-margin-right: 6px;
-margin-left: 6px;
+// margin-right: 6px;
+// margin-left: 6px;
 background: #F3F3F3;
 }
 
 .active .feed-img  {
-  border-radius: 20px;
+  // border-radius: 20px;
+  // height: 100%;
+}
+
+.active {
+  height: 607px;
 }
 
 .inactive {
-  height: 400px;
-  width: 350px;
+  height: 100vh;
+  width: 100%;
   padding-bottom: 1rem;
   background-position: center;
   border-radius: 20px;
@@ -88,15 +93,6 @@ background: #F3F3F3;
 .feed-criteria-description p {
   color: $green;
   font-size: 16px;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-.feed-criteria-explanation p {
-  color: $green;
-  font-size: 12px;
-  margin-top: -2;
-  margin-left: 17px;
   margin-bottom: 0;
   text-align: center;
 }

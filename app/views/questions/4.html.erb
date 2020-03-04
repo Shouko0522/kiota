@@ -1,39 +1,48 @@
 <div class="theme">
-  <div class="progress-bar">
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-  </div>
-  <p>Your preferences</p>
-  <div class="theme-box">
-    <h1 class="text-center question" style="font-size: 28px;">How much space do you need?</h1>
-  </div>
-    <%= simple_form_for(@user, url: question_update_path) do |f| %>
-      <div class="form-group text-center" style="position: absolute; top: 40%; left: 40%;">
-        <div class="justify-content-center">
-        <label for="pricerange" class="question-subtext" ></label>
-        <%= select(:user, :layout, [
-          ['25m²'],
-          ['35m²'],
-          ['45m²'],
-          ['55m²'],
-          ['65m²'],
-          ['70m²'],
-          ['80m²'],
-          ['100m²'],
-          ]) %>
-        </div>
+  <div class="img-box">
+    <div class= "white-box">
+      <p>Tell us about yourself</p>
+      <div class="progress-bar">
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
       </div>
-      <div class="text-center">
-        <%= f.submit "Next", class: "next-button", style: "top:80%" %>
+    </div>
+  </div>
+  <div class="question-box">
+    <h1 class="text-center question" style= "font-size: 24px">Would you describe yourself as a minimalist?</h1>
+    <div class="button-div" style="text-align: center">
+      <div style="text-align: center; margin-top: 2rem;">
+        <%= form_for(@user, url: question_update_path) do |f| %>
+          <div class="justify-content-center">
+            <%= f.check_box :size_desired, checked: true, hidden:  50 %>
+            <%= f.submit "Yes I would ", class:"choice-button" %>
+          </div>
+        <% end %>
+
+        <%= form_for(@user, url: question_update_path) do |f| %>
+          <div class="justify-content-center">
+            <%= f.check_box :size_desired, checked: false, hidden: 50 %>
+            <%= f.submit "Not particularly", class:"choice-button" %>
+          </div>
+        <% end %>
+
+        <%= form_for(@user, url: question_update_path) do |f| %>
+          <div class="justify-content-center">
+            <%= f.check_box :size_desired, checked: false, hidden: 50 %>
+            <%= f.submit "Not in the slightest", class:"choice-button" %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
-    <%= render 'shared/question_layout' %>
+    </div>
+    
+  </div>
+  <%= render 'shared/question_layout' %>
 </div>

@@ -9,24 +9,27 @@
     <div class="green-bar"></div>
     <div class="green-bar"></div>
     <div class="green-bar"></div>
-    <div class="purple-bar"></div>
+    <div class="green-bar"></div>
   </div>
   <p>Your preferences</p>
-  <div class="theme-box">
-    <h1 class="text-center question">Have any pets?</h1>
+  <div class= "theme-box">
+    <h1 class="text-center question" style="font-size: 28px;">Tatami mats: love them or hate them?</h1>
   </div>
-  <div style="text-align: center; padding-top: 13rem; color: purple;">
+  <div style="text-align: center">
     <%= form_for(@user, url: question_update_path) do |f| %>
-      <div class="form-group" style="text-align: center;">
-        <div class="justify-content-center">
-          <%= f.radio_button :pets, true  %>Yes
-          <%= f.radio_button :pets, false  %>No
-        </div>
-        <div>
-          <%= f.submit "Next", class: "next-button" %>
-        </div>
+      <div class="justify-content-center mb-3">
+        <%= f.check_box :tatami, checked: true, hidden: true %>
+        <%= f.submit "Love them", class: "yes-button" %>
+      </div>
+    <% end %>
+
+    <%= form_for(@user, url: question_update_path) do |f| %>
+      <div class="justify-content-center">
+        <%= f.check_box :tatami, checked: false, hidden: true %>
+        <%= f.submit "Hate them", class: "no-button" %>
       </div>
     <% end %>
   </div>
-  <%= render 'shared/question_layout' %>
 </div>
+
+<%= render 'shared/question_layout' %>
