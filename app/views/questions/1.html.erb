@@ -1,35 +1,39 @@
 <div class="theme">
-  <div class="progress-bar">
-    <div class="green-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-  </div>
-  <p>Your preferences</p>
-  <div class="theme-box">
-    <h1 class="text-center question">How much are you willing to shell out every month?</h1>
-  </div>
-  <%= form_for(@user, url: question_update_path) do |f| %>
-    <div class="form-group text-center" style="position: absolute; left: 10%; top: 332px;">
-      <label for="pricerange" style="color: #2FEE92;"></label>
-      <div class="d-flex justify-content-center">
-        <section class="range-slider" data-controller="sliders" style= "color: #BA00D9; font-size: 29px" >
-          <span class="rangeValues"></span>
-          <input name="user[min_price]" value="40000" min="10000" max="350000" step="1000" type="range" id="slider1">
-          <input name="user[max_price]" value="250000" min="10000" max="350000" step="1000" type="range" id="slider2">
-        </section>
+  <div class="img-box">
+    <div class= "white-box">
+      <p>Tell us about yourself</p>
+      <div class="progress-bar">
+        <div class="green-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
       </div>
     </div>
-    
-    <div class="continue-div">
-      <%= f.submit "", class: "continue-bttn" %>
+  </div>
+  <div class="question-box">
+    <h1 class="text-center question">How much is your monthly budget?</h1>
+    <%= form_for(@user, url: question_update_path) do |f| %>
+      <div class="form-group text-center">
+        <label for="pricerange" style="color: #2FEE92;"></label>
+        <div class="d-flex justify-content-center">
+          <section class="range-slider" data-controller="sliders" style= "color: #BA00D9; font-size: 29px" >
+            <span class="rangeValues"></span>
+            <input name="user[min_price]" value="40000" min="10000" max="350000" step="1000" type="range" id="slider1">
+            <input name="user[max_price]" value="250000" min="10000" max="350000" step="1000" type="range" id="slider2">
+          </section>
+        </div>
+      </div>
     </div>
-  <% end %>
+      
+      <div class="continue-div">
+        <%= f.submit "", class: "continue-bttn" %>
+      </div>
+    <% end %>
   <%= render 'shared/question_layout' %>
 </div>
