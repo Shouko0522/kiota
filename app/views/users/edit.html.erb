@@ -1,14 +1,33 @@
-<div class="container" style="text-align: center; margin-bottom: 6rem; margin-top: 4rem; color: rgba(186, 0, 217);">
+
+<div class="containe" style="text-align: center; margin-bottom: 6rem; margin: 1rem; margin-top: 4rem; color: rgba(186, 0, 217);">
     <h2 >Make your reservation</h2>
       <%= form_for @user, url: profile_path, class: "form-control" do |f| %>
       <div style="text-align: center;margin: 1rem; ">Chose your available day</div>
       <%= f.fields_for :availability do |fa| %>
         <% time_options = options_for_select(%w[8:00 9:00 10:00 11:00 12:00 13:00 14:00 15:00 16:00 17:00 18:00 19:00 20:00]) %>
         <% Date::DAYS_INTO_WEEK.each do |day_name, day_index| %>
+
+        <div class="row" >
+          <div class="col-1">
+            <input class="checkbox" type="checkbox" class="form-check-input">
+          </div>
+          <div class="col-4">
+            <%= day_name.to_s.capitalize %>
+          </div>
+          <%= fa.fields_for day_name do |fa_day| %>
+            <div class="col-3">
+              <%= fa_day.select :start, time_options %>
+            </div>
+            <div class="col-1"> - </div>
+            <div class="col-3">
+              <%= fa_day.select :end, time_options %>
+            </div>
+
         <div>
           <input class="checkbox" type="checkbox" class="form-check-input"> <%= day_name.to_s.capitalize %>
           <%= fa.fields_for day_name do |fa_day| %>
           <%= fa_day.select :start, time_options %>-  <%= fa_day.select :end, time_options %>
+
           <% end %>
         </div>
         <% end %>
@@ -46,6 +65,3 @@
     </div>
   </div>
 </div>
-
-
-
