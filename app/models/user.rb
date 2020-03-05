@@ -14,8 +14,10 @@ class User < ApplicationRecord
   def feed_properties
 
     to_be_seen_properties
-      .where('location = ?', desired_location)
-      .where('pets = ?', pets)
+      .where('location = ?', work_location)
+      .or(to_be_seen_properties.where('location = ?', partylocation)) 
+      .where('price <= ?', max_price)
+      .where('size >= ?', size_desired)
       # .where('')
   end
 
