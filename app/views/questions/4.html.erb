@@ -17,30 +17,22 @@
     </div>
   </div>
   <div class="question-box">
-    <h1 class="text-center question" style= "font-size: 24px">Would you describe yourself as a minimalist?</h1>
-    <div class="button-div" style="text-align: center">
-      <div style="text-align: center; margin-top: 2rem;">
-        <%= form_for(@user, url: question_update_path) do |f| %>
-          <div class="justify-content-center">
-            <%= f.check_box :size_desired, checked: true, hidden:  50 %>
-            <%= f.submit "Yes I would ", class:"choice-button" %>
-          </div>
+    <h1 class="text-center question" style= "font-size: 24px">Are you a loner or do you have a tribe?</h1>
+    <div class="button-div">
+        <%= simple_form_for(@user, url: question_update_path) do |f| %>
+            <%= f.input :size_desired, as: :hidden, input_html: { value: "50" }, wrapper_html: {class: "m-0"} %>
+            <%= f.submit "Tribe", class:"choice-button" %>
         <% end %>
 
-        <%= form_for(@user, url: question_update_path) do |f| %>
-          <div class="justify-content-center">
-            <%= f.check_box :size_desired, checked: false, hidden: 50 %>
-            <%= f.submit "Not particularly", class:"choice-button" %>
-          </div>
+        <%= simple_form_for(@user, url: question_update_path) do |f| %>
+            <%= f.input :size_desired, as: :hidden, input_html: { value: "35" }, wrapper_html: {class: "m-0"} %>
+            <%= f.submit "A bit of both", class:"choice-button" %>
         <% end %>
 
-        <%= form_for(@user, url: question_update_path) do |f| %>
-          <div class="justify-content-center">
-            <%= f.check_box :size_desired, checked: false, hidden: 50 %>
-            <%= f.submit "Not in the slightest", class:"choice-button" %>
-          </div>
+        <%= simple_form_for(@user, url: question_update_path) do |f| %>
+            <%= f.input :size_desired, as: :hidden, input_html: { value: "25" }, wrapper_html: {class: "m-0"} %>
+            <%= f.submit "Loner ", class:"choice-button" %>
         <% end %>
-      </div>
     </div>
     
   </div>

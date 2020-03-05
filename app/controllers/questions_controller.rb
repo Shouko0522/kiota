@@ -35,7 +35,9 @@ class QuestionsController < ApplicationController
       :tatami,
       :wants_station_nearby,
       :age,
-      :layout
+      :layout,
+      :size_desired,
+      :partylocation
       )
   end
 end

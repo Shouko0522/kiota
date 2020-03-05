@@ -15,6 +15,7 @@ class User < ApplicationRecord
 
     to_be_seen_properties
       .where('location = ?', desired_location)
+      .where('pets = ?', pets)
       # .where('')
   end
 
