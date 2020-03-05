@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get '/profile', to: 'users#show'
   patch '/profile', to: 'users#update'
-  get '/profile/edit', to: 'users#edit'
+  get '/profile/availability', to: 'users#availability'
 
 
   get '/properties', to: 'properties#index'

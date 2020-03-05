@@ -7,11 +7,13 @@ class UsersController < ApplicationController
     redirect_to meetings_path
   end
 
-  def edit
+  def availability
     @user = current_user
   end
 
+
   def show
+    @user = current_user
   end
 
   private
