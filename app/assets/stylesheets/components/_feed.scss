@@ -1,5 +1,5 @@
 .feed-container {
-margin-top: 3.6rem;
+// margin-top: 3.6rem;
 // margin-right: 6px;
 // margin-left: 6px;
 background: #F3F3F3;
@@ -165,7 +165,7 @@ background: #F3F3F3;
 }
 
 .feed-yes-btn {
-  background-image: asset_url('Logo-62x65.png');
+  background-image: asset_url('yes-button.svg');
   height: 80px;
   width: 80px;
   background-position: center;
@@ -175,7 +175,7 @@ background: #F3F3F3;
 .feed-no-btn {
   height: 80px;
   width: 80px;
-  background-image: url('no-button.png');
+  background-image: url('no-button.svg');
   background-position: center;
   background-repeat: no-repeat;
 }

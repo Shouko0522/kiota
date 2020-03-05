@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="question-box">
-    <h1 class="text-center question" style="font-size: 27px">Now let's talk about priorities, beer or coffee?</h1>
+    <h1 class="text-center question" style="font-size: 25px">Now let's talk about priorities, do you like going out for coffee or for beer?</h1>
     <div class="button-div" style="text-align: center">
       <%= form_for(@user, url: question_update_path) do |f| %>
         <div class="justify-content-center">
@@ -32,7 +32,6 @@
           <%= f.submit "Coffee", class: "choice-button" %>
         </div>
       <% end %>
-
     </div>
   </div>
   <%= render 'shared/question_layout' %>
