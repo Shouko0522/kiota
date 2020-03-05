@@ -6,4 +6,5 @@ class MeetingsController < ApplicationController
     ConfirmReservationJob.set(wait: 20.seconds).perform_later(@applied_reservations.sample.id) unless @applied_reservations.nil?
 
   end
+
 end
