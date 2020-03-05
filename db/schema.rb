@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_29_055135) do
+ActiveRecord::Schema.define(version: 2020_03_04_133237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,8 @@ ActiveRecord::Schema.define(version: 2020_02_29_055135) do
     t.float "latitude"
     t.float "longitude"
     t.text "address"
+    t.boolean "bar_nearby"
+    t.boolean "cafe_nearby"
     t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
@@ -120,6 +122,11 @@ ActiveRecord::Schema.define(version: 2020_02_29_055135) do
     t.string "phone_number"
     t.integer "salary"
     t.string "employer_name"
+    t.string "partylocation"
+    t.integer "size_desired"
+    t.boolean "key_money"
+    t.boolean "wants_bar_nearby"
+    t.boolean "wants_cafe_nearby"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

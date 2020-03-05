@@ -1,32 +1,38 @@
 <div class="theme">
-  <div class="progress-bar">
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="green-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-    <div class="purple-bar"></div>
-  </div>
-  <p>Your preferences</p>
-  <div class="theme-box">
-    <h1 class="text-center question" style="font-size: 27px">How old is your desired apartment?</h1>
-  </div>
-  <%= simple_form_for(@user, url: question_update_path) do |f| %>
-    <div class="form-group" style="position: absolute; top: 50%; right: 13%;">
-      <div class="justify-content-center">
-        <label for="pricerange" class="question-subtext" style="color: #2FEE92;">Choose the max age (years)</label>
-        <%= select(:user, :age, [
-        1, 5, 10, 15, 20, 25, 30, 35, 40, 50
-        ]) %>
+  <div class="img-box">
+    <div class= "white-box">
+      <p>Tell us about yourself</p>
+      <div class="progress-bar">
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="green-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
+        <div class="purple-bar"></div>
       </div>
     </div>
-    <div class="text-center">
-      <%= f.submit "Next", class: "next-button", style: "top:80%" %>
+  </div>
+  <div class="question-box">
+    <h1 class="text-center question">Are you afraid of heights?</h1>
+    <div class="button-div" style="text-align: center">
+      <%= form_for(@user, url: question_update_path) do |f| %>
+        <div class="justify-content-center">
+          <%= f.check_box :wants_first_floor, checked: true, hidden: true %>
+          <%= f.submit "Terrified", class: "choice-button" %>
+        </div>
+      <% end %>
+
+      <%= form_for(@user, url: question_update_path) do |f| %>
+        <div class="justify-content-center">
+          <%= f.check_box :wants_first_floor, checked: false, hidden: true %>
+          <%= f.submit "No problem", class: "choice-button" %>
+        </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
   <%= render 'shared/question_layout' %>
 </div>

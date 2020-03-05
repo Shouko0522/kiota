@@ -1,8 +1,8 @@
 <div class="dashboard-container">
-  <h1 style="color: rgba(186, 0, 217); font-size: 18px; text-align: center;">Your liked properties</h1>
+  <h1 style="color: rgba(186, 0, 217); font-size: 18px; text-align: center;">Places you thought were awesome</h1>
   <%= form_tag apply_path, method: :post do %>
     <div class="text-center">
-      <%= submit_tag "Apply Selected", class: "reserve-all" %>
+      <%= submit_tag "Schedule a viewing!", class: "reserve-all" %>
     </div>
     <% @property_viewings.each do |property_viewing| %>
       <div class="dashboard-property-container">
@@ -35,7 +35,7 @@
       </div>
     <% end %>
     <div class="text-center">
-      <%= submit_tag "Apply Selected", class: "reserve-all" %>
+      <%= submit_tag "Schedule a viewing!", class: "reserve-all" %>
     </div>
   <% end %>
 </div>

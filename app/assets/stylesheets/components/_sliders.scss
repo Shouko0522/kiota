@@ -16,9 +16,9 @@
     box-shadow: inset 0 1px 0 0 darken($input-bg-color,15%), inset 0 -1px 0 0 darken($input-bg-color,10%);
     -webkit-box-shadow: inset 0 1px 0 0 darken($input-bg-color,15%), inset 0 -1px 0 0 darken($input-bg-color,10%);
     overflow: hidden;
-    left: 0;
-    top: $input-top;
-    width: $width;
+    left: 5px;
+    top: 70px;
+    width: 280px;
     outline: none;
     height: $input-height;
     margin: 0;
