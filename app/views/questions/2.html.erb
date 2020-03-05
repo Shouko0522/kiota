@@ -31,9 +31,24 @@
             ['Ginza'],
             ['Ikebukuro']
             ]) %>
-        </div>
       </div>
       
+      <h1 class="text-center question">Where do you party?</h1>
+      <div class="form-group text-center">
+        <div class="justify-content-center">
+          <label for="partylocation" class="question-subtext" ></label>
+          <%= select(:user, :partylocation, [
+            ['Roppongi'],
+            ['Shibuya'],
+            ['Shinjuku'],
+            ['Ueno'],
+            ['Yurakucho'],
+            ['Ginza'],
+            ['Ikebukuro']
+            ]) %>
+        </div>
+      </div>
+
     </div>
     <div class="text-center" style="position: absolute; bottom: 15%; left: 30%;">
       <%= f.submit "Continue", class:"choice-button" %>
