@@ -1,10 +1,29 @@
 .meeting-container {
-margin-top: 3.6rem;
-margin-right: 6px;
-margin-left: 6px;
-background: #F3F3F3;
+margin-top: 4rem;
+margin-left: 1rem;
+margin-right: 1rem;
+margin-bottom: 4rem;
 }
 
 .meeting-card{
-
+height: 170px;
+// width: 250px;
+background: white;
+// box-shadow: 0 0 15px rgba(0,0,0,0.2);
+display: flex;
+align-items: center;
+margin-bottom: 1rem;
+border-radius: 20px;
+// box-shadow: 0px 10px 0px $green;
+color: $purple;
+}
+.meeting-banner{
+  background-size: cover;
+  background-position: top;
+  height: 25rem;
+  margin-bottom: 3rem;
+}
+.meeting-info{
+  // background-size: 100vh;
+  // background: $green;
 }
