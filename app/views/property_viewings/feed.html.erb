@@ -9,7 +9,7 @@
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
         <div class="carousel-inner" style="width: 100%; height: auto; margin-bottom: 1rem;">
           <div class="carousel-item active">
-            <img class="d-block w-100 feed-img" src="<%= cl_image_path @property.photo.key, height: 570, width: 350, crop: :fill %>" alt="First slide" style="position:relative; opacity: 80%;">
+            <img class="d-block w-100 feed-img" src="<%= cl_image_path @property.photos.first.key, height: 570, width: 350, crop: :fill %>" alt="First slide" style="position:relative; opacity: 80%;">
               <div class="image-overlay">
                 <svg xmlns="http://www.w3.org/2000/svg" class="img-svg-location" width="26" height="28" viewBox="0 0 48 48"><title>ic_location_on_48px</title>
                   <g class="nc-icon-wrapper" fill="#111111">
@@ -26,13 +26,13 @@
                 </div>
                 <p class="feed-img-location"><%= @property.location %><p>
                 <p class="feed-img-station"><%= @property.distance_to_station %> minute walk<p>
-              </div>  
+              </div>
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100 inactive" src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/<%=@property.longitude%>,<%=@property.latitude%>,10.45,0,0/600x1000?access_token=pk.eyJ1Ijoic2hvdWtvMDUyMiIsImEiOiJjazM4bDU2NW4wMzl3M2lxZTE5cml5a2tlIn0.s7I7YWPUw2sOQdWENcgDtA" alt="Second slide">
+            <img class="d-block w-100 feed-img" src="<%= cl_image_path @property.photos.last.key, height: 570, width: 350, crop: :fill %>" alt="Second slide" style="position:relative; opacity: 80%;">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100 inactive" src="..." alt="Third slide">
+            <img class="d-block w-100 inactive" src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-l-home+BA00D9(<%=@property.longitude%>,<%=@property.latitude%>)/<%=@property.longitude%>,<%=@property.latitude%>,14,0,0/600x1000?access_token=pk.eyJ1Ijoic2hvdWtvMDUyMiIsImEiOiJjazM4bDU2NW4wMzl3M2lxZTE5cml5a2tlIn0.s7I7YWPUw2sOQdWENcgDtA" alt="Second slide">
           </div>
         </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -121,7 +121,7 @@
             <p>Including first month’s rent, deposit, key money</p>
           </div>
           <div class="initial-cost-price">
-            <p>¥100,000</p>
+            <p><%= @property.initial_cost %></p>
           </div>
 
         </div>

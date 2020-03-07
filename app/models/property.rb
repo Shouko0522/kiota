@@ -1,6 +1,6 @@
 class Property < ApplicationRecord
   belongs_to :user
-  has_one_attached :photo
+  has_many_attached :photos
   has_many :property_viewings
   # belongs_to :reservation
   geocoded_by :location
