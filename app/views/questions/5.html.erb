@@ -3,29 +3,34 @@
     <div class= "white-box">
       <p>Tell us about yourself</p>
       <div class="progress-bar">
-        <div class="green-bar"></div>
-        <div class="green-bar"></div>
-        <div class="green-bar"></div>
-        <div class="green-bar"></div>
-        <div class="green-bar"></div>
         <div class="purple-bar"></div>
         <div class="purple-bar"></div>
         <div class="purple-bar"></div>
         <div class="purple-bar"></div>
         <div class="purple-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
       </div>
     </div>
   </div>
   <div class="question-box">
-    <h1 class="text-center question">Are you afraid of heights?</h1>
+    <h1 class="question" style="font-size: 27px;">Do you mainly cook at home or do you eat out?</h1>
     <div class="button-div">
-      <%= simple_form_for(@user, url: question_update_path) do |f| %>
-          <%= f.input :wants_first_floor, input_html: { value: true }, as: :hidden, wrapper_html: {class: "m-0"} %>
-          <%= f.submit "Terrified", class: "choice-button" %>  
+      <%= form_for(@user, url: question_update_path) do |f| %>
+        <div>
+          <%= f.check_box :wants_supermarket_nearby, checked: true, hidden: true %>
+          <%= f.submit "I cook at home", class: "choice-button" %>
+        </div>
       <% end %>
-      <%= simple_form_for(@user, url: question_update_path) do |f| %> 
-          <%= f.input :wants_first_floor, input_html: { value: false }, as: :hidden, wrapper_html: {class: "m-0"} %>
-          <%= f.submit "No problem", class: "choice-button" %>
+
+      <%= form_for(@user, url: question_update_path) do |f| %>
+        <div>
+          <%= f.check_box :wants_supermarket_nearby, checked: false, hidden: true %>
+          <%= f.submit "I eat out", class: "choice-button" %>
+        </div>
       <% end %>
     </div>
   </div>

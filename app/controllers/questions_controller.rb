@@ -10,7 +10,7 @@ class QuestionsController < ApplicationController
     @step = params[:step].to_i
     @user = current_user
     if @user.update(strong_params)
-      if @step < 12
+      if @step < 10
         redirect_to question_path(@step + 1)
       else
         redirect_to property_viewings_feed_path

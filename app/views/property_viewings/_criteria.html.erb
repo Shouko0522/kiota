@@ -2,14 +2,30 @@
       <h2 class="header">Why this property was chosen for you</h2>
       <div class="feed-criteria-description">
         <p>
-          <i class="fas fa-tree" style="color: $green;"></i> Less than 1 meter from a park
+          <% if @pets_tag %>
+            <i class="fas fa-dog" style="color: $green;"></i> Pet friendly
+          <% else %>
+          <% end %>
+        </p>
+        <p>
+          <% if @bar_tag %>
+            <i class="fas fa-dog" style="color: $green;"></i> Many bars nearby
+          <% else %>
+          <% end %>
+        </p>
+        <p>
+          <% if @cafe_tag %>
+            <i class="fas fa-dog" style="color: $green;"></i> Many cafes nearby
+          <% else %>
+          <% end %>
+        </p>
+        <p>
+          <% if @floor_tag %>
+            <i class="fas fa-dog" style="color: $green;"></i> 1st floor property
+          <% else %>
+          <% end %>
         </p>
       </div>
 
-      <div class="feed-criteria-description">
-        <p>
-          <i class="fas fa-dog" style="color: $green;"></i> This property is pet friendly
-        </p>
-      </div>
   
     </div>

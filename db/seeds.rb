@@ -192,7 +192,6 @@ property = Property.new(
       )
     file = URI.open("https://www.aeras-group.jp/wp-content/themes/aeras/iwf/vendors/timthumb.php?w=550&src=https%3A%2F%2Fwww.aeras-group.jp%2Fwp-content%2Fuploads%2F2018%2F10%2F2_2_1_30141123.jpg")
     property.photo.attach(io: file, filename: "room8.jpg", content_type: 'image/jpg')
-    property.save!
 
 property = Property.new(
       information: "A one bedroom apartment",
