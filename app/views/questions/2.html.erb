@@ -3,59 +3,59 @@
     <div class= "white-box">
       <p>Tell us about yourself</p>
       <div class="progress-bar">
-        <div class="green-bar"></div>
-        <div class="green-bar"></div>
         <div class="purple-bar"></div>
         <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
       </div>
     </div>
   </div>
   <div class="question-box">
-    <h1 class="text-center question">Where do you work?</h1>
-
+    <h1 class="question">Where do you work?</h1>
     <%= simple_form_for(@user, url: question_update_path) do |f| %>
-      <div class="form-group text-center">
-        <label for="work_location" class="question-subtext" ></label>
+      <div>
+        <label for="work_location"></label>
           <%= select(:user, :work_location, [
-            ['Roppongi'],
-            ['Shibuya'],
-            ['Shinjuku'],
-            ['Ueno'],
-            ['Yurakucho'],
+            ['Ebisu'],
             ['Ginza'],
             ['Ikebukuro'],
-            ['Ebisu']
-            ]) %>
-      </div>
-      
-      <h1 class="text-center question">Where do you party?</h1>
-      <div class="form-group text-center">
-        <div class="justify-content-center">
-          <label for="partylocation" class="question-subtext" ></label>
-          <%= select(:user, :partylocation, [
+            ['Meguro'],
+            ['Omotesando'],
             ['Roppongi'],
             ['Shibuya'],
             ['Shinjuku'],
-            ['Ueno'],
+            ['Tokyo (Station)'],
             ['Yurakucho'],
+            ]) %>
+      </div>
+      <h1 class="question">Where do you have fun?</h1>
+      <div>
+        <div>
+          <label for="partylocation"></label>
+          <%= select(:user, :partylocation, [
+            ['Ebisu'],
             ['Ginza'],
-            ['Ikebukuro']
+            ['Ikebukuro'],
+            ['Meguro'],
+            ['Omotesando'],
+            ['Roppongi'],
+            ['Shibuya'],
+            ['Shinjuku'],
+            ['Tokyo (Station)'],
+            ['Yurakucho'],
             ]) %>
         </div>
       </div>
-
     </div>
-    <div class="text-center" style="position: absolute; bottom: 15%; left: 30%;">
+    <div style="position: absolute; bottom: 19%; left: 30%;">
       <%= f.submit "Continue", class:"choice-button" %>
     </div>
     <% end %>
-
-    
   <%= render 'shared/question_layout' %>
 </div>

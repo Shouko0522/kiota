@@ -9,6 +9,11 @@ class PropertyViewingsController < ApplicationController
       @bar_tag = @property.bar_nearby == current_user.wants_bar_nearby
       @cafe_tag = @property.cafe_nearby == current_user.wants_cafe_nearby
 
+       if @property.floor = 1
+         @floor_tag = @property.floor == true
+       else
+         @property.floor == false
+       end
       @floor_tag = @property.floor == current_user.wants_first_floor
       @supermarket_tag = @property.distance_to_supermarket == current_user.wants_supermarket_nearby
       @park_tag = @property.distance_to_park == current_user.wants_park_nearby
