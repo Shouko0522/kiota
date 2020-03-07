@@ -207,8 +207,8 @@ property = Property.new(
       location: "Roppongi",
       user: User.create(email: Faker::Internet.email, password: "123456"),
       deposit: 120000,
-      key_money: 120000,
-      initial_cost: 360000
+      key_money: 0,
+      initial_cost: 240000
       )
     file = URI.open("https://hitorikurashi.com/wp-content/uploads/2015/10/3092b594387976da880f943cf9ebad9b_s.jpg")
     property.photo.attach(io: file, filename: "room9.jpg", content_type: 'image/jpg')
@@ -228,8 +228,8 @@ property = Property.new(
       location: "Roppongi",
       user: User.create(email: Faker::Internet.email, password: "123456"),
       deposit: 110000,
-      key_money: 110000,
-      initial_cost: 330000
+      key_money: 0,
+      initial_cost: 220000
       )
     file = URI.open("https://www.img-asp.jp/cms/189116_1_500_1000_1.jpg?t=1575678072")
     property.photo.attach(io: file, filename: "room10.jpg", content_type: 'image/jpg')
