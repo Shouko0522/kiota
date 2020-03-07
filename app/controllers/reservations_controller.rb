@@ -30,7 +30,7 @@ class ReservationsController < ApplicationController
     else 
       @viewing_ids = params[:property_viewings].keys
       current_user.property_viewings.where(id: @viewing_ids).update_all(status: "applied")
-      redirect_to profile_edit_path
+      redirect_to profile_availability_path
     end
     # redirect_to new_property_reservation_path(@reservation)
 
