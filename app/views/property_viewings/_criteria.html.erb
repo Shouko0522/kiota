@@ -9,19 +9,37 @@
         </p>
         <p>
           <% if @bar_tag %>
-            <i class="fas fa-dog" style="color: $green;"></i> Many bars nearby
+            <i class="fas fa-beer"></i> Many bars nearby
           <% else %>
           <% end %>
         </p>
         <p>
           <% if @cafe_tag %>
-            <i class="fas fa-dog" style="color: $green;"></i> Many cafes nearby
+            <i class="fas fa-coffee"></i> Many cafes nearby
           <% else %>
           <% end %>
         </p>
         <p>
           <% if @floor_tag %>
-            <i class="fas fa-dog" style="color: $green;"></i> 1st floor property
+            <i class="fas fa-home"></i> 1st floor property
+          <% else %>
+          <% end %>
+        </p>
+        <p>
+          <% if @supermarket_tag %>
+            <i class="fas fa-store"></i> Supermarket close by
+          <% else %>
+          <% end %>
+        </p>
+        <p>
+          <% if @park_tag %>
+            <i class="fas fa-shoe-prints"></i> Park close by
+          <% else %>
+          <% end %>
+        </p>
+        <p>
+          <% if @zero_key_money_tag %>
+            <i class="fas fa-times-circle"></i> No key money
           <% else %>
           <% end %>
         </p>
