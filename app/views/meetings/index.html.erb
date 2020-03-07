@@ -35,7 +35,7 @@
     <% @applied_reservations.each do |applied_reservation| %>
     <div class="col-12 col-md-6 col-lg-3">
       <div class="meeting-card">
-          <%=cl_image_tag applied_reservation.property.photo.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin: 16px;" %>
+          <%=cl_image_tag applied_reservation.property.photos.first.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin: 16px;" %>
         <div class="meeting-info">
           <div><i class="fas fa-subway"></i>
             <%= applied_reservation.property.location %>

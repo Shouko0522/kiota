@@ -6,7 +6,7 @@
     </div>
   </div>
   <div class="dashboard-container">
-    
+
     <%= form_tag apply_path, method: :post do %>
       <div class="text-center">
         <%= submit_tag "Schedule a viewing!", class: "reserve-all" %>
@@ -18,9 +18,9 @@
           <%= label_tag "property_viewings[#{property_viewing.id}]" do %>
             <div class="dashboard-property">
               <div class="image-price-div">
-                <%=cl_image_tag property_viewing.property.photo.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin-left: 12px; margin-top: 10px;" %>
+                <%=cl_image_tag property_viewing.property.photos.first.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin-left: 12px; margin-top: 10px;" %>
                 <div class="price">
-                  <h2>¥<%="#{property_viewing.property.price.to_s[0..-4]},#{property_viewing.property.price.to_s[-3..-1]}"%></h2>   
+                  <h2>¥<%="#{property_viewing.property.price.to_s[0..-4]},#{property_viewing.property.price.to_s[-3..-1]}"%></h2>
                 </div>
               </div>
               <div class="dashboard-info">
@@ -35,7 +35,7 @@
                   <%= property_viewing.property.age %> years old
                   <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Age</p>
                 </div>
-                
+
               </div>
             </div>
           <% end %>
