@@ -6,15 +6,16 @@ margin-bottom: 4rem;
 }
 
 .meeting-card{
-height: 170px;
+height: 180px;
 // width: 250px;
 background: white;
 // box-shadow: 0 0 15px rgba(0,0,0,0.2);
 display: flex;
+// flex-wrap: wrap;
 align-items: center;
 margin-bottom: 1rem;
 border-radius: 20px;
-// box-shadow: 0px 10px 0px $green;
+box-shadow: 10px 10px 10px $green;
 color: $purple;
 }
 .meeting-banner{
@@ -27,3 +28,19 @@ color: $purple;
   // background-size: 100vh;
   // background: $green;
 }
+.h2{
+  font-size: 15px
+}
+.p{
+  font-size: 10px;
+  margin-top: -6px;
+  margin-bottom: 0
+}
+.image-view-div{
+  display: flex;
+flex-direction: column;
+vertical-align: middle;
+text-align: center;
+// display: table-cell;
+}
+
