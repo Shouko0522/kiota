@@ -26,29 +26,32 @@ User.create(email:"shouko@gmail.com",password:"123456")
 User.create(email:"yann@gmail.com",password:"123456")
 
 property = Property.new(
-      information: "A high-rise apartment",
+      information: "A apartment with garden",
       price: 120000,
       distance_to_station: 10,
       pets: true,
       distance_to_supermarket: 5,
       age: 5,
-      floor: 13,
+      floor: 1,
       distance_to_park: 5,
       size: 50,
       layout: "2LDK",
-      location: "Shinjuku",
+      location: "Shibuya",
       user: User.create(email: Faker::Internet.email, password: "123456"),
       deposit: 120000,
       key_money: 120000,
       initial_cost: 360000
       )
-    file = URI.open("http://imgs.u-note.me/note/uploadimage/1517469286245.jpg")
-    property.photo.attach(io: file, filename: "room1.jpg", content_type: 'image/jpg')
+    file = URI.open("https://img.door.ac/door-chintai/realestate/apamanshop/5134740100/14906720_G2.jpg")
+    property.photos.attach(io: file, filename: "room2.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/856/100188555856/100188555856_ro.jpg")
+    property.photos.attach(io: file, filename: "room22.jpg", content_type: 'image/jpg')
     property.save!
 
 property = Property.new(
-      information: "A one bedroom apartment",
-      price: 70000,
+      information: "A apartment with rooftop",
+      price: 100000,
       distance_to_station: 15,
       pets: false,
       distance_to_supermarket: 5,
@@ -59,54 +62,63 @@ property = Property.new(
       layout: "1K",
       location: "Shibuya",
       user: User.create(email: Faker::Internet.email, password: "123456"),
-      deposit: 70000,
-      key_money: 70000,
-      initial_cost: 210000
+      deposit: 100000,
+      key_money: 100000,
+      initial_cost: 300000
       )
-    file = URI.open("https://the-tanaka.com/wp-content/uploads/2017/05/room-2-768x576.jpg")
-    property.photo.attach(io: file, filename: "room2.jpg", content_type: 'image/jpg')
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/403/100187879403/100187879403_go.jpg")
+    property.photos.attach(io: file, filename: "room1.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/403/100187879403/100187879403_2o.jpg")
+    property.photos.attach(io: file, filename: "room11.jpg", content_type: 'image/jpg')
     property.save!
 
 property = Property.new(
       information: "A one bedroom apartment",
-      price: 80000,
-      distance_to_station: 10,
+      price: 110000,
+      distance_to_station: 5,
       pets: false,
       distance_to_supermarket: 5,
       age: 6,
       floor: 7,
       distance_to_park: 10,
-      size: 40,
+      size: 35,
       layout: "1DK",
       location: "Shibuya",
       user: User.create(email: Faker::Internet.email, password: "123456"),
-      deposit: 80000,
-      key_money: 80000,
-      initial_cost: 240000
+      deposit: 100000,
+      key_money: 100000,
+      initial_cost: 300000
       )
-    file = URI.open("https://simple-hira.com/wp-content/uploads/2017/11/f6ba78c90a4d93b9f5f93a35e791aa18.jpg")
-    property.photo.attach(io: file, filename: "room3.jpg", content_type: 'image/jpg')
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/046/100186603046/100186603046_go.jpg")
+    property.photos.attach(io: file, filename: "room3.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/046/100186603046/100186603046_ro.jpg")
+    property.photos.attach(io: file, filename: "room33.jpg", content_type: 'image/jpg')
     property.save!
 
 property = Property.new(
       information: "A one bedroom apartment",
-      price: 60000,
+      price: 90000,
       distance_to_station: 20,
       pets: false,
       distance_to_supermarket: 5,
       age: 9,
-      floor: 1,
+      floor: 6,
       distance_to_park: 10,
       size: 40,
       layout: "1DK",
       location: "Shibuya",
       user: User.create(email: Faker::Internet.email, password: "123456"),
-      deposit: 60000,
-      key_money: 60000,
-      initial_cost: 180000
+      deposit: 90000,
+      key_money: 90000,
+      initial_cost: 270000
       )
-    file = URI.open("https://d1sw4fcdq5we39.cloudfront.net/wp-content/uploads/2017/10/13121353/37b5ecb9-9c49-4be1-a01a-d3d11ab39483-P1.jpg")
-    property.photo.attach(io: file, filename: "room4.jpg", content_type: 'image/jpg')
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/473/100187718473/100187718473_go.jpg")
+    property.photos.attach(io: file, filename: "room4.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/473/100187718473/100187718473_ro.jpg")
+    property.photos.attach(io: file, filename: "room44.jpg", content_type: 'image/jpg')
     property.save!
 
 
@@ -117,7 +129,7 @@ property = Property.new(
       pets: false,
       distance_to_supermarket: 10,
       age: 2,
-      floor: 4,
+      floor: 1,
       distance_to_park: 10,
       size: 50,
       layout: "1DK",
@@ -127,8 +139,11 @@ property = Property.new(
       key_money: 100000,
       initial_cost: 300000
       )
-    file = URI.open("https://www.aeras-group.jp/wp-content/themes/aeras/iwf/vendors/timthumb.php?w=550&src=https%3A%2F%2Fwww.aeras-group.jp%2Fwp-content%2Fuploads%2F2018%2F10%2F2_2_1_30141123.jpg")
-    property.photo.attach(io: file, filename: "room5.jpg", content_type: 'image/jpg')
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/095/100183440095/100183440095_go.jpg")
+    property.photos.attach(io: file, filename: "room5.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/095/100183440095/100183440095_ro.jpg")
+    property.photos.attach(io: file, filename: "room55.jpg", content_type: 'image/jpg')
     property.save!
 
 property = Property.new(
@@ -148,58 +163,68 @@ property = Property.new(
       key_money: 110000,
       initial_cost: 330000
       )
-    file = URI.open("https://assets.media-platform.com/roomie/dist/images/2019/09/DSCF7354.jpg")
-    property.photo.attach(io: file, filename: "room6.jpg", content_type: 'image/jpg')
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/762/100186890762/100186890762_go.jpg")
+    property.photos.attach(io: file, filename: "room6.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/395/100187498395/100187498395_1o.jpg")
+    property.photos.attach(io: file, filename: "room66.jpg", content_type: 'image/jpg')
     property.save!
 
 property = Property.new(
       information: "A one bedroom apartment",
-      price: 100000,
+      price: 80000,
       distance_to_station: 5,
       pets: false,
       distance_to_supermarket: 10,
       age: 2,
       floor: 4,
       distance_to_park: 10,
-      size: 50,
+      size: 35,
       layout: "1DK",
       location: "Roppongi",
       user: User.create(email: Faker::Internet.email, password: "123456"),
-      deposit: 100000,
-      key_money: 100000,
-      initial_cost: 300000
+      deposit: 80000,
+      key_money: 80000,
+      initial_cost: 240000
       )
-    file = URI.open("https://lh3.googleusercontent.com/-Az-Q5p_rnOQ/WeMI1-lyfxI/AAAAAAAAn08/0GlHp6Umyfwf4hhNyITtULBnCzp3KjMqACE0YBhgL/s1024/DSC00272%257E2.JPG")
-    property.photo.attach(io: file, filename: "room7.jpg", content_type: 'image/jpg')
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/316/100140643316/100140643316_4o.jpg")
+    property.photos.attach(io: file, filename: "room7.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/316/100140643316/100140643316_10o.jpg")
+    property.photos.attach(io: file, filename: "room77.jpg", content_type: 'image/jpg')
     property.save!
 
 property = Property.new(
       information: "A one bedroom apartment",
-      price: 100000,
+      price: 70000,
       distance_to_station: 5,
       pets: false,
       distance_to_supermarket: 10,
-      age: 2,
+      age: 8,
       floor: 4,
       distance_to_park: 10,
-      size: 50,
+      size: 35,
       layout: "1DK",
       location: "Shibuya",
       user: User.create(email: Faker::Internet.email, password: "123456"),
-      deposit: 100000,
-      key_money: 100000,
-      initial_cost: 300000
+      deposit: 70000,
+      key_money: 70000,
+      initial_cost: 210000
       )
-    file = URI.open("https://www.aeras-group.jp/wp-content/themes/aeras/iwf/vendors/timthumb.php?w=550&src=https%3A%2F%2Fwww.aeras-group.jp%2Fwp-content%2Fuploads%2F2018%2F10%2F2_2_1_30141123.jpg")
-    property.photo.attach(io: file, filename: "room8.jpg", content_type: 'image/jpg')
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/076/100188195076/100188195076_9o.jpg")
+    property.photos.attach(io: file, filename: "room8.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/076/100188195076/100188195076_ro.jpg")
+    property.photos.attach(io: file, filename: "room88.jpg", content_type: 'image/jpg')
+    property.save!
 
 property = Property.new(
       information: "A one bedroom apartment",
-      price: 120000,
+      price: 110000,
       distance_to_station: 5,
       pets: false,
       distance_to_supermarket: 10,
-      age: 2,
+      age: 0,
       floor: 4,
       distance_to_park: 10,
       size: 50,
@@ -210,8 +235,11 @@ property = Property.new(
       key_money: 0,
       initial_cost: 240000
       )
-    file = URI.open("https://hitorikurashi.com/wp-content/uploads/2015/10/3092b594387976da880f943cf9ebad9b_s.jpg")
-    property.photo.attach(io: file, filename: "room9.jpg", content_type: 'image/jpg')
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/893/100188658893/100188658893_go.jpg")
+    property.photos.attach(io: file, filename: "room9.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/893/100188658893/100188658893_ro.jpg")
+    property.photos.attach(io: file, filename: "room99.jpg", content_type: 'image/jpg')
     property.save!
 
 property = Property.new(
@@ -231,8 +259,11 @@ property = Property.new(
       key_money: 0,
       initial_cost: 220000
       )
-    file = URI.open("https://www.img-asp.jp/cms/189116_1_500_1000_1.jpg?t=1575678072")
-    property.photo.attach(io: file, filename: "room10.jpg", content_type: 'image/jpg')
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/274/100185751274/100185751274_ro.jpg")
+    property.photos.attach(io: file, filename: "room10.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://img.door.ac/door-chintai/realestate/suumo/274/100185751274/100185751274_ro.jpg")
+    property.photos.attach(io: file, filename: "room100.jpg", content_type: 'image/jpg')
     property.save!
 
 
