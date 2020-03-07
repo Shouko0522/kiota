@@ -23,14 +23,14 @@ background: #F3F3F3;
 }
 
 .img-svg-location {
-  position: absolute; 
-  top: 320px; 
+  position: absolute;
+  top: 320px;
   left: 10px;
 }
 
 .img-svg-station {
-  position: absolute; 
-  top: 360px; 
+  position: absolute;
+  top: 360px;
   left: 10px
 }
 
@@ -130,13 +130,13 @@ background: #F3F3F3;
 }
 
 .feed-additional-info-box-content p {
-  font-size: 12px; 
+  font-size: 12px;
   margin-bottom: 0;
   color: white;
 }
 
 .initial-cost h2 {
-  margin-top: 3rem; 
+  margin-top: 3rem;
   // margin-bottom: rem;
   font-size: 25px;
   color: $green;
@@ -178,4 +178,11 @@ background: #F3F3F3;
   background-image: url('no-button.svg');
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.like-dislike-btns {
+  top: 510px;
+  left: calc(50% - 80px);
+  display: flex;
+  position: absolute;
 }

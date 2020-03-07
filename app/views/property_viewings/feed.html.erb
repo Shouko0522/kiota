@@ -35,16 +35,33 @@
             <img class="d-block w-100 inactive" src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-l-home+BA00D9(<%=@property.longitude%>,<%=@property.latitude%>)/<%=@property.longitude%>,<%=@property.latitude%>,14,0,0/600x1000?access_token=pk.eyJ1Ijoic2hvdWtvMDUyMiIsImEiOiJjazM4bDU2NW4wMzl3M2lxZTE5cml5a2tlIn0.s7I7YWPUw2sOQdWENcgDtA" alt="Second slide">
           </div>
         </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
 
+        <div class="like-dislike-btns" >
+          <div>
+            <%= simple_form_for @property_viewing do |f| %>
+              <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
+              <%= f.input :status, :as => :hidden, :input_html => { :value => "disliked" } %>
+              <%= f.button :submit, "", class: "feed-no-btn"%>
+            <% end %>
+          </div>
+          <div>
+            <%= simple_form_for @property_viewing do |f| %>
+              <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
+              <%= f.input :status, :as => :hidden, :input_html => { :value => "liked" } %>
+              <%= f.button :submit, "", class: "feed-yes-btn"%>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
     <%= render "criteria", user: @user, property_viewing: @property_viewing%>
 
       <div class="feed-additional-info">
@@ -124,23 +141,6 @@
             <p><%= @property.initial_cost %></p>
           </div>
 
-        </div>
-      </div>
-
-      <div class="like-dislike-btns" style="display: flex; position: absolute; bottom: 7%; left: 29%;">
-        <div>
-          <%= simple_form_for @property_viewing do |f| %>
-            <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
-            <%= f.input :status, :as => :hidden, :input_html => { :value => "disliked" } %>
-            <%= f.button :submit, "", class: "feed-no-btn"%>
-          <% end %>
-        </div>
-        <div>
-          <%= simple_form_for @property_viewing do |f| %>
-            <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
-            <%= f.input :status, :as => :hidden, :input_html => { :value => "liked" } %>
-            <%= f.button :submit, "", class: "feed-yes-btn"%>
-          <% end %>
         </div>
       </div>
   <% end %>
