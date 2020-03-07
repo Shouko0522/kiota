@@ -29,7 +29,7 @@
               </div>  
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100 inactive" src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/<%=@property.longitude%>,<%=@property.latitude%>,10.45,0,0/600x1000?access_token=pk.eyJ1Ijoic2hvdWtvMDUyMiIsImEiOiJjazM4bDU2NW4wMzl3M2lxZTE5cml5a2tlIn0.s7I7YWPUw2sOQdWENcgDtA" alt="Second slide">
+            <img class="d-block w-100 inactive" src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-l-home+BA00D9(<%=@property.longitude%>,<%=@property.latitude%>)/<%=@property.longitude%>,<%=@property.latitude%>,14,0,0/600x1000?access_token=pk.eyJ1Ijoic2hvdWtvMDUyMiIsImEiOiJjazM4bDU2NW4wMzl3M2lxZTE5cml5a2tlIn0.s7I7YWPUw2sOQdWENcgDtA" alt="Second slide">
           </div>
           <div class="carousel-item">
             <img class="d-block w-100 inactive" src="..." alt="Third slide">
@@ -121,7 +121,7 @@
             <p>Including first month’s rent, deposit, key money</p>
           </div>
           <div class="initial-cost-price">
-            <p>¥100,000</p>
+            <p><%= @property.initial_cost %></p>
           </div>
 
         </div>
