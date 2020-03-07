@@ -30,7 +30,7 @@ Rails.application.routes.draw do
     get '/confirm', to: 'reservations#confirm'
     post '/confirm', to: 'reservations#submit'
 
-      resources :property do
+      resources :properties do
         resources :reservations, only: [ :new, :create ]
       end
     end

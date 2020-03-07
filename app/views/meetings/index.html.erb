@@ -1,27 +1,37 @@
+ <div class="img-box">
+    </div>
+  </div>
  <div class= "meeting-container">
-   <h1 style="color: rgba(186, 0, 217); font-size: 18px; text-align: center;">confirmed reservations</h1>
+   <h1 style="color: rgba(186, 0, 217); font-size: 18px; text-align: center;">Confirmed Reservations</h1>
      <% @confirmed_reservations.each do |confirmed_reservation| %>
        <div class="meeting-card">
+        <div class= "image-view-div">
           <%=cl_image_tag confirmed_reservation.property.photo.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin: 16px;" %>
+          <div class= view>
+            <%= link_to "view", property_path(confirmed_reservation.property) , class: "btn btn-success btn-sm", style: "color: white;"%>
+          </div>
+        </div>
          <div class="meeting-info">
            <div><i class="far fa-calendar"></i>
-            <%= confirmed_reservation.confirmed_time.strftime("%a, %b, %-d") %>
-            <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Time</p>
+            <h2 class= "h2"> <%= confirmed_reservation.confirmed_time.strftime("%a, %b, %-d") %> </h2>
+            <p class="p">Time</p>
            </div>
            <div><i class="fas fa-subway"></i>
-             <%= confirmed_reservation.property.location %>
-             <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Location</p>
+            <h2 class= "h2"> <%= confirmed_reservation.property.location %> </h2>
+             <p class="p">Location</p>
            </div>
-          <%= link_to "view property", property_path(confirmed_reservation.property) , class: "btn btn-success", style: "color: white;"%>
          </div>
-         <a href="<%= confirmed_reservation.google_url %>">link to google calendar</a>
+         <a class="btn btn-primary btn-sm" href="<%= confirmed_reservation.google_url %>">calendar</a>
+          <div>
+
+          </div>
        </div>
      <% end %>
  </div>
 
 
     <div class= "meeting-container">
-  <h1 style="color: rgba(186, 0, 217); font-size: 18px; text-align: center;">applied reservations</h1>
+  <h1 style="color: rgba(186, 0, 217); font-size: 18px; text-align: center;">Applied Reservations</h1>
     <% @applied_reservations.each do |applied_reservation| %>
     <div class="col-12 col-md-6 col-lg-3">
       <div class="meeting-card">
@@ -29,7 +39,7 @@
         <div class="meeting-info">
           <div><i class="fas fa-subway"></i>
             <%= applied_reservation.property.location %>
-            <p style="font-size: 10px; margin-top: -6px; margin-bottom: 0;">Location</p>
+            <p class="p">Location</p>
           </div>
           <%#= link_to "", property_viewing.property, class: "btn btn-success", style: "color: white;"%>
         </div>
