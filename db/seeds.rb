@@ -42,9 +42,11 @@ User.create(email:"yann@gmail.com",password:"123456")
 
     property = Property.new(
       information: INFO.sample,
-      price: rand(50..100),
+      price: rand(50000..300000),
       distance_to_station: rand(20),
       pets: Faker::Boolean.boolean,
+      wants_bar_nearby: Faker::Boolean.boolean,
+      wants_cafe_nearby: Faker::Boolean.boolean,
       distance_to_supermarket: rand(20),
       tatami: Faker::Boolean.boolean,
       age: rand(10),
@@ -54,7 +56,7 @@ User.create(email:"yann@gmail.com",password:"123456")
       layout: LAYOUT.sample,
       location: CITY.sample,
       user: User.create(email: Faker::Internet.email, password: "123456"),
-      deposit: rand(10..50)
+      deposit: :price
     )
     file = URI.open(photos.sample)
     property.photo.attach(io: file, filename: "room#{index}.jpg", content_type: 'image/jpg')

@@ -3,16 +3,16 @@
     <div class= "white-box">
       <p>Tell us about yourself</p>
       <div class="progress-bar">
-        <div class="green-bar"></div>
         <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
       </div>
     </div>
   </div>
@@ -20,9 +20,9 @@
     <h1 class="text-center question">How much is your monthly budget?</h1>
     
     <%= form_for(@user, url: question_update_path) do |f| %>
-      <div class="form-group text-center">
+      <div>
         <label for="pricerange" style="color: #2FEE92;"></label>
-        <div class="d-flex justify-content-center">
+        <div>
           <section class="range-slider" data-controller="sliders" style= "color: #BA00D9; font-size: 29px" >
             <span class="rangeValues"></span>
             <input name="user[min_price]" value="40000" min="10000" max="350000" step="1000" type="range" id="slider1">
@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <div class="text-center" style="position: absolute; bottom: 15%; left: 30%;">
+    <div style="position: absolute; bottom: 19%; left: 30%;">
       <%= f.submit "Continue", class:"choice-button" %>
     </div>
     <% end %>

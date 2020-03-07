@@ -3,38 +3,36 @@
     <div class= "white-box">
       <p>Tell us about yourself</p>
       <div class="progress-bar">
-        <div class="green-bar"></div>
-        <div class="green-bar"></div>
-        <div class="green-bar"></div>
-        <div class="green-bar"></div>
         <div class="purple-bar"></div>
         <div class="purple-bar"></div>
         <div class="purple-bar"></div>
         <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
-        <div class="purple-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
+        <div class="grey-bar"></div>
       </div>
     </div>
   </div>
   <div class="question-box">
-    <h1 class="text-center question" style= "font-size: 24px">Are you a loner or do you have a tribe?</h1>
+    <h1 class="question">Are you a fan of jogging?</h1>
     <div class="button-div">
-        <%= simple_form_for(@user, url: question_update_path) do |f| %>
-            <%= f.input :size_desired, as: :hidden, input_html: { value: "50" }, wrapper_html: {class: "m-0"} %>
-            <%= f.submit "Tribe", class:"choice-button" %>
-        <% end %>
+      <%= form_for(@user, url: question_update_path) do |f| %>
+        <div>
+          <%= f.check_box :wants_park_nearby, checked: true, hidden: true %>
+          <%= f.submit "Yes", class: "choice-button" %>
+        </div>
+      <% end %>
 
-        <%= simple_form_for(@user, url: question_update_path) do |f| %>
-            <%= f.input :size_desired, as: :hidden, input_html: { value: "35" }, wrapper_html: {class: "m-0"} %>
-            <%= f.submit "A bit of both", class:"choice-button" %>
-        <% end %>
-
-        <%= simple_form_for(@user, url: question_update_path) do |f| %>
-            <%= f.input :size_desired, as: :hidden, input_html: { value: "25" }, wrapper_html: {class: "m-0"} %>
-            <%= f.submit "Loner ", class:"choice-button" %>
-        <% end %>
+      <%= form_for(@user, url: question_update_path) do |f| %>
+        <div>
+          <%= f.check_box :wants_park_nearby, checked: false, hidden: true %>
+          <%= f.submit "No", class: "choice-button" %>
+        </div>
+      <% end %>
     </div>
-    
   </div>
   <%= render 'shared/question_layout' %>
 </div>
