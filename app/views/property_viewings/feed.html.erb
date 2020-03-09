@@ -7,26 +7,21 @@
   <% else %>
     <div class="feed-card">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
-        <div class="carousel-inner" style="width: 100%; height: auto; margin-bottom: 1rem;">
+        <div class="carousel-inner" style="width: 100%; height: auto; margin-bottom: 2px;">
           <div class="carousel-item active">
             <img class="d-block w-100 feed-img" src="<%= cl_image_path @property.photos.first.key, height: 570, width: 350, crop: :fill %>" alt="First slide" style="position:relative; opacity: 80%;">
-              <div class="image-overlay">
-                <svg xmlns="http://www.w3.org/2000/svg" class="img-svg-location" width="26" height="28" viewBox="0 0 48 48"><title>ic_location_on_48px</title>
-                  <g class="nc-icon-wrapper" fill="#111111">
-                    <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"/>
-                  </g>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" class="img-svg-station" width="26" height="28" viewBox="0 0 48 48"><title>ic_directions_subway_48px</title>
-                  <g class="nc-icon-wrapper" fill="#ffffff">
-                    <path d="M24 4C15.16 4 8 5 8 12v19c0 3.87 3.14 7 7 7l-3 3v1h24v-1l-3-3c3.87 0 7-3.13 7-7V12c0-7-7.16-8-16-8zm-9 30c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm7-12H12V12h10v10zm11 12c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-12H26V12h10v10z"/>
-                  </g>
-                </svg>
-                <div class="feed-img-price">
-                  <p>¥<%= "#{@property.price.to_s[0..-4]},#{@property.price.to_s[-3..-1]}" %></p>
+              <div class="icon-overlay">
+                <div class="text-center">
+                  <p class="description-location"><i class="far fa-compass" style="font-size: 26px;"></i><%= @property.location %><p>
+                </div> 
+                <div class="text-center">
+                  <p class="top-description-distance"><i class="fas fa-train"></i></i> </p>
+                  <p class="description-distance"><%= @property.distance_to_station %> minute walk<p>
                 </div>
-                <p class="feed-img-location"><%= @property.location %><p>
-                <p class="feed-img-station"><%= @property.distance_to_station %> minute walk<p>
-              </div>
+                <div class="text-center">
+                  <p class="description-price"><i class="fas fa-tag"></i>¥<%= "#{@property.price.to_s[0..-4]},#{@property.price.to_s[-3..-1]}" %></p>
+                </div>
+              </div>     
           </div>
           <div class="carousel-item">
             <img class="d-block w-100 feed-img" src="<%= cl_image_path @property.photos.last.key, height: 570, width: 350, crop: :fill %>" alt="Second slide" style="position:relative; opacity: 80%;">
@@ -62,19 +57,47 @@
         </div>
       </div>
     </div>
-    <%= render "criteria", user: @user, property_viewing: @property_viewing%>
+    <div class="img-box">
+      <div class="white-box">
+        <%= render "criteria", user: @user, property_viewing: @property_viewing%>
+      </div>
+    </div>
+    
 
       <div class="feed-additional-info">
         <div>
           <h2 class="header" style="margin-top: 2rem; margin-bottom: 2rem;">Additional Information</h2>
+
+          <div class="additional-info-line" style="display: flex; margin-bottom: 1rem;">
+            <div class="feed-additional-info-pill-1">
+              <div>
+                <i class="far fa-compass" style="color: white; margin-left: 1rem;"></i>
+              </div>
+              <div class="feed-additional-info-box-content">
+                <p style="font-size: 12px; font-weight: bold;">Location</p>
+                <p style="font-size: 16px;"><%= @property.location %></p>
+              </div>
+            </div>
+
+            <div class="feed-additional-info-pill-2">
+              <div>
+                <i class="fas fa-tag" style="color: white; margin-left: 1rem;"></i>
+              </div>
+              <div class="feed-additional-info-box-content">
+                <p style="font-size: 12px; font-weight: bold;">Price</p>
+                <p style="font-size: 16px;">¥<%= "#{@property.price.to_s[0..-4]},#{@property.price.to_s[-3..-1]}" %></p>
+              </div>
+            </div>
+          </div>
+
           <div class="additional-info-line" style="display: flex; margin-bottom: 1rem;">
             <div class="feed-additional-info-pill-1">
               <div>
                 <i class="fas fa-key" style="color: white; margin-left: 1rem;"></i>
               </div>
               <div class="feed-additional-info-box-content">
-                <p style="font-size: 12px; font-weight: lighter;">Key money</p>
-                <p style="font-size: 16px;"><%= @property.key_money %></p>
+                <p style="font-size: 12px; font-weight: bold;">Key money</p>
+                <p style="font-size: 16px;">¥<%= "#{@property.key_money.to_s[0..-4]},#{@property.key_money.to_s[-3..-1]}" %></p>
               </div>
             </div>
 
@@ -83,8 +106,8 @@
                 <i class="fas fa-money-check" style="color: white; margin-left: 1rem;"></i>
               </div>
               <div class="feed-additional-info-box-content">
-                <p style="font-size: 12px; font-weight: lighter;">Deposit</p>
-                <p style="font-size: 16px;"><%= @property.deposit %></p>
+                <p style="font-size: 12px; font-weight: bold;">Deposit</p>
+                <p style="font-size: 16px;">¥<%= "#{@property.deposit.to_s[0..-4]},#{@property.deposit.to_s[-3..-1]}" %></p>
               </div>
             </div>
           </div>
@@ -95,7 +118,7 @@
                 <i class="fas fa-arrows-alt" style="color: white; margin-left: 1rem;"></i>
               </div>
               <div class="feed-additional-info-box-content">
-                <p style="font-size: 12px; font-weight: lighter;">Layout</p>
+                <p style="font-size: 12px; font-weight: bold;">Layout</p>
                 <p style="font-size: 16px;"><%= @property.layout %></p>
               </div>
             </div>
@@ -105,7 +128,7 @@
                 <i class="fas fa-ruler-combined" style="color: white; margin-left: 1rem;"></i>
               </div>
               <div class="feed-additional-info-box-content">
-                <p style="font-size: 12px; font-weight: lighter;">Size</p>
+                <p style="font-size: 12px; font-weight: bold;">Size</p>
                 <p style="font-size: 16px;"><%= @property.size %>m²</p>
               </div>
             </div>
@@ -117,7 +140,7 @@
                 <i class="fas fa-arrow-up" style="color: white; margin-left: 1rem;"></i>
               </div>
               <div class="feed-additional-info-box-content">
-                <p style="font-size: 12px; font-weight: lighter;">Floor</p>
+                <p style="font-size: 12px; font-weight: bold;">Floor</p>
                 <p style="font-size: 16px;"><%= @property.floor %></p>
               </div>
             </div>
@@ -127,7 +150,7 @@
                 <i class="fas fa-heartbeat" style="color: white; margin-left: 1rem;"></i>
               </div>
               <div class="feed-additional-info-box-content">
-                <p style="font-size: 12px; font-weight: lighter;">Age</p>
+                <p style="font-size: 12px; font-weight: bold;">Age</p>
                 <p style="font-size: 16px;"><%= @property.age %> years old</p>
               </div>
             </div>
@@ -138,7 +161,7 @@
             <p>Including first month’s rent, deposit, key money</p>
           </div>
           <div class="initial-cost-price">
-            <p><%= @property.initial_cost %></p>
+            <p>¥<%= "#{@property.initial_cost.to_s[0..-4]},#{@property.initial_cost.to_s[-3..-1]}" %></p>
           </div>
 
         </div>

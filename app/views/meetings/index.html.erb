@@ -6,14 +6,14 @@
      <% @confirmed_reservations.each do |confirmed_reservation| %>
        <div class="meeting-card">
         <div class= "image-view-div">
-          <%=cl_image_tag confirmed_reservation.property.photo.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin: 16px;" %>
+          <%=cl_image_tag confirmed_reservation.property.photos.first.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin: 16px;" %>
           <div class= view>
             <%= link_to "view", property_path(confirmed_reservation.property) , class: "btn btn-success btn-sm", style: "color: white;"%>
           </div>
         </div>
          <div class="meeting-info">
            <div><i class="far fa-calendar"></i>
-            <h2 class= "h2"> <%= confirmed_reservation.confirmed_time.strftime("%a, %b, %-d") %> </h2>
+            
             <p class="p">Time</p>
            </div>
            <div><i class="fas fa-subway"></i>
