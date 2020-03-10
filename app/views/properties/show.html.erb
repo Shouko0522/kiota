@@ -1,8 +1,8 @@
 <div class="property_container">
   <div class="property_card">
-    <%= cl_image_tag @property.photo.key, height: 300, width: 400, crop: :fill %>
+    <%= cl_image_tag @property.photos.first.key, height: 300, width: 400, crop: :fill %>
       <div class="property-info">
-        <div class="price">¥<%= @property.price %>,000/m</div>
+        <div class="price">¥<%= @property.price %>/m</div>
         <div><i class="fas fa-subway"></i> <%= @property.distance_to_station %>m from <%= @property.location %> station</div>
         <div><i class="fas fa-bed"></i> <%= @property.layout %></div>
         <div><i class="fas fa-ruler-combined"></i> <%= @property.size %></div>
