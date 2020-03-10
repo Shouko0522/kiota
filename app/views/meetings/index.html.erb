@@ -1,4 +1,34 @@
-<div class="img-box">
+ <div class="img-box">
+ 
+  </div>
+ <div class= "meeting-container">
+   <h1 style="color: rgba(186, 0, 217); font-size: 18px; text-align: center;">Confirmed Reservations</h1>
+     <% @confirmed_reservations.each do |confirmed_reservation| %>
+       <div class="meeting-card">
+        <div class= "image-view-div">
+          <%=cl_image_tag confirmed_reservation.property.photos.first.key, height: 120, width: 130, crop: :fill, style: "border-radius: 20px; margin: 16px;" %>
+          <div class= view>
+            <%= link_to "view", property_path(confirmed_reservation.property) , class: "btn btn-success btn-sm", style: "color: white;"%>
+          </div>
+        </div>
+         <div class="meeting-info">
+           <div><i class="far fa-calendar"></i>
+            
+            <p class="p">Time</p>
+           </div>
+           <div><i class="fas fa-subway"></i>
+            <h2 class= "h2"> <%= confirmed_reservation.property.location %> </h2>
+             <p class="p">Location</p>
+           </div>
+         </div>
+         <a class="btn btn-primary btn-sm" href="<%= confirmed_reservation.google_url %>">calendar</a>
+          <div>
+
+          </div>
+       </div>
+     <% end %>
+ </div>
+
 
 </div>
 <div class= "meeting-container">

@@ -29,7 +29,7 @@ class ReservationsController < ApplicationController
       redirect_to dashboard_path
     else
       @viewing_ids = params[:property_viewings].keys
-      current_user.property_viewings.where(id: @viewing_ids).update_all(status: "applied")
+      current_user.property_viewings.where(id: @viewing_ids).update_all(status: "confirmed")
       redirect_to profile_availability_path
     end
     # redirect_to new_property_reservation_path(@reservation)
