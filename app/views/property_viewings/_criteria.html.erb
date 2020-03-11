@@ -3,7 +3,7 @@
 
   <div class="feed-criteria-description d-flex">
     <% if @pets_tag %>
-      <div class="button-pill">
+      <div class="button-pill-criteria">
         <i class="fas fa-dog"></i>
         <div class="button-pill-info">
           <p>Pet friendly</p>
@@ -12,20 +12,18 @@
     <% else %>
     <% end %>
 
-    <% if @bar_tag %>
-      <div class="button-pill">
-        <i class="fas fa-beer"></i>
+    <% if @park_tag %>
+      <div class="button-pill-criteria">
+        <i class="fas fa-shoe-prints"></i>
         <div class="button-pill-info">
-          <p>Many bars nearby</p>
+          <p>Close to park</p>
         </div>
-      </div>
+      </div>    
     <% else %>
     <% end %>
-  </div>
-
-  <div class="feed-criteria-description d-flex">
+  
     <% if @cafe_tag %>
-      <div class="button-pill">
+      <div class="button-pill-criteria">
         <i class="fas fa-coffee"></i>
         <div class="button-pill-info">
           <p>Many cafes nearby</p>
@@ -34,8 +32,12 @@
     <% else %>
     <% end %>
 
+  </div>
+
+  <div class="feed-criteria-description d-flex">
+
     <% if @floor_tag %>
-      <div class="button-pill">
+      <div class="button-pill-criteria">
         <i class="fas fa-home"></i>
         <div class="button-pill-info">
           <p>First floor</p>
@@ -43,11 +45,9 @@
       </div>
     <% else %>
     <% end %>
-  </div>
   
-  <div class="feed-criteria-description d-flex">
     <% if @supermarket_tag %>
-      <div class="button-pill">
+      <div class="button-pill-criteria">
         <i class="fas fa-store"></i>
         <div class="button-pill-info">
           <p>Close to market</p>
@@ -56,19 +56,20 @@
     <% else %>
     <% end %>
 
-    <% if @park_tag %>
-      <div class="button-pill">
-        <i class="fas fa-shoe-prints"></i>
+    <% if @bar_tag %>
+      <div class="button-pill-criteria">
+        <i class="fas fa-beer"></i>
         <div class="button-pill-info">
-          <p>Close to park</p>
+          <p>Many bars nearby</p>
         </div>
-      </div>    
+      </div>
     <% else %>
     <% end %>
+    
   </div>
   <div class="feed-criteria-description d-flex">
     <% if @zero_key_money_tag %>
-    <div class="button-pill">
+    <div class="button-pill-criteria">
       <i class="fas fa-times-circle"></i>
       <div class="button-pill-info">
         <p>No key money</p>
