@@ -10,12 +10,26 @@
   color: white;
 }
 
+.button-pill-criteria {
+  border-radius: 20px;
+  display: flex;
+  margin: 4px;
+  align-items: center;
+  
+  color: $green;
+  
+
+    .button-pill-info p {
+      font-size: 10px;
+    }
+}
+
 .button-pill-info {
   margin-left: 8px;
 }
 
 .button-pill-info p {
   font-size: 13px; 
-  line-height:11px;
+  line-height:17px;
   margin: 0;
 }
