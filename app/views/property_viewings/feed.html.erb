@@ -1,26 +1,34 @@
-<div class="feed-container">
-  <% if @property.nil? %>
-    <div style="position: absolute; top: 30%;">
-      <p class="text-center">No more properties match your criteria. Click below to view all of the properties you've liked</p>
-      <%= link_to "My dashboard", dashboard_path(current_user), class: "btn btn-success text-align-center", style: "display: block; color: white;" %>
+<div id="mySwipe" class="swipe">
+  <div class="swipe-wrap">
+    <div>-1</div>
+    <div>
+      <div class="feed-container">
+      <% if @property.nil? %>
+        <div style="position: absolute; top: 30%;">
+          <p class="text-center">No more properties match your criteria. Click below to view all of the properties you've liked</p>
+          <%= link_to "My dashboard", dashboard_path(current_user), class: "btn btn-success text-align-center", style: "display: block; color: white;" %>
+        </div>
+        <% else %>
+          <%= render 'properties/card', property: @property, property_viewing: @property_viewing, feed: true %>
+          <div class="like-dislike-btns" style="top: 178.5%;">
+            <div>
+              <%= simple_form_for @property_viewing do |f| %>
+                <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
+                <%= f.input :status, :as => :hidden, :input_html => { :value => "disliked" } %>
+                <%= f.button :submit, "", class: "feed-no-btn"%>
+              <% end %>
+            </div>
+            <div>
+              <%= simple_form_for @property_viewing do |f| %>
+                <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
+                <%= f.input :status, :as => :hidden, :input_html => { :value => "liked" } %>
+                <%= f.button :submit, "", class: "feed-yes-btn"%>
+              <% end %>
+            </div>
+          </div>
+      <% end %>
     </div>
-    <% else %>
-      <%= render 'properties/card', property: @property, property_viewing: @property_viewing, feed: true %>
-      <div class="like-dislike-btns" style="top: 178.5%;">
-        <div>
-          <%= simple_form_for @property_viewing do |f| %>
-            <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
-            <%= f.input :status, :as => :hidden, :input_html => { :value => "disliked" } %>
-            <%= f.button :submit, "", class: "feed-no-btn"%>
-          <% end %>
-        </div>
-        <div>
-          <%= simple_form_for @property_viewing do |f| %>
-            <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
-            <%= f.input :status, :as => :hidden, :input_html => { :value => "liked" } %>
-            <%= f.button :submit, "", class: "feed-yes-btn"%>
-          <% end %>
-        </div>
-      </div>
-  <% end %>
+    </div>
+    <div>1</div>
+  </div>
 </div>
