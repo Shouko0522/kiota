@@ -10,8 +10,8 @@
             <%= link_to "My dashboard", dashboard_path(current_user), class: "btn btn-success text-align-center", style: "display: block; color: white;" %>
           </div>
         <% else %>
-          <%= render 'properties/card', property: @property, property_viewing: @property_viewing, feed: true %>
-          <div class="like-dislike-btns" style="top: 178.5%;">
+          <%= render 'properties/card', property: @property, user: current_user, property_viewing: @property_viewing, feed: true %>
+          <div class="like-dislike-btns" style="top: 180.5%;">
             <div>
               <%= simple_form_for @property_viewing do |f| %>
                 <%= f.input :property_id, :as => :hidden, :input_html => { :value => @property.id } %>
