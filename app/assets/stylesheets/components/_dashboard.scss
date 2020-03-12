@@ -33,6 +33,19 @@
   margin-left: 1rem;
   margin-right: 1rem;
   margin-top: 2rem;
+  margin-bottom: 100px;
+
+    // margin-top: 4rem;
+    // margin-bottom: 4rem;
+    // margin-left: 16px;
+    // margin-right: 16px;
+    padding-top: 22px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 6px 10px 0px rgba(214, 214, 214, 0.74);
+    padding-bottom: 22px;
+  
+
 }
 
 .dashboard-property {
@@ -45,10 +58,10 @@
 }
 
 .reserve-all {
-  width: 140px;
+  width: 160px;
   height: 36px;
   background-color: rgba(186, 0, 217, 0.53);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   border-radius: 7px;
   color: white;
@@ -88,7 +101,8 @@
     background: white;
     
     border-radius: 20px;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
     cursor: pointer;
   }
 
