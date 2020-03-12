@@ -50,22 +50,22 @@ User.create(email:"yann@gmail.com",password:"123456")
 
 property = Property.new(
       information: "A apartment with rooftop",
-      price: 160000,
-      distance_to_station: 15,
+      price: 140000,
+      distance_to_station: 9,
       pets: false,
-      distance_to_supermarket: 5,
+      distance_to_supermarket: 11,
       age: 8,
-      floor: 2,
-      distance_to_park: 10,
+      floor: 1,
+      distance_to_park: 5,
       cafe_nearby: false,
       bar_nearby: true,
-      size: 35,
+      size: 42,
       layout: "1LDK",
       location: "Shibuya",
       user: User.create(email: Faker::Internet.email, password: "123456"),
-      deposit: 160000,
-      key_money: 160000,
-      initial_cost: 480000
+      deposit: 140000,
+      key_money: 140000,
+      initial_cost: 420000
       )
     file = URI.open("https://www.yuuki-home.co.jp/upload/image/article_1_916_1499062310.jpg")
     property.photos.attach(io: file, filename: "room1.jpg", content_type: 'image/jpg')
@@ -79,12 +79,12 @@ property = Property.new(
 property = Property.new(
       information: "A one bedroom apartment",
       price: 110000,
-      distance_to_station: 5,
-      pets: false,
+      distance_to_station: 20,
+      pets: true,
       distance_to_supermarket: 5,
       age: 6,
       floor: 7,
-      distance_to_park: 10,
+      distance_to_park: 13,
       cafe_nearby: true,
       bar_nearby: false,
       size: 40,
@@ -107,16 +107,16 @@ property = Property.new(
 property = Property.new(
       information: "A one bedroom apartment",
       price: 90000,
-      distance_to_station: 20,
+      distance_to_station: 11,
       pets: false,
       distance_to_supermarket: 5,
       age: 9,
-      floor: 6,
-      distance_to_park: 10,
+      floor: 1,
+      distance_to_park: 12,
       cafe_nearby: true,
       bar_nearby: true,
       size: 40,
-      layout: "1R",
+      layout: "1DK",
       location: "Shinjuku",
       user: User.create(email: Faker::Internet.email, password: "123456"),
       deposit: 90000,
@@ -160,31 +160,31 @@ property = Property.new(
    
 #     puts "Creating properties..."
 
-# property = Property.new(
-#       information: "Stylish one bedroom apartment",
-#       price: 90000,
-#       distance_to_station: 5,
-#       pets: false,
-#       distance_to_supermarket: 10,
-#       age: 5,
-#       floor: 4,
-#       distance_to_park: 10,
-#       cafe_nearby: true,
-#       bar_nearby: true,
-#       size: 50,
-#       layout: "1DK",
-#       location: "Ebisu",
-#       user: User.create(email: Faker::Internet.email, password: "123456"),
-#       deposit: 90000,
-#       key_money: 90000,
-#       initial_cost: 270000
-#       )
-#     file = URI.open("https://images.squarespace-cdn.com/content/v1/558d57a4e4b047b6f98af00b/1441924497322-H5WT7AO2I8TTVOYOYLET/ke17ZwdGBToddI8pDm48kGuCsc8-DpZmIDDUa5lwmQp7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UeYBXSfb7omi9BTA8x_8lL5P8aaMBMs81UZEhq2WPeTzuWcPLFtnvN-Wy7FWDJKpPw/sndn_001.jpg")
-#     property.photos.attach(io: file, filename: "room6.jpg", content_type: 'image/jpg')
-#     property.save!
-#     file = URI.open("https://bukkenfan.jp/t/%E6%B8%8B%E8%B0%B7/image")
-#     property.photos.attach(io: file, filename: "room66.jpg", content_type: 'image/jpg')
-#     property.save!
+property = Property.new(
+      information: "Stylish one bedroom apartment",
+      price: 120000,
+      distance_to_station: 5,
+      pets: false,
+      distance_to_supermarket: 10,
+      age: 5,
+      floor: 4,
+      distance_to_park: 9,
+      cafe_nearby: true,
+      bar_nearby: true,
+      size: 50,
+      layout: "1DK",
+      location: "Shinjuku",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 90000,
+      key_money: 90000,
+      initial_cost: 360000
+      )
+    file = URI.open("https://images.squarespace-cdn.com/content/v1/558d57a4e4b047b6f98af00b/1441924497322-H5WT7AO2I8TTVOYOYLET/ke17ZwdGBToddI8pDm48kGuCsc8-DpZmIDDUa5lwmQp7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UeYBXSfb7omi9BTA8x_8lL5P8aaMBMs81UZEhq2WPeTzuWcPLFtnvN-Wy7FWDJKpPw/sndn_001.jpg")
+    property.photos.attach(io: file, filename: "room6.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://bukkenfan.jp/t/%E6%B8%8B%E8%B0%B7/image")
+    property.photos.attach(io: file, filename: "room66.jpg", content_type: 'image/jpg')
+    property.save!
 
 #     puts "Creating properties..."
 
