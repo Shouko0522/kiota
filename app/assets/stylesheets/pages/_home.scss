@@ -9,9 +9,9 @@
 .tagline {
   position: absolute;
   top: 55%;
-  left: 6%;
+  left: calc(50% - 150px);
   height: 10vh; 
-  width: 50vh;   
+  width: 300px;   
 }
 
 .tagline h2 {
