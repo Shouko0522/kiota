@@ -14,7 +14,7 @@
     <% end %>
   </div>
   <div class= "meeting-container">
-    <h1 style="color: rgba(186, 0, 217); font-size: 18px; text-align: center;">Viewings you've applied for</h1>
+    <h1>Viewings you've applied for</h1>
     <% @applied_reservations.each do |applied_reservation| %>
       <div class="col-12 col-md-6 col-lg-3">
         <%= render "card", reservation: applied_reservation %>
