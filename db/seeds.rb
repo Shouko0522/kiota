@@ -55,7 +55,7 @@ property = Property.new(
       pets: false,
       distance_to_supermarket: 11,
       age: 8,
-      floor: 1,
+      floor: 9,
       distance_to_park: 5,
       cafe_nearby: false,
       bar_nearby: true,
@@ -216,31 +216,31 @@ property = Property.new(
 
 #     puts "Creating properties..."
 
-# # property = Property.new(
-# #       information: "A one bedroom apartment",
-# #       price: 70000,
-# #       distance_to_station: 15,
-# #       pets: false,
-# #       distance_to_supermarket: 10,
-# #       age: 8,
-# #       floor: 4,
-# #       distance_to_park: 10,
-# #       cafe_nearby: true,
-# #       bar_nearby: true,
-# #       size: 35,
-# #       layout: "1DK",
-# #       location: "Roppongi",
-# #       user: User.create(email: Faker::Internet.email, password: "123456"),
-# #       deposit: 70000,
-# #       key_money: 70000,
-# #       initial_cost: 210000
-# #       )
-# #     file = URI.open("https://lh3.googleusercontent.com/proxy/5851ss72mBJ50d4HUHDol0JKLF-ejQ5LwtRcf3YNbOyUd_I97YmMKAKaUizkdPbkOmGZoduXa81_VZvCVzlPd8JqXkg1uDA_R2gt19tUM9TtNNYGcApbHwVcvbomXUY")
-# #     property.photos.attach(io: file, filename: "room8.jpg", content_type: 'image/jpg')
-# #     property.save!
-# #     file = URI.open("https://d1sw4fcdq5we39.cloudfront.net/wp-content/uploads/2018/11/21170950/dcdcd2cd-85cf-4616-ad68-8ca804cf4a70.jpg")
-# #     property.photos.attach(io: file, filename: "room88.jpg", content_type: 'image/jpg')
-# #     property.save!
+property = Property.new(
+      information: "A one bedroom apartment",
+      price: 70000,
+      distance_to_station: 15,
+      pets: false,
+      distance_to_supermarket: 10,
+      age: 8,
+      floor: 4,
+      distance_to_park: 10,
+      cafe_nearby: true,
+      bar_nearby: true,
+      size: 35,
+      layout: "1DK",
+      location: "Roppongi",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 70000,
+      key_money: 70000,
+      initial_cost: 210000
+      )
+    file = URI.open("https://lh3.googleusercontent.com/proxy/5851ss72mBJ50d4HUHDol0JKLF-ejQ5LwtRcf3YNbOyUd_I97YmMKAKaUizkdPbkOmGZoduXa81_VZvCVzlPd8JqXkg1uDA_R2gt19tUM9TtNNYGcApbHwVcvbomXUY")
+    property.photos.attach(io: file, filename: "room8.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://d1sw4fcdq5we39.cloudfront.net/wp-content/uploads/2018/11/21170950/dcdcd2cd-85cf-4616-ad68-8ca804cf4a70.jpg")
+    property.photos.attach(io: file, filename: "room88.jpg", content_type: 'image/jpg')
+    property.save!
 
 # #     puts "Creating properties..."
 
