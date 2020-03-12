@@ -1,13 +1,13 @@
 <div id="mySwipe" class="swipe">
   <div class="swipe-wrap">
-    <div>-1</div>
+<div></div>
     <div>
       <div class="feed-container">
-      <% if @property.nil? %>
-        <div style="position: absolute; top: 30%;">
-          <p class="text-center">No more properties match your criteria. Click below to view all of the properties you've liked</p>
-          <%= link_to "My dashboard", dashboard_path(current_user), class: "btn btn-success text-align-center", style: "display: block; color: white;" %>
-        </div>
+        <% if @property.nil? %>
+          <div style="position: absolute; top: 30%;">
+            <p class="text-center">No more properties match your criteria. Click below to view all of the properties you've liked</p>
+            <%= link_to "My dashboard", dashboard_path(current_user), class: "btn btn-success text-align-center", style: "display: block; color: white;" %>
+          </div>
         <% else %>
           <%= render 'properties/card', property: @property, property_viewing: @property_viewing, feed: true %>
           <div class="like-dislike-btns" style="top: 178.5%;">
@@ -26,9 +26,9 @@
               <% end %>
             </div>
           </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
-    </div>
-    <div>1</div>
+    <div></div>
   </div>
 </div>

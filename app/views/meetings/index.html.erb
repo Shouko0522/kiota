@@ -6,12 +6,12 @@
     </div>
   </div>
   <div class= "meeting-container">
-  <h1>Scheduled Viewings</h1>
-  <% @confirmed_reservations.each do |confirmed_reservation| %>
-    <div class="col-12 col-md-6 col-lg-3">
-      <%= render "card", reservation: confirmed_reservation %>
-    </div>
-  <% end %>
+    <h1>Scheduled Viewings</h1>
+    <% @confirmed_reservations.each do |confirmed_reservation| %>
+      <div class="col-12 col-md-6 col-lg-3">
+        <%= render "card", reservation: confirmed_reservation %>
+      </div>
+    <% end %>
   </div>
   <div class= "meeting-container">
     <h1 style="color: rgba(186, 0, 217); font-size: 18px; text-align: center;">Viewings you've applied for</h1>

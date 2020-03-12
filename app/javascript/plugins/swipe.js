@@ -12,7 +12,7 @@ const likeDislike = (index, elem, dir) => {
 const initSwipe = () => {
   var element = document.getElementById('mySwipe');
   window.mySwipe = new Swipe(element, {
-    startSlide: 1,
+    startSlide: 0,
     auto: 0,
     draggable: true,
     autoRestart: false,
