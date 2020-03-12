@@ -1,4 +1,5 @@
 <div class="theme">
+  <i class="fas fa-chevron-left go_back_arrow" style="color: white;"></i><%= link_to "Go back", property_viewings_feed_path, class: "go_back_button", style: "color: white;" %>
   <div class="img-box-green">
     <div class="white-box-avail">
       <h1 style="font-size: 27px; font-weight: 100; color: #498A6B">Schedule a viewing</h1>
@@ -29,7 +30,7 @@
               <% end %>
             </div>
         <% end %>
-      </div> 
+      </div>
     <% end %>
     <div class="profile-link">
       <%= link_to "Complete your profile", profile_path, style:"color:#687091ed"  %>
