@@ -40,7 +40,7 @@ property = Property.new(
     file = URI.open("https://www.yuuki-home.co.jp/upload/image/article_1_1619_1578123350.jpg")
     property.photos.attach(io: file, filename: "room2.jpg", content_type: 'image/jpg')
     property.save!
-    file = URI.open("https://data.freedomcorp.co.jp/images/2015/12/d9c065a97e09ceedbb6148ef07895013-1-1024x768.jpg")
+    file = URI.open("https://www.google.com/url?sa=i&url=http%3A%2F%2Fhoap.tokyo%2Fportfolio%2Fshibuya-apartment-401%2F&psig=AOvVaw3e7ZdYQl5xLaVGUTMNubWf&ust=1584093175140000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjq24zVlOgCFQAAAAAdAAAAABAL")
     property.photos.attach(io: file, filename: "room22.jpg", content_type: 'image/jpg')
     property.save!
 
@@ -92,7 +92,7 @@ property = Property.new(
     file = URI.open("https://i.ytimg.com/vi/BXwDNp2eAvM/maxresdefault.jpg")
     property.photos.attach(io: file, filename: "room3.jpg", content_type: 'image/jpg')
     property.save!
-    file = URI.open("https://www.sumitomo-latour.jp/bldg/25256/unit/D1-50W-N/photo/1.jpg")
+    file = URI.open("https://hoap.tokyo/wp-content/uploads/2017/04/MG_5740.jpg")
     property.photos.attach(io: file, filename: "room33.jpg", content_type: 'image/jpg')
     property.save!
 
