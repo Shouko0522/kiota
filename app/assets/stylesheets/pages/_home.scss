@@ -1,14 +1,16 @@
 // Specific CSS for your home-page
 .landing-img {
-  background-image: asset_url("landing-page-final.svg");
+  background-image: asset_url("extended-landing-page.svg");
   background-repeat: no-repeat;
   height: 100vh;
-  background-position: center;
+  // background-position: center;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .tagline {
   position: absolute;
-  top: 55%;
+  top: 62%;
   left: calc(50% - 150px);
   height: 10vh; 
   width: 300px;   

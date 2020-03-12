@@ -169,11 +169,11 @@
 .button-div {
   position: absolute;
   bottom: 7%;
-  left: 25%;
+  left: 21%;
 }
 
 .choice-button {
-  width: 140px;
+  width: 155px;
   height: 36px;
   background-color: rgba(186, 0, 217, 0.53);
   font-size: 14px;
@@ -183,5 +183,12 @@
   border: none;
   margin: 6px;
   // box-shadow: 0 0 0 3px #000000;
-  
 }
+
+.q-div {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 10%;
+}
+
