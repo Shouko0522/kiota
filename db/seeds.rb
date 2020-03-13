@@ -55,7 +55,7 @@ property = Property.new(
       pets: false,
       distance_to_supermarket: 11,
       age: 8,
-      floor: 9,
+      floor: 1,
       distance_to_park: 5,
       cafe_nearby: false,
       bar_nearby: true,
@@ -74,7 +74,7 @@ property = Property.new(
     property.photos.attach(io: file, filename: "room11.jpg", content_type: 'image/jpg')
     property.save!
 
-    puts "Creating properties..."
+    puts "Property created"
 
 property = Property.new(
       information: "A one bedroom apartment",
@@ -102,20 +102,20 @@ property = Property.new(
     property.photos.attach(io: file, filename: "room33.jpg", content_type: 'image/jpg')
     property.save!
 
-    puts "Creating properties..."
+    puts "Property created"
 
 property = Property.new(
       information: "A one bedroom apartment",
       price: 90000,
       distance_to_station: 11,
       pets: false,
-      distance_to_supermarket: 5,
+      distance_to_supermarket: 12,
       age: 9,
       floor: 1,
       distance_to_park: 12,
       cafe_nearby: true,
       bar_nearby: true,
-      size: 40,
+      size: 43,
       layout: "1DK",
       location: "Shinjuku",
       user: User.create(email: Faker::Internet.email, password: "123456"),
@@ -130,7 +130,7 @@ property = Property.new(
     property.photos.attach(io: file, filename: "room44.jpg", content_type: 'image/jpg')
     property.save!
 
-    puts "Creating properties..."
+    puts "Property created"
 
 # property = Property.new(
 #       information: "A one bedroom apartment",
@@ -160,31 +160,7 @@ property = Property.new(
    
 #     puts "Creating properties..."
 
-property = Property.new(
-      information: "Stylish one bedroom apartment",
-      price: 120000,
-      distance_to_station: 5,
-      pets: false,
-      distance_to_supermarket: 10,
-      age: 5,
-      floor: 4,
-      distance_to_park: 9,
-      cafe_nearby: true,
-      bar_nearby: true,
-      size: 50,
-      layout: "1DK",
-      location: "Shinjuku",
-      user: User.create(email: Faker::Internet.email, password: "123456"),
-      deposit: 90000,
-      key_money: 90000,
-      initial_cost: 360000
-      )
-    file = URI.open("https://images.squarespace-cdn.com/content/v1/558d57a4e4b047b6f98af00b/1441924497322-H5WT7AO2I8TTVOYOYLET/ke17ZwdGBToddI8pDm48kGuCsc8-DpZmIDDUa5lwmQp7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UeYBXSfb7omi9BTA8x_8lL5P8aaMBMs81UZEhq2WPeTzuWcPLFtnvN-Wy7FWDJKpPw/sndn_001.jpg")
-    property.photos.attach(io: file, filename: "room6.jpg", content_type: 'image/jpg')
-    property.save!
-    file = URI.open("https://bukkenfan.jp/t/%E6%B8%8B%E8%B0%B7/image")
-    property.photos.attach(io: file, filename: "room66.jpg", content_type: 'image/jpg')
-    property.save!
+
 
 #     puts "Creating properties..."
 
@@ -216,31 +192,31 @@ property = Property.new(
 
 #     puts "Creating properties..."
 
-property = Property.new(
-      information: "A one bedroom apartment",
-      price: 70000,
-      distance_to_station: 15,
-      pets: false,
-      distance_to_supermarket: 10,
-      age: 8,
-      floor: 4,
-      distance_to_park: 10,
-      cafe_nearby: true,
-      bar_nearby: true,
-      size: 35,
-      layout: "1DK",
-      location: "Roppongi",
-      user: User.create(email: Faker::Internet.email, password: "123456"),
-      deposit: 70000,
-      key_money: 70000,
-      initial_cost: 210000
-      )
-    file = URI.open("https://lh3.googleusercontent.com/proxy/5851ss72mBJ50d4HUHDol0JKLF-ejQ5LwtRcf3YNbOyUd_I97YmMKAKaUizkdPbkOmGZoduXa81_VZvCVzlPd8JqXkg1uDA_R2gt19tUM9TtNNYGcApbHwVcvbomXUY")
-    property.photos.attach(io: file, filename: "room8.jpg", content_type: 'image/jpg')
-    property.save!
-    file = URI.open("https://d1sw4fcdq5we39.cloudfront.net/wp-content/uploads/2018/11/21170950/dcdcd2cd-85cf-4616-ad68-8ca804cf4a70.jpg")
-    property.photos.attach(io: file, filename: "room88.jpg", content_type: 'image/jpg')
-    property.save!
+# # property = Property.new(
+# #       information: "A one bedroom apartment",
+# #       price: 70000,
+# #       distance_to_station: 15,
+# #       pets: false,
+# #       distance_to_supermarket: 10,
+# #       age: 8,
+# #       floor: 4,
+# #       distance_to_park: 10,
+# #       cafe_nearby: true,
+# #       bar_nearby: true,
+# #       size: 35,
+# #       layout: "1DK",
+# #       location: "Roppongi",
+# #       user: User.create(email: Faker::Internet.email, password: "123456"),
+# #       deposit: 70000,
+# #       key_money: 70000,
+# #       initial_cost: 210000
+# #       )
+# #     file = URI.open("https://lh3.googleusercontent.com/proxy/5851ss72mBJ50d4HUHDol0JKLF-ejQ5LwtRcf3YNbOyUd_I97YmMKAKaUizkdPbkOmGZoduXa81_VZvCVzlPd8JqXkg1uDA_R2gt19tUM9TtNNYGcApbHwVcvbomXUY")
+# #     property.photos.attach(io: file, filename: "room8.jpg", content_type: 'image/jpg')
+# #     property.save!
+# #     file = URI.open("https://d1sw4fcdq5we39.cloudfront.net/wp-content/uploads/2018/11/21170950/dcdcd2cd-85cf-4616-ad68-8ca804cf4a70.jpg")
+# #     property.photos.attach(io: file, filename: "room88.jpg", content_type: 'image/jpg')
+# #     property.save!
 
 # #     puts "Creating properties..."
 
@@ -272,30 +248,32 @@ property = Property.new(
 
 #     puts "Creating properties..."
 
-# property = Property.new(
-#       information: "A one bedroom apartment",
-#       price: 90000,
-#       distance_to_station: 5,
-#       pets: true,
-#       distance_to_supermarket: 5,
-#       age: 10,
-#       floor: 1,
-#       distance_to_park: 5,
-#       cafe_nearby: true,
-#       bar_nearby: true,
-#       size: 50,
-#       layout: "1DK",
-#       location: "Shinjuku",
-#       user: User.create(email: Faker::Internet.email, password: "123456"),
-#       deposit: 90000,
-#       key_money: 0,
-#       initial_cost: 180000
-#       )
-#     file = URI.open("https://odis.homeaway.com/odis/listing/63a6c329-3fd3-42af-a892-4d80467f1c44.c10.jpg")
-#     property.photos.attach(io: file, filename: "room10.jpg", content_type: 'image/jpg')
-#     property.save!
-#     file = URI.open("https://shootest.jp/wp-content/uploads/2019/07/IMG_002.jpg")
-#     property.photos.attach(io: file, filename: "room100.jpg", content_type: 'image/jpg')
-#     property.save!
+property = Property.new(
+      information: "A one bedroom apartment",
+      price: 90000,
+      distance_to_station: 5,
+      pets: true,
+      distance_to_supermarket: 5,
+      age: 10,
+      floor: 1,
+      distance_to_park: 5,
+      cafe_nearby: true,
+      bar_nearby: true,
+      size: 50,
+      layout: "1DK",
+      location: "Shinjuku",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 90000,
+      key_money: 0,
+      initial_cost: 180000
+      )
+    file = URI.open("https://shootest.jp/wp-content/uploads/2019/07/IMG_002.jpg")
+    property.photos.attach(io: file, filename: "room100.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://odis.homeaway.com/odis/listing/63a6c329-3fd3-42af-a892-4d80467f1c44.c10.jpg")
+    property.photos.attach(io: file, filename: "room10.jpg", content_type: 'image/jpg')
+    property.save!
+
+    puts "Property created"
 
 puts 'Finished!'
