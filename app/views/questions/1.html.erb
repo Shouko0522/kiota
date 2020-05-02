@@ -22,7 +22,7 @@
     <%= form_for(@user, url: question_update_path) do |f| %>
       <div>
         <label for="pricerange" style="color: #2FEE92;"></label>
-        <div>
+        <div style="display: flex; justify-content: center;">
           <section class="range-slider" data-controller="sliders" style= "color: #BA00D9; font-size: 29px" >
             <span class="rangeValues"></span>
             <input name="user[min_price]" value="40000" min="10000" max="350000" step="5000" type="range" id="slider1">
