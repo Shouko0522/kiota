@@ -4,4 +4,6 @@ It makes use of an engaging series of questions to guage what is most important 
 
 Once they have selected their favorites, the user can then get into contact with the property owner or real estate agent to set up a time and place to view the properties they like.
 
+Kiota uses many technologies, mainly Ruby on Rails but also Javascript, Active Record database management, Bootstrap and CSS. Designed primarily for mobile applications.
+
 Find kiota here: kiota.xyz
