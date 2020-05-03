@@ -38,7 +38,6 @@
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= render 'shared/flashes' %>
-    
     <% unless params[:action] == "home" %>
       <%= render 'shared/navbar' %>
     <% end %>

@@ -1,0 +1,13 @@
+.sign-out {
+  position: absolute;
+  bottom: 25%;
+  left: 6%;
+  color:$purple;
+  z-index: 3;
+  font-size: 16px;
+}
+
+.sign-out:hover {
+  text-decoration: none;
+  color: $purple;
+}

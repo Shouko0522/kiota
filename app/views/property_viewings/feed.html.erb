@@ -5,7 +5,7 @@
       <div class="feed-container">
         <% if @property.nil? %>
         
-          <div style="position: absolute;">
+          <div style="position: absolute; margin-top: 4rem;">
             <p class="text-center">No more properties match your criteria. Click below to view all of the properties you've liked</p>
             <%= link_to "My dashboard", dashboard_path(current_user), class: "btn btn-success text-align-center", style: "display: block; color: white;" %>
           </div>

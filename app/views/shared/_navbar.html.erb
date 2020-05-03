@@ -5,4 +5,5 @@
   <%= link_to dashboard_path(current_user), class: "navbar-brand-dashboard" do %>
     <%= image_tag "kiota-logo-no-circle.png"%>
   <% end %>
+  <%= link_to "Sign out", destroy_user_session_path(current_user), method: :delete, class: "sign-out" %>
 </div>
