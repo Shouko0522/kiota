@@ -1,3 +1,49 @@
+.go_back_button {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  color:white;
+  z-index: 3;
+  font-size: 14px;
+}
+
+.go_back_button:hover {
+  text-decoration: none;
+  color: $purple;
+}
+
+.go_back_arrow {
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  z-index: 3;
+  color: $purple;
+}
+
+.pink-button {
+  width: 168px;
+  height: 36px;
+  background-color: rgba(186, 0, 217, 0.53);
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 7px;
+  color: white;
+  border: none;
+  margin: 6px;
+}
+
+.green-button {
+  width: 168px;
+  height: 36px;
+  background-color: #33C17E;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 7px;
+  color: white;
+  border: none;
+  margin: 6px;
+}
+
 .button-pill {
   background: rgba(186, 0, 217, 0.53);
   height: 43px;

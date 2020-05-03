@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="main-container">
-    <h1 class="text-center question">How much is your monthly budget?</h1>
+    <h1 class="text-center questions1-2">How much is your monthly budget?</h1>
     
     <%= form_for(@user, url: question_update_path) do |f| %>
       <div>
@@ -32,7 +32,7 @@
       </div>
     </div>
     <div class="q-div">
-      <%= f.submit "Continue", class:"choice-button" %>
+      <%= f.submit "Continue", class:"pink-button" %>
     </div>
     <% end %>
   <%= render 'shared/question_layout' %>

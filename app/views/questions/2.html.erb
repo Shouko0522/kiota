@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="main-container">
-    <h1 class="question">Where do you work?</h1>
+    <h1 class="questions1-2">Where do you work?</h1>
     <%= simple_form_for(@user, url: question_update_path) do |f| %>
       <div>
         <label for="work_location"></label>
@@ -54,7 +54,7 @@
       </div>
     </div>
     <div class="q-div">
-      <%= f.submit "Continue", class:"choice-button" %>
+      <%= f.submit "Continue", class:"pink-button" %>
     </div>
     <% end %>
   <%= render 'shared/question_layout' %>

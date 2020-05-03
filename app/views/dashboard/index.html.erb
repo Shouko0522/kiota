@@ -9,7 +9,7 @@
 
     <%= form_tag apply_path, method: :post do %>
       <div class="text-center">
-        <%= submit_tag "Schedule a viewing!", class: "reserve-all" %>
+        <%= submit_tag "Schedule a viewing!", class: "pink-button" %>
       </div>
       <% @property_viewings.each do |property_viewing| %>
         <div class="dashboard-property-container">
@@ -42,8 +42,9 @@
         </div>
       <% end %>
       <div class="text-center">
-        <%= submit_tag "Schedule a viewing!", class: "reserve-all" %>
+        <%= submit_tag "Schedule a viewing!", class: "pink-button" %>
       </div>
     <% end %>
   </div>
+  <i class="fas fa-chevron-left go_back_arrow"></i><%= link_to "Back to feed", property_viewings_feed_path, class: "go_back_button" %>
 </div>

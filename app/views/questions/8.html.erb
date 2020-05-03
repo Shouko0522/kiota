@@ -17,19 +17,19 @@
     </div>
   </div>
   <div class="main-container">
-    <h1 class="question" style="font-size: 28px;">Are you afraid of heights?</h1>
+    <h1 class="question">Are you afraid of heights?</h1>
     <div class="button-div">
       <%= form_for(@user, url: question_update_path) do |f| %>
         <div>
           <%= f.check_box :wants_first_floor, checked: true, hidden: true %>
-          <%= f.submit "Terrified", class: "choice-button" %>
+          <%= f.submit "Terrified", class: "pink-button" %>
         </div>
       <% end %>
 
       <%= form_for(@user, url: question_update_path) do |f| %>
         <div>
           <%= f.check_box :wants_first_floor, checked: false, hidden: true %>
-          <%= f.submit "No problem", class: "choice-button" %>
+          <%= f.submit "No problem", class: "pink-button" %>
         </div>
       <% end %>
     </div>

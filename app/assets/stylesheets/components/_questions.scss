@@ -43,6 +43,14 @@
   letter-spacing: 0.1em;
   margin-top: 1rem;
   font-weight: lighter;
+  margin-bottom: 2rem;
+}
+
+.questions1-2 {
+  font-size: 26px;
+  letter-spacing: 0.1em;
+  margin-top: 1rem;
+  font-weight: lighter;
 }
 
 .question-subheader {
@@ -62,29 +70,6 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
-.go_back_button {
-  position: absolute;
-  top: 5px;
-  left: 15px;
-  color:white;
-  z-index: 3;
-  font-size: 14px;
-}
-
-.go_back_button:hover {
-  text-decoration: none;
-  color: white;
-}
-
-.go_back_arrow {
-  position: absolute;
-  top: 7px;
-  left: 0px;
-  z-index: 3;
-  color: $purple;
-}
-
 // For Question 1 use with the sliders
 
 .rangeValues {
@@ -106,24 +91,11 @@
   height: 30px;
 }
 
-// For circle answer questions
+// For answering questions
 .button-div {
   position: absolute;
+  left: 24%;
   bottom: 7%;
-  left: 21%;
-}
-
-.choice-button {
-  width: 155px;
-  height: 36px;
-  background-color: rgba(186, 0, 217, 0.53);
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 7px;
-  color: white;
-  border: none;
-  margin: 6px;
-  // box-shadow: 0 0 0 3px #000000;
 }
 
 .q-div {
