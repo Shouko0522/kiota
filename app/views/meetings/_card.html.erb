@@ -14,7 +14,7 @@
     <% end %>
     <div>
       <p class="meeting-title">Where</p>
-      <p class="meeting-p"><i class="fas fa-train"></i> <%= reservation.property.location %></p>
+      <p class="meeting-p"><i class="fas fa-train"></i> <%= reservation.property.location %> station</p>
     </div>
     <% if reservation.confirmed_time %>
       <a class="btn btn-primary btn-sm" href="<%= reservation.google_url %>">Add to calendar</a>

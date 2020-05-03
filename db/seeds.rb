@@ -28,7 +28,7 @@ property = Property.new(
       pets: false,
       distance_to_supermarket: 11,
       age: 8,
-      floor: 1,
+      floor: 11,
       distance_to_park: 5,
       cafe_nearby: false,
       bar_nearby: true,
@@ -84,7 +84,7 @@ property = Property.new(
       pets: true,
       distance_to_supermarket: 5,
       age: 6,
-      floor: 7,
+      floor: 2,
       distance_to_park: 13,
       cafe_nearby: true,
       bar_nearby: false,
@@ -214,9 +214,6 @@ property = Property.new(
     file = URI.open("https://www.r-store.jp/photo/roominfo/photo/building/230188/230188_04_size6.jpg?20200503162614")
     property.photos.attach(io: file, filename: "room77.jpg", content_type: 'image/jpg')
     property.save!
-    file = URI.open("https://www.r-store.jp/photo/roominfo/photo/building/230188/230188_11_size6.jpg?20200503162614")
-    property.photos.attach(io: file, filename: "room777.jpg", content_type: 'image/jpg')
-    property.save!
 
     puts "Property 7 created"
 
@@ -231,7 +228,7 @@ property = Property.new(
       distance_to_park: 10,
       cafe_nearby: true,
       bar_nearby: false,
-      size: 80,
+      size: 60,
       layout: "1LDK",
       location: "Kichijoji",
       user: User.create(email: Faker::Internet.email, password: "123456"),
@@ -293,7 +290,7 @@ property = Property.new(
       user: User.create(email: Faker::Internet.email, password: "123456"),
       deposit: 95000,
       key_money: 0,
-      initial_cost: 180000
+      initial_cost: 190000
       )
     file = URI.open("https://shootest.jp/wp-content/uploads/2020/03/iwai-omotesando-8.jpg")
     property.photos.attach(io: file, filename: "room1000.jpg", content_type: 'image/jpg')
@@ -315,7 +312,7 @@ property = Property.new(
       distance_to_park: 5,
       cafe_nearby: true,
       bar_nearby: true,
-      size: 60,
+      size: 80,
       layout: "1DK",
       location: "Kichijoji",
       user: User.create(email: Faker::Internet.email, password: "123456"),
@@ -338,7 +335,7 @@ property = Property.new(
       distance_to_station: 10,
       pets: true,
       distance_to_supermarket: 5,
-      age: 2,
+      age: 12,
       floor: 3,
       distance_to_park: 5,
       cafe_nearby: true,
@@ -349,12 +346,12 @@ property = Property.new(
       user: User.create(email: Faker::Internet.email, password: "123456"),
       deposit: 130000,
       key_money: 0,
-      initial_cost: 390000
+      initial_cost: 260000
       )
     file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/01/IMG_1685.jpg")
     property.photos.attach(io: file, filename: "room12.jpg", content_type: 'image/jpg')
     property.save!
-    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/01/IMG_1706.jpg")
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/04/IMG_2253.jpg")
     property.photos.attach(io: file, filename: "room112.jpg", content_type: 'image/jpg')
     property.save!
 
@@ -377,7 +374,7 @@ property = Property.new(
       user: User.create(email: Faker::Internet.email, password: "123456"),
       deposit: 110000,
       key_money: 0,
-      initial_cost: 390000
+      initial_cost: 220000
       )
     file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/02/IMG_1643.jpg")
     property.photos.attach(io: file, filename: "room13.jpg", content_type: 'image/jpg')
@@ -407,11 +404,14 @@ property = Property.new(
       key_money: 0,
       initial_cost: 230000
       )
-    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/02/IMG_1643.jpg")
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2019/08/IMG_0432.jpg")
     property.photos.attach(io: file, filename: "room14.jpg", content_type: 'image/jpg')
     property.save!
-    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/02/IMG_1632.jpg")
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2019/08/IMG_0412.jpg")
     property.photos.attach(io: file, filename: "room114.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2019/08/IMG_0423.jpg")
+    property.photos.attach(io: file, filename: "room1114.jpg", content_type: 'image/jpg')
     property.save!
 
     puts "Property 14 created"   
