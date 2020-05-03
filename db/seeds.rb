@@ -19,34 +19,7 @@ User.create(email:"shouko@gmail.com",password:"123456")
 User.create(email:"yann@gmail.com",password:"123456")
 
 
-
-# property = Property.new(
-#       information: "Big room",
-#       price: 130000,
-#       distance_to_station: 10,
-#       pets: true,
-#       distance_to_supermarket: 5,
-#       age: 2,
-#       floor: 1,
-#       distance_to_park: 5,
-#       cafe_nearby: true,
-#       bar_nearby: false,
-#       size: 50,
-#       layout: "1DK",
-#       location: "Roppongi",
-#       user: User.create(email: Faker::Internet.email, password: "123456"),
-#       deposit: 130000,
-#       key_money: 130000,
-#       initial_cost: 390000
-#       )
-#     # file = URI.open("https://www.yuuki-home.co.jp/upload/image/article_1_1619_1578123350.jpg")
-#     # property.photos.attach(io: file, filename: "room2.jpg", content_type: 'image/jpg')
-#     # property.save!
-#     # file = URI.open("https://www.google.com/url?sa=i&url=http%3A%2F%2Fhoap.tokyo%2Fportfolio%2Fshibuya-apartment-401%2F&psig=AOvVaw3e7ZdYQl5xLaVGUTMNubWf&ust=1584093175140000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOjq24zVlOgCFQAAAAAdAAAAABAL")
-#     # property.photos.attach(io: file, filename: "room22.jpg", content_type: 'image/jpg')
-#     property.save!
-
-#     puts "Creating properties..."
+puts "Creating properties..."
 
 property = Property.new(
       information: "A apartment with rooftop",
@@ -61,7 +34,7 @@ property = Property.new(
       bar_nearby: true,
       size: 42,
       layout: "1LDK",
-      location: "Shibuya",
+      location: "Roppongi",
       user: User.create(email: Faker::Internet.email, password: "123456"),
       deposit: 140000,
       key_money: 140000,
@@ -74,7 +47,35 @@ property = Property.new(
     property.photos.attach(io: file, filename: "room11.jpg", content_type: 'image/jpg')
     property.save!
 
-    puts "Property created"
+    puts "Property 1 created"
+
+property = Property.new(
+      information: "Big room",
+      price: 130000,
+      distance_to_station: 10,
+      pets: true,
+      distance_to_supermarket: 5,
+      age: 2,
+      floor: 1,
+      distance_to_park: 5,
+      cafe_nearby: true,
+      bar_nearby: false,
+      size: 50,
+      layout: "1DK",
+      location: "Roppongi",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 130000,
+      key_money: 130000,
+      initial_cost: 390000
+      )
+    file = URI.open("https://www.athome.co.jp/image_files/path/0D1vU0R5sBwig8cfqsEF9w==.jpeg?width=640&height=640&margin=true")
+    property.photos.attach(io: file, filename: "room2.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://www.athome.co.jp/image_files/path/0D1vU0R5sBy5VzpbrzoHNg==.jpeg?width=640&height=640&margin=true")
+    property.photos.attach(io: file, filename: "room22.jpg", content_type: 'image/jpg')
+    property.save!
+
+    puts "Property 2 created"
 
 property = Property.new(
       information: "A one bedroom apartment",
@@ -89,7 +90,7 @@ property = Property.new(
       bar_nearby: false,
       size: 40,
       layout: "1DK",
-      location: "Shibuya",
+      location: "Shimokitazawa",
       user: User.create(email: Faker::Internet.email, password: "123456"),
       deposit: 110000,
       key_money: 110000,
@@ -102,7 +103,7 @@ property = Property.new(
     property.photos.attach(io: file, filename: "room33.jpg", content_type: 'image/jpg')
     property.save!
 
-    puts "Property created"
+    puts "Property 3 created"
 
 property = Property.new(
       information: "A one bedroom apartment",
@@ -117,7 +118,7 @@ property = Property.new(
       bar_nearby: true,
       size: 43,
       layout: "1DK",
-      location: "Shinjuku",
+      location: "Ebisu",
       user: User.create(email: Faker::Internet.email, password: "123456"),
       deposit: 90000,
       key_money: 90000,
@@ -130,150 +131,349 @@ property = Property.new(
     property.photos.attach(io: file, filename: "room44.jpg", content_type: 'image/jpg')
     property.save!
 
-    puts "Property created"
-
-# property = Property.new(
-#       information: "A one bedroom apartment",
-#       price: 100000,
-#       distance_to_station: 5,
-#       pets: false,
-#       distance_to_supermarket: 10,
-#       age: 2,
-#       floor: 1,
-#       distance_to_park: 10,
-#       cafe_nearby: false,
-#       bar_nearby: true,
-#       size: 50,
-#       layout: "1DK",
-#       location: "Shibuya",
-#       user: User.create(email: Faker::Internet.email, password: "123456"),
-#       deposit: 100000,
-#       key_money: 100000,
-#       initial_cost: 300000
-#       )
-#     file = URI.open("https://lh3.googleusercontent.com/proxy/oA3jDB7gFGfwvoRDlkDo6ZWgBw0zndC_td6ScWeJ6LGvWAb_LtuqAZl8mQodvlbWcEDpRLmRLpwxD86feePyZddONtT2DTZraOBXyjxjBAr05LEHKJ6VKQQTDtBuPg")
-#     property.photos.attach(io: file, filename: "room5.jpg", content_type: 'image/jpg')
-#     property.save!
-#     file = URI.open("https://tasimages.blob.core.windows.net/uploads/636244132390459811_One_Bedroom_C_Type_2219f1c3-dfdb-4aea-9f58-48210e4cb810.jpg")
-#     property.photos.attach(io: file, filename: "room55.jpg", content_type: 'image/jpg')
-#     property.save!
-   
-#     puts "Creating properties..."
-
-
-
-#     puts "Creating properties..."
-
-# property = Property.new(
-#       information: "A one bedroom apartment",
-#       price: 80000,
-#       distance_to_station: 15,
-#       pets: false,
-#       distance_to_supermarket: 10,
-#       age: 2,
-#       floor: 4,
-#       distance_to_park: 10,
-#       cafe_nearby: false,
-#       bar_nearby: true,
-#       size: 35,
-#       layout: "1LDK",
-#       location: "Meguro",
-#       user: User.create(email: Faker::Internet.email, password: "123456"),
-#       deposit: 80000,
-#       key_money: 80000,
-#       initial_cost: 240000
-#       )
-#     file = URI.open("https://images.es-e-bukken.com/building/0/000/179/125/1962724.jpg")
-#     property.photos.attach(io: file, filename: "room7.jpg", content_type: 'image/jpg')
-#     property.save!
-#     file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2019/06/IMG_9967.jpg")
-#     property.photos.attach(io: file, filename: "room77.jpg", content_type: 'image/jpg')
-#     property.save!
-
-#     puts "Creating properties..."
-
-# # property = Property.new(
-# #       information: "A one bedroom apartment",
-# #       price: 70000,
-# #       distance_to_station: 15,
-# #       pets: false,
-# #       distance_to_supermarket: 10,
-# #       age: 8,
-# #       floor: 4,
-# #       distance_to_park: 10,
-# #       cafe_nearby: true,
-# #       bar_nearby: true,
-# #       size: 35,
-# #       layout: "1DK",
-# #       location: "Roppongi",
-# #       user: User.create(email: Faker::Internet.email, password: "123456"),
-# #       deposit: 70000,
-# #       key_money: 70000,
-# #       initial_cost: 210000
-# #       )
-# #     file = URI.open("https://lh3.googleusercontent.com/proxy/5851ss72mBJ50d4HUHDol0JKLF-ejQ5LwtRcf3YNbOyUd_I97YmMKAKaUizkdPbkOmGZoduXa81_VZvCVzlPd8JqXkg1uDA_R2gt19tUM9TtNNYGcApbHwVcvbomXUY")
-# #     property.photos.attach(io: file, filename: "room8.jpg", content_type: 'image/jpg')
-# #     property.save!
-# #     file = URI.open("https://d1sw4fcdq5we39.cloudfront.net/wp-content/uploads/2018/11/21170950/dcdcd2cd-85cf-4616-ad68-8ca804cf4a70.jpg")
-# #     property.photos.attach(io: file, filename: "room88.jpg", content_type: 'image/jpg')
-# #     property.save!
-
-# #     puts "Creating properties..."
-
-# property = Property.new(
-#       information: "A one bedroom apartment",
-#       price: 110000,
-#       distance_to_station: 5,
-#       pets: false,
-#       distance_to_supermarket: 10,
-#       age: 0,
-#       floor: 4,
-#       distance_to_park: 10,
-#       cafe_nearby: true,
-#       bar_nearby: false,
-#       size: 50,
-#       layout: "1LDK",
-#       location: "Shinjuku",
-#       user: User.create(email: Faker::Internet.email, password: "123456"),
-#       deposit: 120000,
-#       key_money: 0,
-#       initial_cost: 240000
-#       )
-#     file = URI.open("https://s3-ap-northeast-1.amazonaws.com/tpo-web/wp-content/uploads/R0036262.jpg")
-#     property.photos.attach(io: file, filename: "room9.jpg", content_type: 'image/jpg')
-#     property.save!
-#     file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2019/12/IMG_1446.jpg")
-#     property.photos.attach(io: file, filename: "room99.jpg", content_type: 'image/jpg')
-#     property.save!
-
-#     puts "Creating properties..."
+    puts "Property 4 created"
 
 property = Property.new(
       information: "A one bedroom apartment",
-      price: 90000,
+      price: 100000,
       distance_to_station: 5,
+      pets: false,
+      distance_to_supermarket: 10,
+      age: 2,
+      floor: 1,
+      distance_to_park: 10,
+      cafe_nearby: false,
+      bar_nearby: true,
+      size: 50,
+      layout: "1DK",
+      location: "Omotesando",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 100000,
+      key_money: 100000,
+      initial_cost: 300000
+      )
+    file = URI.open("https://www.r-store.jp/photo/roominfo/photo/building/224461/224461_14_size6.jpg?20200503161430")
+    property.photos.attach(io: file, filename: "room5.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://www.r-store.jp/photo/roominfo/photo/building/224461/224461_01_size6.jpg?20200503161430")
+    property.photos.attach(io: file, filename: "room55.jpg", content_type: 'image/jpg')
+    property.save!
+   
+    puts "Property 5 created"
+
+property = Property.new(
+      information: "A one bedroom apartment",
+      price: 80000,
+      distance_to_station: 15,
+      pets: false,
+      distance_to_supermarket: 10,
+      age: 2,
+      floor: 4,
+      distance_to_park: 10,
+      cafe_nearby: false,
+      bar_nearby: true,
+      size: 35,
+      layout: "1LDK",
+      location: "Meguro",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 80000,
+      key_money: 80000,
+      initial_cost: 240000
+      )
+    file = URI.open("https://images.es-e-bukken.com/building/0/000/179/125/1962724.jpg")
+    property.photos.attach(io: file, filename: "room6.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2019/06/IMG_9967.jpg")
+    property.photos.attach(io: file, filename: "room66.jpg", content_type: 'image/jpg')
+    property.save!
+
+    puts "Property 6 created"
+
+property = Property.new(
+      information: "A one bedroom apartment",
+      price: 70000,
+      distance_to_station: 15,
+      pets: false,
+      distance_to_supermarket: 10,
+      age: 8,
+      floor: 4,
+      distance_to_park: 10,
+      cafe_nearby: true,
+      bar_nearby: true,
+      size: 35,
+      layout: "1DK",
+      location: "Roppongi",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 70000,
+      key_money: 70000,
+      initial_cost: 210000
+      )
+    file = URI.open("https://www.r-store.jp/photo/roominfo/photo/building/230188/230188_01_size6.jpg?20200503162614")
+    property.photos.attach(io: file, filename: "room7.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://www.r-store.jp/photo/roominfo/photo/building/230188/230188_04_size6.jpg?20200503162614")
+    property.photos.attach(io: file, filename: "room77.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://www.r-store.jp/photo/roominfo/photo/building/230188/230188_11_size6.jpg?20200503162614")
+    property.photos.attach(io: file, filename: "room777.jpg", content_type: 'image/jpg')
+    property.save!
+
+    puts "Property 7 created"
+
+property = Property.new(
+      information: "A spacious home",
+      price: 110000,
+      distance_to_station: 5,
+      pets: false,
+      distance_to_supermarket: 10,
+      age: 0,
+      floor: 1,
+      distance_to_park: 10,
+      cafe_nearby: true,
+      bar_nearby: false,
+      size: 80,
+      layout: "1LDK",
+      location: "Kichijoji",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 110000,
+      key_money: 0,
+      initial_cost: 220000
+      )
+    file = URI.open("http://hoap.tokyo/wp-content/uploads/2017/08/Noda-House_-045-900x900.jpg")
+    property.photos.attach(io: file, filename: "room8.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("http://hoap.tokyo/wp-content/uploads/2017/08/Noda-House_-050-960x960.jpg")
+    property.photos.attach(io: file, filename: "room88.jpg", content_type: 'image/jpg')
+    property.save!
+
+    puts "Property 8 created"
+
+property = Property.new(
+      information: "Big room",
+      price: 130000,
+      distance_to_station: 10,
       pets: true,
       distance_to_supermarket: 5,
-      age: 10,
+      age: 2,
       floor: 1,
+      distance_to_park: 5,
+      cafe_nearby: true,
+      bar_nearby: false,
+      size: 50,
+      layout: "1DK",
+      location: "Ebisu",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 130000,
+      key_money: 130000,
+      initial_cost: 390000
+      )
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/04/IMG_2297.jpg")
+    property.photos.attach(io: file, filename: "room9.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("http://hoap.tokyo/wp-content/uploads/2015/11/01.jpg")
+    property.photos.attach(io: file, filename: "room99.jpg", content_type: 'image/jpg')
+    property.save!
+
+    puts "Property 9 created"
+
+property = Property.new(
+      information: "A one bedroom apartment",
+      price: 95000,
+      distance_to_station: 15,
+      pets: true,
+      distance_to_supermarket: 5,
+      age: 8,
+      floor: 2,
       distance_to_park: 5,
       cafe_nearby: true,
       bar_nearby: true,
       size: 50,
-      layout: "1DK",
-      location: "Shinjuku",
+      layout: "1LDK",
+      location: "Kichijoji",
       user: User.create(email: Faker::Internet.email, password: "123456"),
-      deposit: 90000,
+      deposit: 95000,
       key_money: 0,
       initial_cost: 180000
       )
+    file = URI.open("https://shootest.jp/wp-content/uploads/2020/03/iwai-omotesando-8.jpg")
+    property.photos.attach(io: file, filename: "room1000.jpg", content_type: 'image/jpg')
+    property.save!
     file = URI.open("https://shootest.jp/wp-content/uploads/2019/07/IMG_002.jpg")
     property.photos.attach(io: file, filename: "room100.jpg", content_type: 'image/jpg')
     property.save!
-    file = URI.open("https://odis.homeaway.com/odis/listing/63a6c329-3fd3-42af-a892-4d80467f1c44.c10.jpg")
-    property.photos.attach(io: file, filename: "room10.jpg", content_type: 'image/jpg')
+    
+    puts "Property 10 created"
+
+property = Property.new(
+      information: "Big room",
+      price: 130000,
+      distance_to_station: 10,
+      pets: true,
+      distance_to_supermarket: 5,
+      age: 2,
+      floor: 1,
+      distance_to_park: 5,
+      cafe_nearby: true,
+      bar_nearby: true,
+      size: 60,
+      layout: "1DK",
+      location: "Kichijoji",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 130000,
+      key_money: 130000,
+      initial_cost: 390000
+      )
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/03/IMG_6473.jpg")
+    property.photos.attach(io: file, filename: "room11.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/04/IMG_6633.jpg")
+    property.photos.attach(io: file, filename: "room111.jpg", content_type: 'image/jpg')
     property.save!
 
-    puts "Property created"
+    puts "Property 11 created"
+
+property = Property.new(
+      information: "Big room",
+      price: 130000,
+      distance_to_station: 10,
+      pets: true,
+      distance_to_supermarket: 5,
+      age: 2,
+      floor: 3,
+      distance_to_park: 5,
+      cafe_nearby: true,
+      bar_nearby: true,
+      size: 60,
+      layout: "2DK",
+      location: "Shimokitazawa",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 130000,
+      key_money: 0,
+      initial_cost: 390000
+      )
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/01/IMG_1685.jpg")
+    property.photos.attach(io: file, filename: "room12.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/01/IMG_1706.jpg")
+    property.photos.attach(io: file, filename: "room112.jpg", content_type: 'image/jpg')
+    property.save!
+
+    puts "Property 12 created"   
+
+property = Property.new(
+      information: "Big room",
+      price: 110000,
+      distance_to_station: 7,
+      pets: false,
+      distance_to_supermarket: 2,
+      age: 2,
+      floor: 3,
+      distance_to_park: 5,
+      cafe_nearby: false,
+      bar_nearby: true,
+      size: 45,
+      layout: "1LDK",
+      location: "Shibuya",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 110000,
+      key_money: 0,
+      initial_cost: 390000
+      )
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/02/IMG_1643.jpg")
+    property.photos.attach(io: file, filename: "room13.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/02/IMG_1632.jpg")
+    property.photos.attach(io: file, filename: "room113.jpg", content_type: 'image/jpg')
+    property.save!
+
+    puts "Property 13 created"   
+
+property = Property.new(
+      information: "Big room",
+      price: 115000,
+      distance_to_station: 5,
+      pets: true,
+      distance_to_supermarket: 2,
+      age: 11,
+      floor: 3,
+      distance_to_park: 2,
+      cafe_nearby: true,
+      bar_nearby: false,
+      size: 45,
+      layout: "1LDK",
+      location: "Shibuya",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 115000,
+      key_money: 0,
+      initial_cost: 230000
+      )
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/02/IMG_1643.jpg")
+    property.photos.attach(io: file, filename: "room14.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2020/02/IMG_1632.jpg")
+    property.photos.attach(io: file, filename: "room114.jpg", content_type: 'image/jpg')
+    property.save!
+
+    puts "Property 14 created"   
+
+property = Property.new(
+      information: "Big room",
+      price: 90000,
+      distance_to_station: 15,
+      pets: true,
+      distance_to_supermarket: 2,
+      age: 1,
+      floor: 1,
+      distance_to_park: 2,
+      cafe_nearby: true,
+      bar_nearby: false,
+      size: 55,
+      layout: "2DK",
+      location: "Meguro",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 90000,
+      key_money: 100000,
+      initial_cost: 280000
+      )
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2019/12/IMG_1386.jpg")
+    property.photos.attach(io: file, filename: "room15.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2019/12/IMG_1384.jpg")
+    property.photos.attach(io: file, filename: "room115.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2019/12/IMG_1376.jpg")
+    property.photos.attach(io: file, filename: "room1115.jpg", content_type: 'image/jpg')
+    property.save!
+
+    puts "Property 15 created"
+
+property = Property.new(
+      information: "Big room",
+      price: 130000,
+      distance_to_station: 6,
+      pets: true,
+      distance_to_supermarket: 7,
+      age: 7,
+      floor: 1,
+      distance_to_park:7,
+      cafe_nearby: false,
+      bar_nearby: true,
+      size: 76,
+      layout: "2LDK",
+      location: "Omotesando",
+      user: User.create(email: Faker::Internet.email, password: "123456"),
+      deposit: 130000,
+      key_money: 130000,
+      initial_cost: 390000
+      )
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2019/11/IMG_5495.jpg")
+    property.photos.attach(io: file, filename: "room116.jpg", content_type: 'image/jpg')
+    property.save!
+    file = URI.open("https://www.zeroapa.com/wp02/wp-content/uploads/2019/11/IMG_5489.jpg")
+    property.photos.attach(io: file, filename: "room1116.jpg", content_type: 'image/jpg')
+    property.save!
+
+    puts "Property 16 created"
+
 
 puts 'Finished!'
